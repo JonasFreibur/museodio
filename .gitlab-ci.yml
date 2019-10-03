@@ -19,20 +19,20 @@ stages:
 lintDebug:
   stage: build
   tags:
-    - ubuntu-docker
+    - dind
   script:
   - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
 
 assembleDebug:
   stage: build
   tags:
-    - ubuntu-docker
+    - dind
   script:
   - ./gradlew assembleDebug
 
 testDebug:
   stage: test
   tags:
-    - ubuntu-docker
+    - dind
   script:
   - ./gradlew -Pci --console=plain :app:testDebug
