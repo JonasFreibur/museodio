@@ -27,11 +27,15 @@ stages:
 
 lintDebug:
   stage: build
+  tags:
+    - ubuntu-docker
   script:
     - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
 
 assembleDebug:
   stage: build
+  tags:
+    - ubuntu-docker
   script:
     - ./gradlew assembleDebug
   artifacts:
@@ -40,5 +44,7 @@ assembleDebug:
 
 debugTests:
   stage: test
+  tags:
+    - ubuntu-docker
   script:
     - ./gradlew -Pci --console=plain :app:testDebug
