@@ -16,21 +16,29 @@ stages:
 
 lintDebug:
   stage: build
+  tags:
+    - ubuntu-docker
   script:
   - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
 
 assembleDebug:
   stage: build
+  tags:
+    - ubuntu-docker
   script:
   - ./gradlew assembleDebug
 
 testDebug:
   stage: test
+  tags:
+    - ubuntu-docker
   script:
   - ./gradlew -Pci --console=plain :app:testDebug
 
 assembleRelease:
   stage: release
+  tags:
+    - ubuntu-docker
   script:
   - echo $KEYSTORE_FILE | base64 -d > my.keystore
   - ./gradlew assembleRelease
