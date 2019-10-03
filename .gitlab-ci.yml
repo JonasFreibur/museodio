@@ -2,6 +2,7 @@ image: jangrewe/gitlab-ci-android
 
 before_script:
 - export GRADLE_USER_HOME=$(pwd)/.gradle
+- export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
 - chmod +x ./gradlew
 
 cache:
@@ -12,7 +13,6 @@ cache:
 stages:
 - build
 - test
-- release
 
 lintDebug:
   stage: build
@@ -34,19 +34,3 @@ testDebug:
     - ubuntu-docker
   script:
   - ./gradlew -Pci --console=plain :app:testDebug
-
-assembleRelease:
-  stage: release
-  tags:
-    - ubuntu-docker
-  script:
-  - echo $KEYSTORE_FILE | base64 -d > my.keystore
-  - ./gradlew assembleRelease
-    -Pandroid.injected.signing.store.file=$(pwd)/my.keystore
-    -Pandroid.injected.signing.store.password=$KEYSTORE_PASSWORD
-    -Pandroid.injected.signing.key.alias=$KEY_ALIAS
-    -Pandroid.injected.signing.key.password=$KEY_PASSWORD
-  artifacts:
-    paths:
-    - app/build/outputs/apk/release
-    - CHANGELOG
