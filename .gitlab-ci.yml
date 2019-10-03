@@ -2,7 +2,7 @@ image: jangrewe/gitlab-ci-android
 
 before_script:
 - export GRADLE_USER_HOME=$(pwd)/.gradle
-- export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+- export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 - chmod +x ./gradlew
 
 cache:
