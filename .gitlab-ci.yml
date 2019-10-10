@@ -1,0 +1,36 @@
+image: jangrewe/gitlab-ci-android
+
+before_script:
+- export GRADLE_USER_HOME=$(pwd)/.gradle
+- chmod +x ./gradlew
+
+cache:
+  key: ${CI_PROJECT_ID}
+  paths:
+  - .gradle/
+
+stages:
+- build
+- test
+
+lintDebug:
+  stage: build
+  tags:
+    - docker
+  script:
+  - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
+
+assembleDebug:
+  stage: build
+  tags:
+    - docker
+  script:
+  - ./gradlew assembleDebug
+
+testDebug:
+  stage: test
+  tags:
+    - docker
+  script:
+  - ./gradlew -Pci --console=plain :app:testDebug
+
