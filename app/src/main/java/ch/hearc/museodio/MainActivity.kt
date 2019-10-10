@@ -3,22 +3,21 @@ package ch.hearc.museodio
 
 import android.Manifest
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
-import android.preference.PreferenceManager
 import android.content.Context
 import android.content.pm.PackageManager
-import android.location.Location
 import android.location.LocationManager
-import org.osmdroid.config.Configuration
 import android.os.Bundle
-import android.os.Looper
+import android.preference.PreferenceManager
 import android.util.Log
-import android.util.Log.d
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
-
+import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
+import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
+import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val REQUEST_PERMISSIONS_REQUEST_CODE = 1
     }
+
     internal var map: MapView? = null
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var locationRequest: LocationRequest
@@ -34,14 +34,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        this.fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
         val ctx = applicationContext
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
 
         setContentView(R.layout.activity_main)
         map = findViewById<MapView>(R.id.map) as MapView
         map!!.setTileSource(TileSourceFactory.MAPNIK)
+
+        this.fusedLocationClient = LocationServices.getFusedLocationProviderClient(ctx)
 
         val permissionState = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
         if (permissionState != PackageManager.PERMISSION_GRANTED) {
@@ -50,9 +50,14 @@ class MainActivity : AppCompatActivity() {
         else {
             if(isLocationEnabled()){
                 getLocationUpdates()
+                fusedLocationClient!!.lastLocation.addOnCompleteListener{location ->
+                    if (location.result != null) {
+                        addLocationToMap(location.result.latitude, location.result.longitude)
+                    }
+                }
             }
             else {
-                Log.d("Localisation", "localisation is not enabled")
+                Toast.makeText(this, "The application requires the location to work correctly", Toast.LENGTH_LONG)
             }
         }
     }
@@ -84,11 +89,10 @@ class MainActivity : AppCompatActivity() {
 
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult?) {
-                Log.d("Location", "in here")
                 locationResult ?: return
                 if (locationResult.locations.isNotEmpty()) {
                     val location = locationResult.lastLocation
-                    Log.d("Location", location.toString())
+                    addLocationToMap(location.latitude, location.longitude)
                 }
             }
         }
@@ -116,11 +120,25 @@ class MainActivity : AppCompatActivity() {
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when (requestCode) {
             REQUEST_PERMISSIONS_REQUEST_CODE -> {
-                if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                     startLocationUpdates()
             }
         }
     }
 
+    private fun addLocationToMap(latitude: Double, longitude: Double){
+        val mapController = map!!.getController()
+        mapController.setZoom(9.5)
+        val startPoint = GeoPoint(latitude, longitude)
+        mapController.setCenter(startPoint)
+
+
+        val myLocationOverlay = MyLocationNewOverlay(map!!)
+        myLocationOverlay.enableFollowLocation()
+        myLocationOverlay.enableMyLocation()
+        map!!.getOverlays().add(myLocationOverlay)
+    }
+
 }
+
 
