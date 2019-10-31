@@ -20,6 +20,7 @@ lintDebug:
   script:
   - ./gradlew -Pci --console=plain :app:lintDebug -PbuildDir=lint
   artifacts:
+    when: always
     paths:
     - "app/lint/reports/"
     expire_in: 1 week
