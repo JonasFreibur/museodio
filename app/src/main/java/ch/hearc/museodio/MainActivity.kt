@@ -25,6 +25,7 @@ import android.widget.LinearLayout
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.widget.AppCompatTextView;
 
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
