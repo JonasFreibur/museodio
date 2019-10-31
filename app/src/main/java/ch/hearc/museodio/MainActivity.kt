@@ -26,7 +26,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import com.birjuvachhani.locus.Locus
 
-
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
@@ -85,7 +84,6 @@ class MainActivity : AppCompatActivity() {
                 0f))
         }
         linearLayout.addView(l1)
-
         startRequestingLocation()
 
     }
@@ -109,6 +107,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+
         /* permission record */
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         permissionToRecordAccepted = if (requestCode == REQUEST_RECORD_AUDIO_PERMISSION) {
@@ -117,10 +116,12 @@ class MainActivity : AppCompatActivity() {
             false
         }
         if (!permissionToRecordAccepted) finish()
+
     }
     private  fun stopRequestingLocation() {
         Locus.stopLocationUpdates()
     }
+
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
         val mapController = map!!.getController()
