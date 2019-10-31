@@ -1,6 +1,5 @@
 package ch.hearc.museodio
 
-
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
@@ -18,8 +17,6 @@ import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
-
-/*record import*/
 import android.media.MediaPlayer
 import android.media.MediaRecorder
 import android.widget.Button
@@ -28,39 +25,33 @@ import android.widget.LinearLayout
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
-import kotlinx.android.synthetic.main.activity_main.view.linearLayout
 
-
-/*var init record*/
-private const val LOG_TAG = "AudioRecordTest"
+/* Variables globales */
+private const val LOG_TAG_RECORD = "AudioRecordTest"
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
-
 
 class MainActivity : AppCompatActivity() {
 
+    /* Initialiation variables location */
     companion object {
         private const val REQUEST_PERMISSIONS_REQUEST_CODE = 1
     }
-
     internal var map: MapView? = null
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var locationRequest: LocationRequest
     private lateinit var locationCallback: LocationCallback
 
-    /* variable init record */
+    /* Initialisation variables record */
     private var fileName: String = ""
     private var recordButton: RecordButton? = null
     private var recorder: MediaRecorder? = null
     private var playButton: PlayButton? = null
+    private var saveButton: SaveButton? = null
     private var player: MediaPlayer? = null
     private var permissionToRecordAccepted = false
     private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO,Manifest.permission.ACCESS_COARSE_LOCATION)
 
-    private var btn1 : Button?=null
-    private var btn2 : Button?=null
-
-
+    /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -73,6 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         this.fusedLocationClient = LocationServices.getFusedLocationProviderClient(ctx)
 
+        /* Permissions */
         val permissionState = ActivityCompat.checkSelfPermission(this, permissions[0])
         val permissionRecord =  ActivityCompat.checkSelfPermission(this, permissions[1])
         if (permissionState != PackageManager.PERMISSION_GRANTED || permissionRecord!= PackageManager.PERMISSION_GRANTED ) {
@@ -91,14 +83,13 @@ class MainActivity : AppCompatActivity() {
             else {
                 Toast.makeText(this, "The application requires the location to work correctly", Toast.LENGTH_LONG)
             }
-
         }
 
-        /* on create record */
+        /* Initialisation record élément */
         fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
         recordButton = RecordButton(this)
         playButton = PlayButton(this)
-
+        saveButton = SaveButton(this)
         val l1 = LinearLayout(this).apply {
             addView(recordButton,
                 LinearLayout.LayoutParams(
@@ -110,10 +101,12 @@ class MainActivity : AppCompatActivity() {
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     0f))
+            addView(saveButton,LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                0f))
         }
-
         linearLayout.addView(l1)
-
     }
 
     public override fun onResume() {
@@ -124,9 +117,7 @@ class MainActivity : AppCompatActivity() {
 
     public override fun onPause() {
         super.onPause()
-
         map!!.onPause()
-
         stopLocationUpdates()
     }
 
@@ -185,16 +176,13 @@ class MainActivity : AppCompatActivity() {
             false
         }
         if (!permissionToRecordAccepted) finish()
-
     }
-
-
+    
     private fun addLocationToMap(latitude: Double, longitude: Double){
         val mapController = map!!.getController()
         mapController.setZoom(9.5)
         val startPoint = GeoPoint(latitude, longitude)
         mapController.setCenter(startPoint)
-
 
         val myLocationOverlay = MyLocationNewOverlay(map!!)
         myLocationOverlay.enableFollowLocation()
@@ -202,12 +190,9 @@ class MainActivity : AppCompatActivity() {
         map!!.getOverlays().add(myLocationOverlay)
     }
 
-    /* function and class record */
-
+    /* functions and classes to record part */
     internal inner class RecordButton(ctx: Context) : Button(ctx) {
-
         var mStartRecording = true
-
         var clicker: OnClickListener = OnClickListener {
             onRecord(mStartRecording)
             text = when (mStartRecording) {
@@ -216,12 +201,22 @@ class MainActivity : AppCompatActivity() {
             }
             mStartRecording = !mStartRecording
         }
-
         init {
             text = "Start recording"
             setOnClickListener(clicker)
         }
     }
+
+    internal inner class SaveButton(ctx: Context) : Button(ctx) {
+        var clicker: OnClickListener = OnClickListener {
+            //lancer a l'API
+        }
+        init {
+            text = "Save recording"
+            setOnClickListener(clicker)
+        }
+    }
+
     internal inner class PlayButton(ctx: Context) : Button(ctx) {
         var mStartPlaying = true
         var clicker: OnClickListener = OnClickListener {
@@ -232,12 +227,12 @@ class MainActivity : AppCompatActivity() {
             }
             mStartPlaying = !mStartPlaying
         }
-
         init {
             text = "Start playing"
             setOnClickListener(clicker)
         }
     }
+
     private fun onPlay(start: Boolean) = if (start) {
         startPlaying()
     } else {
@@ -251,7 +246,7 @@ class MainActivity : AppCompatActivity() {
                 prepare()
                 start()
             } catch (e: IOException) {
-                Log.e(LOG_TAG, "prepare() failed")
+                Log.e(LOG_TAG_RECORD, "prepare() failed")
             }
         }
     }
@@ -268,19 +263,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startRecording() {
-
         recorder = MediaRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
             setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
             setOutputFile(fileName)
             setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
-
             try {
                 prepare()
             } catch (e: IOException) {
-                Log.e(LOG_TAG, "prepare() failed")
+                Log.e(LOG_TAG_RECORD, "prepare() failed")
             }
-
             start()
         }
     }
@@ -291,7 +283,6 @@ class MainActivity : AppCompatActivity() {
             release()
         }
         recorder = null
-
     }
 
     override fun onStop() {
@@ -301,8 +292,6 @@ class MainActivity : AppCompatActivity() {
         player?.release()
         player = null
     }
-
-
 }
 
 
