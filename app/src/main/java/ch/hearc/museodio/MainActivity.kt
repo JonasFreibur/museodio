@@ -19,13 +19,14 @@ import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
 import android.media.MediaPlayer
 import android.media.MediaRecorder
-import android.widget.Button
+//import android.widget.Button
 import java.io.IOException
 import android.widget.LinearLayout
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_main.*
-import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatButton;
+
 
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -192,7 +193,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /* functions and classes to record part */
-    internal inner class RecordButton(ctx: Context) : Button(ctx) {
+    internal inner class RecordButton(ctx: Context) : AppCompatButton(ctx) {
         var mStartRecording = true
         var clicker: OnClickListener = OnClickListener {
             onRecord(mStartRecording)
@@ -208,7 +209,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    internal inner class SaveButton(ctx: Context) : Button(ctx) {
+    internal inner class SaveButton(ctx: Context) : AppCompatButton(ctx) {
         var clicker: OnClickListener = OnClickListener {
             //lancer a l'API
         }
@@ -218,7 +219,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    internal inner class PlayButton(ctx: Context) : Button(ctx) {
+    internal inner class PlayButton(ctx: Context) : AppCompatButton(ctx) {
         var mStartPlaying = true
         var clicker: OnClickListener = OnClickListener {
             onPlay(mStartPlaying)

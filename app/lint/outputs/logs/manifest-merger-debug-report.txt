@@ -1,0 +1,1075 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23c432d3b2a53ef7a434f0376e22ecb8\play-services-12.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dee9d37b8e682afbf1e11f7fb3632577\jetified-play-services-cast-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.mediarouter:mediarouter:1.0.0-alpha5] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6691e97d382fcb700bfccdef593d9eaa\mediarouter-1.0.0-alpha5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a73c3974fa47bb64187237bb2a2898dc\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\09512de3cd1bb1e09be20eb16871e341\core-ktx-1.1.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c4ef5ca596413fc5b60e6754465386ae\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:2:1-29:12
+MERGED from [com.google.android.gms:play-services-ads:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f2af9c896c6beedfd4bd4c7ec1cf6bbc\jetified-play-services-ads-12.0.1\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.android.gms:play-services-tagmanager:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\184a2ce4f2a11bbd07fedb378887bfac\jetified-play-services-tagmanager-12.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\76374999b620946117efd31f520037a3\jetified-play-services-tagmanager-v4-impl-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8c5b4e451d954aff0e845c7881f8e28d\jetified-play-services-auth-api-phone-12.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\25058f93266139a6c61a4b1ca4fc5dbe\jetified-play-services-auth-base-12.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2010ad4907adc53cc0feaff18b557454\jetified-firebase-config-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d7186f3bff41a82507b1b146097d3256\jetified-play-services-awareness-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1fbea8392e97e9bdb72d531610610200\jetified-play-services-games-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4fbe98c88620052edc0ec3d698ccd4d5\jetified-play-services-drive-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c70991ff5320e84d83d36c06554ee421\jetified-play-services-fido-12.0.1\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\bda2ec813ab4e585212624b8d566e732\jetified-firebase-dynamic-links-12.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a7ea949a41aba671bd0d42163ad1f085\jetified-play-services-fitness-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\eca35d0cfe50534489c76943c8db94cf\jetified-firebase-appindexing-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-wallet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4d743701e292ababb92f6a05ead8280b\jetified-play-services-wallet-12.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3b97247dc09826acf6932490d4bf2d14\play-services-identity-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-instantapps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e273beba97d63c8db5e99086f4163d65\jetified-play-services-instantapps-12.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\08c094bf31ad2a64fff05b55dc8cc61f\jetified-play-services-location-12.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc8a351a61af878c43914a09080a46d\jetified-play-services-places-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\7a4d3de997a6aa1ef4b4ade5b95b7660\jetified-play-services-nearby-12.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\337e764d10dbef1182a3b8be1d20a2b3\play-services-panorama-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\039e5e17c53df937675023ca306537e0\jetified-play-services-plus-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e5ae3c95cc349f1cff40b55e8ca80a24\jetified-play-services-safetynet-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\97d64e85141a1db894db50793b6e01c2\play-services-vision-12.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5cba6e96be41fd50c000770692ab5cb0\jetified-play-services-vision-common-12.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\251ef9d6fa2ad471f65cf7b1afd041ee\jetified-play-services-wearable-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\076841225c8aecdc03a6b38a4eee8fa9\jetified-firebase-crash-12.0.1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-database:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23f58ab2bc642e06e027b396f9fc1ff7\jetified-firebase-database-12.0.1\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-database-connection:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\83ced46eb2d0a76c548a4c75ae661a50\jetified-firebase-database-connection-12.0.1\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:17:1-54:12
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-storage:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0bdb0ca647ab2661bee3a983e34346b5\jetified-firebase-storage-12.0.1\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-storage-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e90e23efd93ac70c83b92c48e079cfa3\jetified-firebase-storage-common-12.0.1\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ea6959e374293a35fc491628803dd6ef\play-services-gass-12.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6d925270a06208ffcb1354f8de9a1e41\jetified-play-services-tasks-12.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\807e3f1d8a4640489d6f757b6903dd8e\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d4ebfc95be76e9dc300d9100ccb9dfcd\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dd5fc5a099aef28a67f93df4446647ae\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ca7a8758a6dc5299bc8624f6d06e372e\recyclerview-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\564388c32085138c359dac6cb7f3f8e1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a2a941aa4e6ab52251306224b3bb595c\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fa974f7789519f660b0500bf3e2ef9d2\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.palette:palette:1.0.0-rc01] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\170559c1b48dff819ce23fd23c98bb8f\palette-1.0.0-rc01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d92e74c548111a4842462bb118fb0728\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d703d4fb91397ebd0fcc249b0286692c\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\985a133b102794b102b4aa622ca1dbef\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c449c5b1e03a5ea7862cd8fd75e41472\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\05bcd3c4e41e95356da215f5546ac45f\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c00566a796c8bc87aa9bfe04c457a8ea\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c8ebf87c1c29c88362d4ad2f5e9fa69e\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\318bfc0e146c18ed25c3a6b2db325bf4\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media2:media2:1.0.0-alpha02] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4bc8b7aacaca9b153cb641ac02525263\media2-1.0.0-alpha02\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\55c801ebe9254aadd0bc70a611ebff34\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ac96be6fb81a47a5ed35cb50bf191a\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8ce023457c6feb6f1685f591c421bd20\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\563be99a7f8ba6717b67ce50a8a4b6a6\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6de075386d20be281a87dfa1b2d6ac45\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0e903dd799d54019ded37d0684a014d4\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a09f34a7d8bb632b18d73f2937dc32e4\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\44841f9ca2f4417b2d14d4adf0514cad\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b44a7b7fbe32f24489315f23b9a24783\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\325d0e9e870fa4d06b24c18c9ee90ee8\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a9b612aa422320e030825edc18a2ab1\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1004b84c1a71b13cd57fe025e0cc7af9\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\de0d15be3df3800b00daf51b84bb8611\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d83fe64bffd2c3a18b5121db5e3cda89\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\9444e3cf77d3306ef4a80ba458253a45\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\9233c21f8ab497c46d13c1cb3bad199c\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8eb7e2ed7289808f08001664d269b5bb\play-services-ads-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\cedafd2ff1cd08c0eb2fd3bc7f9e845d\play-services-ads-lite-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b4a907e7a5df6f2f3cc7f35af6ee7a11\play-services-analytics-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8dfb4a8d3d2c1344c4aa785e122279f0\play-services-analytics-impl-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\38e15431a83bdc83c6622c7d924eb68b\play-services-appinvite-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\41e36dcfecb21b098aa91e85fa1b8fa5\play-services-auth-api-phone-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6861b4761d4aab3faeab63dfa91d8608\play-services-auth-base-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8025f6b7ccad213073fa2eae634571b7\play-services-base-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5dc3d61b666e7491bd2fa3fe7abe4e04\play-services-cast-framework-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0114a599d36a4841980036198c6388c1\play-services-cast-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2507acfdc6f7cd5c8395174b71ca0411\play-services-basement-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5c2b2784153f9e94e4c8f936487c8910\firebase-config-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dde10737c126aec9a833f6301d81d18e\play-services-awareness-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\51cda349f8a23d09a08f09868b6fd0e2\firebase-crash-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\33060b3390f6994bcda468ccae8a8757\play-services-drive-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a85a533bdc094dbdd946f957bc7b06b0\play-services-fido-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\be7b5665442e36c410371e65e7068c71\firebase-auth-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a319804353a60386d5ee16004e5c5aee\firebase-database-connection-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\18de31b2a86b8bbd238169b29daed857\firebase-database-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4afcc5ea3d267b7ffa1cb0b15dc8254e\firebase-dynamic-links-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3523ad2f292bd73e2758e8ec41002bfb\firebase-iid-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e1a3e250ba74c2bedf89075447ec36c\firebase-messaging-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f919778678851fd8d177c4145696374f\firebase-storage-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\36b39a5a7a7bdd06cbb57f8f99042225\firebase-storage-common-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ac32f6c26fe67c7b4ff76c6414e53dcd\firebase-common-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ae8ef716690f16cd3add5bae8877335e\play-services-fitness-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e974eab76cf17b37ecb3ee7ce9a17f13\play-services-games-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\28bea0f33a6c86d9ca04eec8412c364b\play-services-gass-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\92bfc18ff286ee92a29dc60fe567c8b6\play-services-gcm-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e21774a843fdcf4e8a51ce69aeaf959\firebase-appindexing-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23ff5714bc33eb6d828b1bb12e08116c\play-services-identity-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5633a8e765ce04e83e416deaaf82a7f6\play-services-iid-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\147893677272137b4c8f30da018bdf04\play-services-instantapps-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\27c484fd629ead99d429c9b63aa20743\play-services-location-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\756b8aabbe68aba709980d3028d4a120\play-services-maps-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f23e18e8baa49b896e112a2af8ee6219\firebase-analytics-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29359d941dd33e51a7707ac705e06b7a\firebase-analytics-impl-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2de1f288283ba31a162c3f99569d8189\play-services-nearby-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5e7b73432778fe5ab2b1d3696f9abfd3\play-services-panorama-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8333f26186f0842059379d6728f64862\play-services-places-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2c2f5a9ffc420726862f5258f65b7369\play-services-plus-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1c89f60328e7d697ed5e24b788f1dbc7\play-services-safetynet-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ee47f586c3099bd3323c9d290b8f987c\play-services-tagmanager-api-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f593c6d291b44da8f3c1e130031a850c\play-services-tagmanager-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aa8371a7f2edf3b075032454724e33e\play-services-tagmanager-v4-impl-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d1e9553b23b1d4ca4ab22b5961a0c76c\play-services-tasks-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c853aa15bc95bad91566bd8bda4ba7f6\play-services-vision-common-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\423a885274ff9d25fe842ec3809459c6\play-services-vision-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d194feda74e76583a021e8f74c6cdced\play-services-wallet-license-12.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ed64bffcc128ceac8153b52f13934b\play-services-wearable-license-12.0.1\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:4:5-32
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:1-31:12
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:6:5-78
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\076841225c8aecdc03a6b38a4eee8fa9\jetified-firebase-crash-12.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\076841225c8aecdc03a6b38a4eee8fa9\jetified-firebase-crash-12.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:8:5-80
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\7a4d3de997a6aa1ef4b4ade5b95b7660\jetified-play-services-nearby-12.0.1\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\7a4d3de997a6aa1ef4b4ade5b95b7660\jetified-play-services-nearby-12.0.1\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:10:5-71
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:10:22-68
+application
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:14:5-29:19
+MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23c432d3b2a53ef7a434f0376e22ecb8\play-services-12.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23c432d3b2a53ef7a434f0376e22ecb8\play-services-12.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:7:5-12:19
+MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:7:5-12:19
+MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dee9d37b8e682afbf1e11f7fb3632577\jetified-play-services-cast-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dee9d37b8e682afbf1e11f7fb3632577\jetified-play-services-cast-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c4ef5ca596413fc5b60e6754465386ae\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c4ef5ca596413fc5b60e6754465386ae\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:29:5-45:19
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:29:5-45:19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\76374999b620946117efd31f520037a3\jetified-play-services-tagmanager-v4-impl-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\76374999b620946117efd31f520037a3\jetified-play-services-tagmanager-v4-impl-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:24:5-35:19
+MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:24:5-35:19
+MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2010ad4907adc53cc0feaff18b557454\jetified-firebase-config-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2010ad4907adc53cc0feaff18b557454\jetified-firebase-config-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d7186f3bff41a82507b1b146097d3256\jetified-play-services-awareness-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d7186f3bff41a82507b1b146097d3256\jetified-play-services-awareness-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1fbea8392e97e9bdb72d531610610200\jetified-play-services-games-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1fbea8392e97e9bdb72d531610610200\jetified-play-services-games-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4fbe98c88620052edc0ec3d698ccd4d5\jetified-play-services-drive-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4fbe98c88620052edc0ec3d698ccd4d5\jetified-play-services-drive-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c70991ff5320e84d83d36c06554ee421\jetified-play-services-fido-12.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c70991ff5320e84d83d36c06554ee421\jetified-play-services-fido-12.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:22:5-30:19
+MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:22:5-30:19
+MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\bda2ec813ab4e585212624b8d566e732\jetified-firebase-dynamic-links-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\bda2ec813ab4e585212624b8d566e732\jetified-firebase-dynamic-links-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a7ea949a41aba671bd0d42163ad1f085\jetified-play-services-fitness-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a7ea949a41aba671bd0d42163ad1f085\jetified-play-services-fitness-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:26:5-20
+MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\eca35d0cfe50534489c76943c8db94cf\jetified-firebase-appindexing-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\eca35d0cfe50534489c76943c8db94cf\jetified-firebase-appindexing-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3b97247dc09826acf6932490d4bf2d14\play-services-identity-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3b97247dc09826acf6932490d4bf2d14\play-services-identity-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\08c094bf31ad2a64fff05b55dc8cc61f\jetified-play-services-location-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\08c094bf31ad2a64fff05b55dc8cc61f\jetified-play-services-location-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc8a351a61af878c43914a09080a46d\jetified-play-services-places-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc8a351a61af878c43914a09080a46d\jetified-play-services-places-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:30:5-20
+MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\7a4d3de997a6aa1ef4b4ade5b95b7660\jetified-play-services-nearby-12.0.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\7a4d3de997a6aa1ef4b4ade5b95b7660\jetified-play-services-nearby-12.0.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\337e764d10dbef1182a3b8be1d20a2b3\play-services-panorama-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\337e764d10dbef1182a3b8be1d20a2b3\play-services-panorama-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\039e5e17c53df937675023ca306537e0\jetified-play-services-plus-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\039e5e17c53df937675023ca306537e0\jetified-play-services-plus-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e5ae3c95cc349f1cff40b55e8ca80a24\jetified-play-services-safetynet-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e5ae3c95cc349f1cff40b55e8ca80a24\jetified-play-services-safetynet-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\97d64e85141a1db894db50793b6e01c2\play-services-vision-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\97d64e85141a1db894db50793b6e01c2\play-services-vision-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5cba6e96be41fd50c000770692ab5cb0\jetified-play-services-vision-common-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5cba6e96be41fd50c000770692ab5cb0\jetified-play-services-vision-common-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\251ef9d6fa2ad471f65cf7b1afd041ee\jetified-play-services-wearable-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\251ef9d6fa2ad471f65cf7b1afd041ee\jetified-play-services-wearable-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\076841225c8aecdc03a6b38a4eee8fa9\jetified-firebase-crash-12.0.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\076841225c8aecdc03a6b38a4eee8fa9\jetified-firebase-crash-12.0.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:26:5-45:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:26:5-45:19
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:27:5-52:19
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:27:5-52:19
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:27:5-38:19
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:27:5-38:19
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:34:5-57:19
+MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ea6959e374293a35fc491628803dd6ef\play-services-gass-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ea6959e374293a35fc491628803dd6ef\play-services-gass-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6d925270a06208ffcb1354f8de9a1e41\jetified-play-services-tasks-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6d925270a06208ffcb1354f8de9a1e41\jetified-play-services-tasks-12.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\563be99a7f8ba6717b67ce50a8a4b6a6\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\563be99a7f8ba6717b67ce50a8a4b6a6\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0e903dd799d54019ded37d0684a014d4\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0e903dd799d54019ded37d0684a014d4\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8eb7e2ed7289808f08001664d269b5bb\play-services-ads-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8eb7e2ed7289808f08001664d269b5bb\play-services-ads-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\cedafd2ff1cd08c0eb2fd3bc7f9e845d\play-services-ads-lite-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\cedafd2ff1cd08c0eb2fd3bc7f9e845d\play-services-ads-lite-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b4a907e7a5df6f2f3cc7f35af6ee7a11\play-services-analytics-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b4a907e7a5df6f2f3cc7f35af6ee7a11\play-services-analytics-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8dfb4a8d3d2c1344c4aa785e122279f0\play-services-analytics-impl-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8dfb4a8d3d2c1344c4aa785e122279f0\play-services-analytics-impl-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\38e15431a83bdc83c6622c7d924eb68b\play-services-appinvite-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\38e15431a83bdc83c6622c7d924eb68b\play-services-appinvite-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\41e36dcfecb21b098aa91e85fa1b8fa5\play-services-auth-api-phone-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\41e36dcfecb21b098aa91e85fa1b8fa5\play-services-auth-api-phone-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6861b4761d4aab3faeab63dfa91d8608\play-services-auth-base-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6861b4761d4aab3faeab63dfa91d8608\play-services-auth-base-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8025f6b7ccad213073fa2eae634571b7\play-services-base-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8025f6b7ccad213073fa2eae634571b7\play-services-base-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5dc3d61b666e7491bd2fa3fe7abe4e04\play-services-cast-framework-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5dc3d61b666e7491bd2fa3fe7abe4e04\play-services-cast-framework-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0114a599d36a4841980036198c6388c1\play-services-cast-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0114a599d36a4841980036198c6388c1\play-services-cast-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2507acfdc6f7cd5c8395174b71ca0411\play-services-basement-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2507acfdc6f7cd5c8395174b71ca0411\play-services-basement-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5c2b2784153f9e94e4c8f936487c8910\firebase-config-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5c2b2784153f9e94e4c8f936487c8910\firebase-config-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dde10737c126aec9a833f6301d81d18e\play-services-awareness-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dde10737c126aec9a833f6301d81d18e\play-services-awareness-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\51cda349f8a23d09a08f09868b6fd0e2\firebase-crash-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\51cda349f8a23d09a08f09868b6fd0e2\firebase-crash-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\33060b3390f6994bcda468ccae8a8757\play-services-drive-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\33060b3390f6994bcda468ccae8a8757\play-services-drive-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a85a533bdc094dbdd946f957bc7b06b0\play-services-fido-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a85a533bdc094dbdd946f957bc7b06b0\play-services-fido-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\be7b5665442e36c410371e65e7068c71\firebase-auth-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\be7b5665442e36c410371e65e7068c71\firebase-auth-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a319804353a60386d5ee16004e5c5aee\firebase-database-connection-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a319804353a60386d5ee16004e5c5aee\firebase-database-connection-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\18de31b2a86b8bbd238169b29daed857\firebase-database-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\18de31b2a86b8bbd238169b29daed857\firebase-database-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4afcc5ea3d267b7ffa1cb0b15dc8254e\firebase-dynamic-links-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4afcc5ea3d267b7ffa1cb0b15dc8254e\firebase-dynamic-links-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3523ad2f292bd73e2758e8ec41002bfb\firebase-iid-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3523ad2f292bd73e2758e8ec41002bfb\firebase-iid-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e1a3e250ba74c2bedf89075447ec36c\firebase-messaging-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e1a3e250ba74c2bedf89075447ec36c\firebase-messaging-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f919778678851fd8d177c4145696374f\firebase-storage-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f919778678851fd8d177c4145696374f\firebase-storage-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\36b39a5a7a7bdd06cbb57f8f99042225\firebase-storage-common-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\36b39a5a7a7bdd06cbb57f8f99042225\firebase-storage-common-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ac32f6c26fe67c7b4ff76c6414e53dcd\firebase-common-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ac32f6c26fe67c7b4ff76c6414e53dcd\firebase-common-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ae8ef716690f16cd3add5bae8877335e\play-services-fitness-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ae8ef716690f16cd3add5bae8877335e\play-services-fitness-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e974eab76cf17b37ecb3ee7ce9a17f13\play-services-games-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e974eab76cf17b37ecb3ee7ce9a17f13\play-services-games-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\28bea0f33a6c86d9ca04eec8412c364b\play-services-gass-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\28bea0f33a6c86d9ca04eec8412c364b\play-services-gass-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\92bfc18ff286ee92a29dc60fe567c8b6\play-services-gcm-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\92bfc18ff286ee92a29dc60fe567c8b6\play-services-gcm-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e21774a843fdcf4e8a51ce69aeaf959\firebase-appindexing-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e21774a843fdcf4e8a51ce69aeaf959\firebase-appindexing-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23ff5714bc33eb6d828b1bb12e08116c\play-services-identity-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23ff5714bc33eb6d828b1bb12e08116c\play-services-identity-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5633a8e765ce04e83e416deaaf82a7f6\play-services-iid-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5633a8e765ce04e83e416deaaf82a7f6\play-services-iid-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\147893677272137b4c8f30da018bdf04\play-services-instantapps-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\147893677272137b4c8f30da018bdf04\play-services-instantapps-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\27c484fd629ead99d429c9b63aa20743\play-services-location-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\27c484fd629ead99d429c9b63aa20743\play-services-location-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\756b8aabbe68aba709980d3028d4a120\play-services-maps-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\756b8aabbe68aba709980d3028d4a120\play-services-maps-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f23e18e8baa49b896e112a2af8ee6219\firebase-analytics-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f23e18e8baa49b896e112a2af8ee6219\firebase-analytics-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29359d941dd33e51a7707ac705e06b7a\firebase-analytics-impl-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29359d941dd33e51a7707ac705e06b7a\firebase-analytics-impl-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2de1f288283ba31a162c3f99569d8189\play-services-nearby-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2de1f288283ba31a162c3f99569d8189\play-services-nearby-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5e7b73432778fe5ab2b1d3696f9abfd3\play-services-panorama-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5e7b73432778fe5ab2b1d3696f9abfd3\play-services-panorama-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8333f26186f0842059379d6728f64862\play-services-places-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8333f26186f0842059379d6728f64862\play-services-places-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2c2f5a9ffc420726862f5258f65b7369\play-services-plus-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2c2f5a9ffc420726862f5258f65b7369\play-services-plus-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1c89f60328e7d697ed5e24b788f1dbc7\play-services-safetynet-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1c89f60328e7d697ed5e24b788f1dbc7\play-services-safetynet-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ee47f586c3099bd3323c9d290b8f987c\play-services-tagmanager-api-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ee47f586c3099bd3323c9d290b8f987c\play-services-tagmanager-api-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f593c6d291b44da8f3c1e130031a850c\play-services-tagmanager-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f593c6d291b44da8f3c1e130031a850c\play-services-tagmanager-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aa8371a7f2edf3b075032454724e33e\play-services-tagmanager-v4-impl-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aa8371a7f2edf3b075032454724e33e\play-services-tagmanager-v4-impl-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d1e9553b23b1d4ca4ab22b5961a0c76c\play-services-tasks-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d1e9553b23b1d4ca4ab22b5961a0c76c\play-services-tasks-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c853aa15bc95bad91566bd8bda4ba7f6\play-services-vision-common-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c853aa15bc95bad91566bd8bda4ba7f6\play-services-vision-common-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\423a885274ff9d25fe842ec3809459c6\play-services-vision-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\423a885274ff9d25fe842ec3809459c6\play-services-vision-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d194feda74e76583a021e8f74c6cdced\play-services-wallet-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d194feda74e76583a021e8f74c6cdced\play-services-wallet-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ed64bffcc128ceac8153b52f13934b\play-services-wearable-license-12.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ed64bffcc128ceac8153b52f13934b\play-services-wearable-license-12.0.1\AndroidManifest.xml:22:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\563be99a7f8ba6717b67ce50a8a4b6a6\core-1.1.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:19:9-35
+	android:label
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:17:9-41
+	tools:ignore
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:21:9-48
+	android:roundIcon
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:18:9-54
+	android:icon
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:16:9-43
+	android:allowBackup
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:15:9-35
+	android:theme
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:20:9-40
+activity#ch.hearc.museodio.MainActivity
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:22:9-28:20
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:22:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml:26:27-74
+uses-sdk
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23c432d3b2a53ef7a434f0376e22ecb8\play-services-12.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23c432d3b2a53ef7a434f0376e22ecb8\play-services-12.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dee9d37b8e682afbf1e11f7fb3632577\jetified-play-services-cast-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dee9d37b8e682afbf1e11f7fb3632577\jetified-play-services-cast-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.mediarouter:mediarouter:1.0.0-alpha5] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6691e97d382fcb700bfccdef593d9eaa\mediarouter-1.0.0-alpha5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.mediarouter:mediarouter:1.0.0-alpha5] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6691e97d382fcb700bfccdef593d9eaa\mediarouter-1.0.0-alpha5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a73c3974fa47bb64187237bb2a2898dc\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a73c3974fa47bb64187237bb2a2898dc\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\09512de3cd1bb1e09be20eb16871e341\core-ktx-1.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\09512de3cd1bb1e09be20eb16871e341\core-ktx-1.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c4ef5ca596413fc5b60e6754465386ae\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c4ef5ca596413fc5b60e6754465386ae\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-ads:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f2af9c896c6beedfd4bd4c7ec1cf6bbc\jetified-play-services-ads-12.0.1\AndroidManifest.xml:21:5-23:52
+MERGED from [com.google.android.gms:play-services-ads:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f2af9c896c6beedfd4bd4c7ec1cf6bbc\jetified-play-services-ads-12.0.1\AndroidManifest.xml:21:5-23:52
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\184a2ce4f2a11bbd07fedb378887bfac\jetified-play-services-tagmanager-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\184a2ce4f2a11bbd07fedb378887bfac\jetified-play-services-tagmanager-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\76374999b620946117efd31f520037a3\jetified-play-services-tagmanager-v4-impl-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\76374999b620946117efd31f520037a3\jetified-play-services-tagmanager-v4-impl-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8c5b4e451d954aff0e845c7881f8e28d\jetified-play-services-auth-api-phone-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8c5b4e451d954aff0e845c7881f8e28d\jetified-play-services-auth-api-phone-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\25058f93266139a6c61a4b1ca4fc5dbe\jetified-play-services-auth-base-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\25058f93266139a6c61a4b1ca4fc5dbe\jetified-play-services-auth-base-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2010ad4907adc53cc0feaff18b557454\jetified-firebase-config-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2010ad4907adc53cc0feaff18b557454\jetified-firebase-config-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d7186f3bff41a82507b1b146097d3256\jetified-play-services-awareness-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d7186f3bff41a82507b1b146097d3256\jetified-play-services-awareness-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1fbea8392e97e9bdb72d531610610200\jetified-play-services-games-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1fbea8392e97e9bdb72d531610610200\jetified-play-services-games-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4fbe98c88620052edc0ec3d698ccd4d5\jetified-play-services-drive-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4fbe98c88620052edc0ec3d698ccd4d5\jetified-play-services-drive-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c70991ff5320e84d83d36c06554ee421\jetified-play-services-fido-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c70991ff5320e84d83d36c06554ee421\jetified-play-services-fido-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\bda2ec813ab4e585212624b8d566e732\jetified-firebase-dynamic-links-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\bda2ec813ab4e585212624b8d566e732\jetified-firebase-dynamic-links-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a7ea949a41aba671bd0d42163ad1f085\jetified-play-services-fitness-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a7ea949a41aba671bd0d42163ad1f085\jetified-play-services-fitness-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\eca35d0cfe50534489c76943c8db94cf\jetified-firebase-appindexing-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\eca35d0cfe50534489c76943c8db94cf\jetified-firebase-appindexing-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4d743701e292ababb92f6a05ead8280b\jetified-play-services-wallet-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4d743701e292ababb92f6a05ead8280b\jetified-play-services-wallet-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3b97247dc09826acf6932490d4bf2d14\play-services-identity-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3b97247dc09826acf6932490d4bf2d14\play-services-identity-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-instantapps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e273beba97d63c8db5e99086f4163d65\jetified-play-services-instantapps-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-instantapps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e273beba97d63c8db5e99086f4163d65\jetified-play-services-instantapps-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\08c094bf31ad2a64fff05b55dc8cc61f\jetified-play-services-location-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\08c094bf31ad2a64fff05b55dc8cc61f\jetified-play-services-location-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc8a351a61af878c43914a09080a46d\jetified-play-services-places-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc8a351a61af878c43914a09080a46d\jetified-play-services-places-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\7a4d3de997a6aa1ef4b4ade5b95b7660\jetified-play-services-nearby-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\7a4d3de997a6aa1ef4b4ade5b95b7660\jetified-play-services-nearby-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\337e764d10dbef1182a3b8be1d20a2b3\play-services-panorama-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\337e764d10dbef1182a3b8be1d20a2b3\play-services-panorama-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\039e5e17c53df937675023ca306537e0\jetified-play-services-plus-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\039e5e17c53df937675023ca306537e0\jetified-play-services-plus-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e5ae3c95cc349f1cff40b55e8ca80a24\jetified-play-services-safetynet-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e5ae3c95cc349f1cff40b55e8ca80a24\jetified-play-services-safetynet-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\97d64e85141a1db894db50793b6e01c2\play-services-vision-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\97d64e85141a1db894db50793b6e01c2\play-services-vision-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5cba6e96be41fd50c000770692ab5cb0\jetified-play-services-vision-common-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5cba6e96be41fd50c000770692ab5cb0\jetified-play-services-vision-common-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\251ef9d6fa2ad471f65cf7b1afd041ee\jetified-play-services-wearable-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\251ef9d6fa2ad471f65cf7b1afd041ee\jetified-play-services-wearable-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\076841225c8aecdc03a6b38a4eee8fa9\jetified-firebase-crash-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\076841225c8aecdc03a6b38a4eee8fa9\jetified-firebase-crash-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23f58ab2bc642e06e027b396f9fc1ff7\jetified-firebase-database-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23f58ab2bc642e06e027b396f9fc1ff7\jetified-firebase-database-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\83ced46eb2d0a76c548a4c75ae661a50\jetified-firebase-database-connection-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database-connection:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\83ced46eb2d0a76c548a4c75ae661a50\jetified-firebase-database-connection-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0bdb0ca647ab2661bee3a983e34346b5\jetified-firebase-storage-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-storage:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0bdb0ca647ab2661bee3a983e34346b5\jetified-firebase-storage-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-storage-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e90e23efd93ac70c83b92c48e079cfa3\jetified-firebase-storage-common-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-storage-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e90e23efd93ac70c83b92c48e079cfa3\jetified-firebase-storage-common-12.0.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ea6959e374293a35fc491628803dd6ef\play-services-gass-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ea6959e374293a35fc491628803dd6ef\play-services-gass-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6d925270a06208ffcb1354f8de9a1e41\jetified-play-services-tasks-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6d925270a06208ffcb1354f8de9a1e41\jetified-play-services-tasks-12.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\807e3f1d8a4640489d6f757b6903dd8e\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\807e3f1d8a4640489d6f757b6903dd8e\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d4ebfc95be76e9dc300d9100ccb9dfcd\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d4ebfc95be76e9dc300d9100ccb9dfcd\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dd5fc5a099aef28a67f93df4446647ae\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dd5fc5a099aef28a67f93df4446647ae\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ca7a8758a6dc5299bc8624f6d06e372e\recyclerview-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ca7a8758a6dc5299bc8624f6d06e372e\recyclerview-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\564388c32085138c359dac6cb7f3f8e1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\564388c32085138c359dac6cb7f3f8e1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a2a941aa4e6ab52251306224b3bb595c\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a2a941aa4e6ab52251306224b3bb595c\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fa974f7789519f660b0500bf3e2ef9d2\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fa974f7789519f660b0500bf3e2ef9d2\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0-rc01] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\170559c1b48dff819ce23fd23c98bb8f\palette-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0-rc01] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\170559c1b48dff819ce23fd23c98bb8f\palette-1.0.0-rc01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d92e74c548111a4842462bb118fb0728\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d92e74c548111a4842462bb118fb0728\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d703d4fb91397ebd0fcc249b0286692c\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d703d4fb91397ebd0fcc249b0286692c\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\985a133b102794b102b4aa622ca1dbef\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\985a133b102794b102b4aa622ca1dbef\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c449c5b1e03a5ea7862cd8fd75e41472\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c449c5b1e03a5ea7862cd8fd75e41472\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\05bcd3c4e41e95356da215f5546ac45f\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\05bcd3c4e41e95356da215f5546ac45f\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c00566a796c8bc87aa9bfe04c457a8ea\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c00566a796c8bc87aa9bfe04c457a8ea\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c8ebf87c1c29c88362d4ad2f5e9fa69e\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c8ebf87c1c29c88362d4ad2f5e9fa69e\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\318bfc0e146c18ed25c3a6b2db325bf4\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\318bfc0e146c18ed25c3a6b2db325bf4\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media2:media2:1.0.0-alpha02] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4bc8b7aacaca9b153cb641ac02525263\media2-1.0.0-alpha02\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media2:media2:1.0.0-alpha02] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4bc8b7aacaca9b153cb641ac02525263\media2-1.0.0-alpha02\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\55c801ebe9254aadd0bc70a611ebff34\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\55c801ebe9254aadd0bc70a611ebff34\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ac96be6fb81a47a5ed35cb50bf191a\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ac96be6fb81a47a5ed35cb50bf191a\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8ce023457c6feb6f1685f591c421bd20\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8ce023457c6feb6f1685f591c421bd20\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\563be99a7f8ba6717b67ce50a8a4b6a6\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\563be99a7f8ba6717b67ce50a8a4b6a6\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6de075386d20be281a87dfa1b2d6ac45\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6de075386d20be281a87dfa1b2d6ac45\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0e903dd799d54019ded37d0684a014d4\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0e903dd799d54019ded37d0684a014d4\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a09f34a7d8bb632b18d73f2937dc32e4\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a09f34a7d8bb632b18d73f2937dc32e4\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\44841f9ca2f4417b2d14d4adf0514cad\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\44841f9ca2f4417b2d14d4adf0514cad\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b44a7b7fbe32f24489315f23b9a24783\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b44a7b7fbe32f24489315f23b9a24783\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\325d0e9e870fa4d06b24c18c9ee90ee8\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\325d0e9e870fa4d06b24c18c9ee90ee8\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a9b612aa422320e030825edc18a2ab1\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a9b612aa422320e030825edc18a2ab1\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1004b84c1a71b13cd57fe025e0cc7af9\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1004b84c1a71b13cd57fe025e0cc7af9\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\de0d15be3df3800b00daf51b84bb8611\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\de0d15be3df3800b00daf51b84bb8611\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d83fe64bffd2c3a18b5121db5e3cda89\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d83fe64bffd2c3a18b5121db5e3cda89\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\9444e3cf77d3306ef4a80ba458253a45\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\9444e3cf77d3306ef4a80ba458253a45\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\9233c21f8ab497c46d13c1cb3bad199c\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\9233c21f8ab497c46d13c1cb3bad199c\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8eb7e2ed7289808f08001664d269b5bb\play-services-ads-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8eb7e2ed7289808f08001664d269b5bb\play-services-ads-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\cedafd2ff1cd08c0eb2fd3bc7f9e845d\play-services-ads-lite-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\cedafd2ff1cd08c0eb2fd3bc7f9e845d\play-services-ads-lite-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b4a907e7a5df6f2f3cc7f35af6ee7a11\play-services-analytics-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b4a907e7a5df6f2f3cc7f35af6ee7a11\play-services-analytics-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8dfb4a8d3d2c1344c4aa785e122279f0\play-services-analytics-impl-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8dfb4a8d3d2c1344c4aa785e122279f0\play-services-analytics-impl-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\38e15431a83bdc83c6622c7d924eb68b\play-services-appinvite-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\38e15431a83bdc83c6622c7d924eb68b\play-services-appinvite-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\41e36dcfecb21b098aa91e85fa1b8fa5\play-services-auth-api-phone-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\41e36dcfecb21b098aa91e85fa1b8fa5\play-services-auth-api-phone-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6861b4761d4aab3faeab63dfa91d8608\play-services-auth-base-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\6861b4761d4aab3faeab63dfa91d8608\play-services-auth-base-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8025f6b7ccad213073fa2eae634571b7\play-services-base-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8025f6b7ccad213073fa2eae634571b7\play-services-base-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5dc3d61b666e7491bd2fa3fe7abe4e04\play-services-cast-framework-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5dc3d61b666e7491bd2fa3fe7abe4e04\play-services-cast-framework-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0114a599d36a4841980036198c6388c1\play-services-cast-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0114a599d36a4841980036198c6388c1\play-services-cast-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2507acfdc6f7cd5c8395174b71ca0411\play-services-basement-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2507acfdc6f7cd5c8395174b71ca0411\play-services-basement-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5c2b2784153f9e94e4c8f936487c8910\firebase-config-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5c2b2784153f9e94e4c8f936487c8910\firebase-config-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dde10737c126aec9a833f6301d81d18e\play-services-awareness-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\dde10737c126aec9a833f6301d81d18e\play-services-awareness-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\51cda349f8a23d09a08f09868b6fd0e2\firebase-crash-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\51cda349f8a23d09a08f09868b6fd0e2\firebase-crash-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\33060b3390f6994bcda468ccae8a8757\play-services-drive-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\33060b3390f6994bcda468ccae8a8757\play-services-drive-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a85a533bdc094dbdd946f957bc7b06b0\play-services-fido-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a85a533bdc094dbdd946f957bc7b06b0\play-services-fido-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\be7b5665442e36c410371e65e7068c71\firebase-auth-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\be7b5665442e36c410371e65e7068c71\firebase-auth-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a319804353a60386d5ee16004e5c5aee\firebase-database-connection-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a319804353a60386d5ee16004e5c5aee\firebase-database-connection-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\18de31b2a86b8bbd238169b29daed857\firebase-database-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\18de31b2a86b8bbd238169b29daed857\firebase-database-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4afcc5ea3d267b7ffa1cb0b15dc8254e\firebase-dynamic-links-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4afcc5ea3d267b7ffa1cb0b15dc8254e\firebase-dynamic-links-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3523ad2f292bd73e2758e8ec41002bfb\firebase-iid-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3523ad2f292bd73e2758e8ec41002bfb\firebase-iid-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e1a3e250ba74c2bedf89075447ec36c\firebase-messaging-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e1a3e250ba74c2bedf89075447ec36c\firebase-messaging-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f919778678851fd8d177c4145696374f\firebase-storage-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f919778678851fd8d177c4145696374f\firebase-storage-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\36b39a5a7a7bdd06cbb57f8f99042225\firebase-storage-common-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\36b39a5a7a7bdd06cbb57f8f99042225\firebase-storage-common-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ac32f6c26fe67c7b4ff76c6414e53dcd\firebase-common-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ac32f6c26fe67c7b4ff76c6414e53dcd\firebase-common-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ae8ef716690f16cd3add5bae8877335e\play-services-fitness-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ae8ef716690f16cd3add5bae8877335e\play-services-fitness-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e974eab76cf17b37ecb3ee7ce9a17f13\play-services-games-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\e974eab76cf17b37ecb3ee7ce9a17f13\play-services-games-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\28bea0f33a6c86d9ca04eec8412c364b\play-services-gass-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\28bea0f33a6c86d9ca04eec8412c364b\play-services-gass-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\92bfc18ff286ee92a29dc60fe567c8b6\play-services-gcm-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\92bfc18ff286ee92a29dc60fe567c8b6\play-services-gcm-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e21774a843fdcf4e8a51ce69aeaf959\firebase-appindexing-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\3e21774a843fdcf4e8a51ce69aeaf959\firebase-appindexing-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23ff5714bc33eb6d828b1bb12e08116c\play-services-identity-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\23ff5714bc33eb6d828b1bb12e08116c\play-services-identity-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5633a8e765ce04e83e416deaaf82a7f6\play-services-iid-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5633a8e765ce04e83e416deaaf82a7f6\play-services-iid-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\147893677272137b4c8f30da018bdf04\play-services-instantapps-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\147893677272137b4c8f30da018bdf04\play-services-instantapps-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\27c484fd629ead99d429c9b63aa20743\play-services-location-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\27c484fd629ead99d429c9b63aa20743\play-services-location-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\756b8aabbe68aba709980d3028d4a120\play-services-maps-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\756b8aabbe68aba709980d3028d4a120\play-services-maps-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f23e18e8baa49b896e112a2af8ee6219\firebase-analytics-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f23e18e8baa49b896e112a2af8ee6219\firebase-analytics-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29359d941dd33e51a7707ac705e06b7a\firebase-analytics-impl-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29359d941dd33e51a7707ac705e06b7a\firebase-analytics-impl-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2de1f288283ba31a162c3f99569d8189\play-services-nearby-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2de1f288283ba31a162c3f99569d8189\play-services-nearby-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5e7b73432778fe5ab2b1d3696f9abfd3\play-services-panorama-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\5e7b73432778fe5ab2b1d3696f9abfd3\play-services-panorama-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8333f26186f0842059379d6728f64862\play-services-places-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\8333f26186f0842059379d6728f64862\play-services-places-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2c2f5a9ffc420726862f5258f65b7369\play-services-plus-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2c2f5a9ffc420726862f5258f65b7369\play-services-plus-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1c89f60328e7d697ed5e24b788f1dbc7\play-services-safetynet-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\1c89f60328e7d697ed5e24b788f1dbc7\play-services-safetynet-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ee47f586c3099bd3323c9d290b8f987c\play-services-tagmanager-api-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ee47f586c3099bd3323c9d290b8f987c\play-services-tagmanager-api-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f593c6d291b44da8f3c1e130031a850c\play-services-tagmanager-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f593c6d291b44da8f3c1e130031a850c\play-services-tagmanager-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aa8371a7f2edf3b075032454724e33e\play-services-tagmanager-v4-impl-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aa8371a7f2edf3b075032454724e33e\play-services-tagmanager-v4-impl-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d1e9553b23b1d4ca4ab22b5961a0c76c\play-services-tasks-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d1e9553b23b1d4ca4ab22b5961a0c76c\play-services-tasks-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c853aa15bc95bad91566bd8bda4ba7f6\play-services-vision-common-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\c853aa15bc95bad91566bd8bda4ba7f6\play-services-vision-common-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\423a885274ff9d25fe842ec3809459c6\play-services-vision-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\423a885274ff9d25fe842ec3809459c6\play-services-vision-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d194feda74e76583a021e8f74c6cdced\play-services-wallet-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d194feda74e76583a021e8f74c6cdced\play-services-wallet-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ed64bffcc128ceac8153b52f13934b\play-services-wearable-license-12.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\29ed64bffcc128ceac8153b52f13934b\play-services-wearable-license-12.0.1\AndroidManifest.xml:20:5-44
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.google.android.gms:play-services-ads:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\f2af9c896c6beedfd4bd4c7ec1cf6bbc\jetified-play-services-ads-12.0.1\AndroidManifest.xml:23:9-49
+	android:targetSdkVersion
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+		ADDED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+		INJECTED from C:\HEARC\Projets\Museodio\mobile\museodio\Museodio\app\src\main\AndroidManifest.xml
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:8:9-100
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:8:19-97
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:10:9-104
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:10:18-101
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:11:9-93
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\af9ba054799470067252be004009c528\jetified-play-services-cast-framework-12.0.1\AndroidManifest.xml:11:18-90
+supports-screens
+ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:11:5-14:40
+	android:largeScreens
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:13:9-36
+	android:normalScreens
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:14:9-37
+	android:anyDensity
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:12:9-34
+uses-feature#android.hardware.location.network
+ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:16:5-18:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:18:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:17:9-57
+uses-feature#android.hardware.location.gps
+ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:19:5-21:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:21:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:20:9-53
+uses-feature#android.hardware.telephony
+ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:22:5-24:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:24:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:23:9-50
+uses-feature#android.hardware.wifi
+ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:25:5-27:36
+	android:required
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:27:9-33
+	android:name
+		ADDED from [org.osmdroid:osmdroid-android:6.1.2] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\fe176114c43feb703ea5fc7da009876b\osmdroid-android-6.1.2\AndroidManifest.xml:26:9-45
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:29:9-33:64
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:32:13-37
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:31:13-122
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:33:13-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\88d50148dc4f9d82adee1175c509d70d\jetified-play-services-ads-lite-12.0.1\AndroidManifest.xml:30:13-65
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:27:5-68
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:27:5-68
+MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\316153ca7974b263ae4426ab932d2d70\jetified-play-services-analytics-impl-12.0.1\AndroidManifest.xml:27:5-68
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:27:22-65
+receiver#com.google.android.gms.analytics.AnalyticsReceiver
+ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:30:9-34:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:32:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:33:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:31:13-78
+service#com.google.android.gms.analytics.AnalyticsService
+ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:36:9-39:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:38:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:37:13-77
+service#com.google.android.gms.analytics.AnalyticsJobService
+ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:40:9-44:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:42:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:43:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:44:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\490e96ad96b094583ba75341f268c0a9\jetified-play-services-analytics-12.0.1\AndroidManifest.xml:41:13-80
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:25:9-34:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:27:13-36
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:28:13-59
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:26:13-76
+intent-filter#action:name:com.google.android.gms.appinvite.ACTION_PREVIEW+category:name:android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:29:13-33:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:30:17-90
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:30:25-87
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:32:17-76
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ff793f78ed48edd4c234fe7314a3fd08\jetified-play-services-appinvite-12.0.1\AndroidManifest.xml:32:27-73
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\ba08992e7167689e0d37b3d2354c0d53\jetified-play-services-auth-12.0.1\AndroidManifest.xml:34:13-89
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:23:9-29:75
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:25:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:27:13-48
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:26:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:28:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:29:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\580167ac9b51b6817c53a1dd539d0cd0\jetified-firebase-auth-12.0.1\AndroidManifest.xml:24:13-85
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\b84c5e0e125489aa9f7565352ab75c21\jetified-play-services-iid-12.0.1\AndroidManifest.xml:23:5-82
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:26:5-82
+MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\2d5816d4a8a2e00e987cc3cf4d88c915\jetified-play-services-gcm-12.0.1\AndroidManifest.xml:23:22-79
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\4aebcb359bb6a151e1ab68e6b2902c2a\jetified-play-services-maps-12.0.1\AndroidManifest.xml:28:9-32
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\a17e775fcda271e90e306234500bd6c4\jetified-play-services-base-12.0.1\AndroidManifest.xml:24:13-79
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:28:9-34:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:29:13-82
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:31:13-33:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:31:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:32:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\249c63b8e54df09dd43b32a00f6a4d0b\jetified-firebase-messaging-12.0.1\AndroidManifest.xml:32:25-75
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:27:9-30:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:29:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:28:13-79
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:32:9-44:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:35:13-37
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:34:13-36
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:33:13-87
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:tagmanager.c.${applicationId}
+ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:36:13-43:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:tagmanager.c.ch.hearc.museodio
+ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:36:13-43:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:37:17-72
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:37:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:39:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:42:17-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\60cd3625c6c375d7121a6e405c627258\jetified-play-services-tagmanager-api-12.0.1\AndroidManifest.xml:42:27-75
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:28:9-32:20
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:28:9-32:20
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:28:9-32:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:30:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:29:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:33:9-41:20
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:35:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:36:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:37:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:34:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:38:13-40:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:39:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:39:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:43:9-46:40
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:34:9-37:40
+MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\edc149adc2939385debe84953894322e\jetified-firebase-analytics-impl-12.0.1\AndroidManifest.xml:34:9-37:40
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:45:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:44:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:47:9-51:72
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:49:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:50:13-37
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:51:13-69
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\da765f7ea91235e927648e15a6ee97fb\jetified-firebase-analytics-12.0.1\AndroidManifest.xml:48:13-87
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:29:9-63
+permission#ch.hearc.museodio.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:28:5-30:47
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:30:9-44
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:29:9-63
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:32:22-76
+uses-permission#ch.hearc.museodio.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:32:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:32:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:35:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:38:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:36:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:${applicationId}
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:39:13-43:29
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+category:name:ch.hearc.museodio
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:39:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:40:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:40:25-78
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:42:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:42:27-58
+category#ch.hearc.museodio
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:42:17-61
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:42:27-58
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:50:9-56:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:51:13-77
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:53:13-55:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:53:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:54:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\85b81219eaca483b069f5b282802213f\jetified-firebase-iid-12.0.1\AndroidManifest.xml:54:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:8:9-12:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:11:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:12:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\d5f99606d140e522856fc55645690dbb\jetified-firebase-common-12.0.1\AndroidManifest.xml:9:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\roxane.carraux\.gradle\caches\transforms-2\files-2.1\0a685f00fb99ffa9a8ad21b9b9407e6f\jetified-play-services-basement-12.0.1\AndroidManifest.xml:24:13-58
