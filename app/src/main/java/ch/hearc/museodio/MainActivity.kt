@@ -12,24 +12,17 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.google.android.gms.location.*
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
+import com.birjuvachhani.locus.Locus
 
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        private const val REQUEST_PERMISSIONS_REQUEST_CODE = 1
-    }
-
     internal var map: MapView? = null
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private lateinit var locationRequest: LocationRequest
-    private lateinit var locationCallback: LocationCallback
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,25 +34,8 @@ class MainActivity : AppCompatActivity() {
         map = findViewById<MapView>(R.id.map) as MapView
         map!!.setTileSource(TileSourceFactory.MAPNIK)
 
-        this.fusedLocationClient = LocationServices.getFusedLocationProviderClient(ctx)
 
-        val permissionState = ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
-        if (permissionState != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION), REQUEST_PERMISSIONS_REQUEST_CODE)
-        }
-        else {
-            if(isLocationEnabled()){
-                getLocationUpdates()
-                fusedLocationClient!!.lastLocation.addOnCompleteListener{location ->
-                    if (location.result != null) {
-                        addLocationToMap(location.result.latitude, location.result.longitude)
-                    }
-                }
-            }
-            else {
-                Toast.makeText(this, "The application requires the location to work correctly", Toast.LENGTH_LONG)
-            }
-        }
+        startRequestingLocation()
     }
 
     public override fun onResume() {
@@ -67,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         map!!.onResume()
 
-        startLocationUpdates()
+        startRequestingLocation()
     }
 
     public override fun onPause() {
@@ -75,55 +51,17 @@ class MainActivity : AppCompatActivity() {
 
         map!!.onPause()
 
-        stopLocationUpdates()
+        stopRequestingLocation()
     }
 
-    @SuppressLint("RestrictedApi")
-    private fun getLocationUpdates()
-    {
-        locationRequest = LocationRequest()
-            .setInterval(1000)
-            .setFastestInterval(1000)
-            .setSmallestDisplacement(100f)
-            .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-
-        locationCallback = object : LocationCallback() {
-            override fun onLocationResult(locationResult: LocationResult?) {
-                locationResult ?: return
-                if (locationResult.locations.isNotEmpty()) {
-                    val location = locationResult.lastLocation
-                    addLocationToMap(location.latitude, location.longitude)
-                }
-            }
+    private fun startRequestingLocation() {
+        Locus.startLocationUpdates(this) { result ->
+            result.location?.let { addLocationToMap(it.latitude, it.longitude) }
         }
     }
 
-    private fun isLocationEnabled(): Boolean {
-        var locationManager: LocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
-            LocationManager.NETWORK_PROVIDER
-        )
-    }
-
-    private fun startLocationUpdates() {
-        fusedLocationClient.requestLocationUpdates(
-            locationRequest,
-            locationCallback,
-            null
-        )
-    }
-
-    private fun stopLocationUpdates() {
-        fusedLocationClient.removeLocationUpdates(locationCallback)
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        when (requestCode) {
-            REQUEST_PERMISSIONS_REQUEST_CODE -> {
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)
-                    startLocationUpdates()
-            }
-        }
+    private  fun stopRequestingLocation() {
+        Locus.stopLocationUpdates()
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
