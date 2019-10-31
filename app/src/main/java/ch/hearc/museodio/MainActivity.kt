@@ -177,7 +177,7 @@ class MainActivity : AppCompatActivity() {
         }
         if (!permissionToRecordAccepted) finish()
     }
-    
+
     private fun addLocationToMap(latitude: Double, longitude: Double){
         val mapController = map!!.getController()
         mapController.setZoom(9.5)
