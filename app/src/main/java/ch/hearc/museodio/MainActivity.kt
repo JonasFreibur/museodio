@@ -1,28 +1,24 @@
 package ch.hearc.museodio
 
 
-import android.Manifest
-import android.annotation.SuppressLint
-import android.content.Context
-import android.content.pm.PackageManager
-import android.location.LocationManager
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
+import ch.hearc.museodio.api.ServiceAPI
+import ch.hearc.museodio.api.model.AudioNote
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
 import com.birjuvachhani.locus.Locus
+import org.osmdroid.views.overlay.Marker
 
 
 class MainActivity : AppCompatActivity() {
 
     internal var map: MapView? = null
+    private lateinit var serviceAPI: ServiceAPI
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +32,8 @@ class MainActivity : AppCompatActivity() {
 
 
         startRequestingLocation()
+
+        ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
     }
 
     public override fun onResume() {
@@ -62,6 +60,14 @@ class MainActivity : AppCompatActivity() {
 
     private  fun stopRequestingLocation() {
         Locus.stopLocationUpdates()
+    }
+
+    private fun addAudioNoteToMap(audioNote: AudioNote){
+        val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+        val startMarker = Marker(map!!)
+        startMarker.setPosition(startPoint)
+        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+        map!!.getOverlays().add(startMarker)
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
