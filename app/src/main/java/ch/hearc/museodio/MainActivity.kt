@@ -32,6 +32,8 @@ import org.osmdroid.views.overlay.Marker
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
+private var fileName: String = ""
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,7 +41,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var serviceAPI: ServiceAPI
 
     /* Initialisation variables record */
-    private var fileName: String = ""
     private var recordButton: RecordButton? = null
     private var recorder: MediaRecorder? = null
     private var playButton: PlayButton? = null
@@ -169,6 +170,17 @@ class MainActivity : AppCompatActivity() {
     internal inner class SaveButton(ctx: Context) : AppCompatButton(ctx) {
         var clicker: OnClickListener = OnClickListener {
             //lancer a l'API
+            Locus.getCurrentLocation(ctx){result->
+                var lat=result.location?.latitude
+                var lon=result.location?.longitude
+
+                Log.i("audio",lat.toString()+" "+lon.toString())
+                if(lat!=null&&lon!=null) {
+                    var audio = AudioNote("fsjnks", "sdlfs", lat, lon, fileName)
+                    audio.save()
+                }
+            }
+
         }
         init {
             text = "Save recording"
