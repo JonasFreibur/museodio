@@ -1,8 +1,10 @@
 package ch.hearc.museodio
 
 
+import android.content.Context
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.AudioNote
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         startRequestingLocation()
 
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
+
+        // val apiKey = ServiceAPI.loadApiKey(this.applicationContext)
     }
 
     public override fun onResume() {
