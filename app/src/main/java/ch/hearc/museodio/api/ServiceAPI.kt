@@ -2,20 +2,14 @@ package ch.hearc.museodio.api
 
 import android.content.Context
 import android.util.Log
-import android.widget.Toast
-import ch.hearc.museodio.MainActivity
 import ch.hearc.museodio.R
 import ch.hearc.museodio.api.model.AudioNote
-import ch.hearc.museodio.api.model.LoginToken
+import ch.hearc.museodio.api.model.PassportToken
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.*
 import com.github.kittinunf.fuel.core.extensions.authentication
-import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import kotlin.math.log
-import org.json.JSONArray
-import org.json.JSONObject
 import java.io.File
 
 
@@ -31,7 +25,7 @@ class ServiceAPI {
             Fuel.post(url + "/login")
                 .header("Content-Type", "application/json")
                 .body(dataJson.toString())
-                .responseObject(LoginToken.Deserializer()){ request, response, result ->
+                .responseObject(PassportToken.Deserializer()){ request, response, result ->
                     val (loginToken, err) = result
                     var isLoggedIn = false
 
@@ -55,25 +49,26 @@ class ServiceAPI {
                 }
         }
 
-        fun signup(firstName: String, lastName: String, email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
-            val dataJson: JsonObject = JsonParser().parse("{\"firstname\":$firstName" +
-                                                                "\"lastname\":$lastName" +
+        fun signUp(firstName: String, lastName: String, email: String, password: String, passwordConfirmation: String,
+                   context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
+            val dataJson: JsonObject = JsonParser().parse("{\"firstname\":$firstName," +
+                                                                "\"lastname\":$lastName," +
                                                                 "\"email\":$email, " +
-                                                                "\"password\": $password}").getAsJsonObject()
+                                                                "\"password\": $password," +
+                                                                "\"password_confirmation\":$passwordConfirmation}").getAsJsonObject()
 
             Fuel.post(url + "/register")
                 .header("Content-Type", "application/json")
                 .body(dataJson.toString())
-                .responseObject(LoginToken.Deserializer()){ request, response, result ->
+                .responseObject(PassportToken.Deserializer()){ request, response, result ->
                     val (loginToken, err) = result
-                    var isLoggedIn = false
+                    var isSignedUp = false
 
-                    if(loginToken?.success?.token != null){
-                        saveApiKey(loginToken.success.token, context)
-                        isLoggedIn = true
+                    if(loginToken?.success?.token != null) {
+                        isSignedUp = true
                     }
 
-                    callbackFn(isLoggedIn)
+                    callbackFn(isSignedUp)
                 }
         }
 

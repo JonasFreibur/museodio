@@ -36,7 +36,7 @@
         android:text="Email" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextSignupEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -46,19 +46,45 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Password" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/editTextPasswordSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password confirmation" />
+
+    <EditText
+        android:id="@+id/editTextPasswordConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign up" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/buttonLoginIntent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to login" />
 
 </LinearLayout>

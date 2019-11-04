@@ -1,11 +1,8 @@
 package ch.hearc.museodio
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.TextView
 import ch.hearc.museodio.api.ServiceAPI
 import kotlinx.android.synthetic.main.activity_login.*
 import android.content.Intent
@@ -20,8 +17,8 @@ class LoginActivity : AppCompatActivity() {
 
         buttonLogin.setOnClickListener(object: View.OnClickListener {
             override fun onClick(v: View?) {
-                var email = editTextEmail.text.toString()
-                var password = editTextPassword.text.toString()
+                val email = editTextEmail.text.toString()
+                val password = editTextPassword.text.toString()
 
                 if(email.trim().isEmpty() || password.trim().isEmpty()) {
                     Toast.makeText(this@LoginActivity, "Empty email or password", Toast.LENGTH_LONG).show()
@@ -30,6 +27,12 @@ class LoginActivity : AppCompatActivity() {
                     ServiceAPI.login(email, password, this@LoginActivity.applicationContext, ::loginCallback)
                 }
 
+            }
+        })
+
+        buttonSignUpIntent.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(v: View?) {
+                loadSignUpActivity()
             }
         })
     }
@@ -43,10 +46,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loadMainActivity() {
-        val myIntent = Intent(this, MainActivity::class.java)
-        startActivity(myIntent)
+        val mainActivityIntent = Intent(this, MainActivity::class.java)
+        startActivity(mainActivityIntent)
     }
 
+    private fun loadSignUpActivity() {
+        val signUpActivityIntent = Intent(this, SignUpActivity::class.java)
+        startActivity(signUpActivityIntent)
+    }
 
 
 }
