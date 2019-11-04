@@ -9,13 +9,14 @@ import ch.hearc.museodio.api.model.AudioNote
 import ch.hearc.museodio.api.model.LoginToken
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.*
+import com.github.kittinunf.fuel.core.extensions.authentication
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import kotlin.math.log
 import org.json.JSONArray
 import org.json.JSONObject
-
+import java.io.File
 
 
 class ServiceAPI {
@@ -52,6 +53,53 @@ class ServiceAPI {
                         callbackFn(audioNote)
                     }
                 }
+        }
+
+        fun signup(firstName: String, lastName: String, email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
+            val dataJson: JsonObject = JsonParser().parse("{\"firstname\":$firstName" +
+                                                                "\"lastname\":$lastName" +
+                                                                "\"email\":$email, " +
+                                                                "\"password\": $password}").getAsJsonObject()
+
+            Fuel.post(url + "/register")
+                .header("Content-Type", "application/json")
+                .body(dataJson.toString())
+                .responseObject(LoginToken.Deserializer()){ request, response, result ->
+                    val (loginToken, err) = result
+                    var isLoggedIn = false
+
+                    if(loginToken?.success?.token != null){
+                        saveApiKey(loginToken.success.token, context)
+                        isLoggedIn = true
+                    }
+
+                    callbackFn(isLoggedIn)
+                }
+        }
+
+        fun downloadAudioNote(fileName: String, bearerToken: String) {
+            Fuel.download(url + "/audio-notes/download/${fileName}", method=Method.GET)
+                .fileDestination(){ response, url ->
+                    Log.i("Bonjour", response.toString())
+                    File.createTempFile("temp", "tmp.mp3") }
+                .authentication()
+                .bearer(bearerToken)
+                .responseString(){ result ->
+                    val (audioNote, err) = result
+                    Log.i("Bonjour", audioNote.toString())
+                }
+        }
+
+        fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double) {
+
+            val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
+
+            Fuel.upload(url + "/audio-notes/save", method = Method.POST)
+                .add(FileDataPart.from("path_to_your_file", name = "image"))
+                .header("Content-Type", "application/json")
+                .body(dataJson.toString())
+                .authentication()
+                .bearer(bearerToken)
         }
 
         fun saveApiKey(apiKey: String?, context: Context) {

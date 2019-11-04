@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
 
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
 
-        // val apiKey = ServiceAPI.loadApiKey(this.applicationContext)
+        val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
+        ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken)
     }
 
     public override fun onResume() {
