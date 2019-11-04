@@ -39,6 +39,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginCallback(isLoggedIn: Boolean){
         if(isLoggedIn){
+            runOnUiThread() {Toast.makeText(this, "Successfully logged in", Toast.LENGTH_SHORT).show()}
             loadMainActivity()
         } else {
             runOnUiThread() {Toast.makeText(this, "Incorrect password or email", Toast.LENGTH_LONG).show()}

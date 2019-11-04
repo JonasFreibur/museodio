@@ -75,7 +75,7 @@ class ServiceAPI {
         fun downloadAudioNote(fileName: String, bearerToken: String) {
             Fuel.download(url + "/audio-notes/download/${fileName}", method=Method.GET)
                 .fileDestination(){ response, url ->
-                    Log.i("Bonjour", response.toString())
+                    response.body()
                     File.createTempFile("temp", "tmp.mp3") }
                 .authentication()
                 .bearer(bearerToken)

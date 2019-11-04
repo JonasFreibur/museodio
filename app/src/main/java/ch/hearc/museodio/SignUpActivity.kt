@@ -28,11 +28,9 @@ class SignUpActivity: AppCompatActivity() {
                 if(firstName.trim().isEmpty() || lastName.trim().isEmpty() ||
                     email.trim().isEmpty() || password.trim().isEmpty() ||
                     passwordConfirmation.trim().isEmpty()) {
-                    Log.i("Bonjour", "Should toast")
                     Toast.makeText(this@SignUpActivity, "Empty email or password", Toast.LENGTH_LONG).show()
                 }
                 else {
-                    Log.i("Bonjour", "calling sign up")
                     ServiceAPI.signUp(firstName, lastName, email,
                                       password, passwordConfirmation, this@SignUpActivity.applicationContext, ::signUpCallback)
                 }
@@ -48,6 +46,7 @@ class SignUpActivity: AppCompatActivity() {
 
     private fun signUpCallback(isSignedUp: Boolean) {
         if(isSignedUp){
+            runOnUiThread() {Toast.makeText(this, "Successfully signed up", Toast.LENGTH_SHORT).show()}
             loadLoginActivity()
         } else {
             runOnUiThread() {Toast.makeText(this, "Failed to sign up, make sure all fields are correct", Toast.LENGTH_LONG).show()}
