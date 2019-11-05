@@ -4,13 +4,12 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
-import android.location.LocationManager
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
+import ch.hearc.museodio.api.ServiceAPI
+import ch.hearc.museodio.api.model.AudioNote
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
@@ -24,7 +23,9 @@ import android.view.View.OnClickListener
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.app.ActivityCompat
 import com.birjuvachhani.locus.Locus
+import org.osmdroid.views.overlay.Marker
 
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -33,6 +34,7 @@ private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
 class MainActivity : AppCompatActivity() {
 
     internal var map: MapView? = null
+    private lateinit var serviceAPI: ServiceAPI
 
     /* Initialisation variables record */
     private var fileName: String = ""
@@ -86,6 +88,10 @@ class MainActivity : AppCompatActivity() {
         linearLayout.addView(l1)
         startRequestingLocation()
 
+        ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
+
+        val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
+        ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken)
     }
 
     public override fun onResume() {
@@ -122,6 +128,13 @@ class MainActivity : AppCompatActivity() {
         Locus.stopLocationUpdates()
     }
 
+    private fun addAudioNoteToMap(audioNote: AudioNote){
+        val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+        val startMarker = Marker(map!!)
+        startMarker.setPosition(startPoint)
+        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+        map!!.getOverlays().add(startMarker)
+    }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
         val mapController = map!!.getController()
