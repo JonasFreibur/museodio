@@ -26,6 +26,9 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import com.birjuvachhani.locus.Locus
 import org.osmdroid.views.overlay.Marker
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -146,6 +149,19 @@ class MainActivity : AppCompatActivity() {
         myLocationOverlay.enableFollowLocation()
         myLocationOverlay.enableMyLocation()
         map!!.getOverlays().add(myLocationOverlay)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.searchUsers -> {
+            
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 
     /* functions and classes to record part */

@@ -17,7 +17,7 @@ class ServiceAPI {
 
     companion object{
 
-        private var url : String = "http://10.0.2.2:8000/api"
+        private var url : String = "http://157.26.104.137:8888/museodio/public/api"
 
         fun login(email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
             val dataJson: JsonObject = JsonParser().parse("{\"email\":$email, \"password\": $password}").getAsJsonObject()
