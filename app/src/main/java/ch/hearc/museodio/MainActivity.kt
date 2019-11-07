@@ -1,11 +1,10 @@
 package ch.hearc.museodio
 
-
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
-import android.location.LocationManager
+
 import android.os.Bundle
 import android.preference.PreferenceManager
 import androidx.appcompat.app.AppCompatActivity
@@ -92,6 +91,10 @@ class MainActivity : AppCompatActivity() {
         startRequestingLocation()
 
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
+
+        val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
+        ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken)
+
     }
 
     public override fun onResume() {
@@ -128,7 +131,6 @@ class MainActivity : AppCompatActivity() {
         Locus.stopLocationUpdates()
     }
 
-
     private fun addAudioNoteToMap(audioNote: AudioNote){
         val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
         val startMarker = Marker(map!!)
@@ -136,7 +138,6 @@ class MainActivity : AppCompatActivity() {
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         map!!.getOverlays().add(startMarker)
     }
-
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
         val mapController = map!!.getController()
@@ -170,6 +171,7 @@ class MainActivity : AppCompatActivity() {
     internal inner class SaveButton(ctx: Context) : AppCompatButton(ctx) {
         var clicker: OnClickListener = OnClickListener {
             //lancer a l'API
+            /*
             Locus.getCurrentLocation(ctx){result->
                 var lat=result.location?.latitude
                 var lon=result.location?.longitude
@@ -179,7 +181,7 @@ class MainActivity : AppCompatActivity() {
                     var audio = AudioNote("fsjnks", "sdlfs", lat, lon, fileName)
                     audio.save()
                 }
-            }
+            }*/
 
         }
         init {

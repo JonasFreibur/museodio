@@ -15,10 +15,5 @@ data class AudioNote(var firstName: String,
         override fun deserialize(content: String): Array<AudioNote>? = Gson().fromJson(content, Array<AudioNote>::class.java)
     }
 
-    fun save()
-    {
-        ServiceAPI.saveAudioNote(this)
-
-    }
 
 }
