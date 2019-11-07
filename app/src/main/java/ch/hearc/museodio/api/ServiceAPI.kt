@@ -82,12 +82,8 @@ class ServiceAPI {
 
         fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double,fileName:String) {
 
-            Log.i("Bpnjour1",latitude.toString()+longitude.toString())
             val data: DataPart = FileDataPart.from(fileName, name = "audio", contentType = "multipart/form-data")
-            Log.i("Bpnjour2", data.toString())
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
-
-            Log.i("Bponjour3",dataJson.toString())
 
             Fuel.upload(url + "/audio-notes/save", method = Method.POST)
                 .add(data, InlineDataPart(latitude.toString(), name="latitude", contentType="multipart/form-data"),InlineDataPart(longitude.toString(), name="longitude", contentType="multipart/form-data"))
@@ -95,8 +91,8 @@ class ServiceAPI {
                 .bearer(bearerToken)
                 .responseString(){ result ->
                     val (test, err) = result
-                    Log.i("adkajhkda",test)
-                    Log.i("sjfsl",err.toString())
+                    Log.i("reponse",test)
+
                 }
         }
 
