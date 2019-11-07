@@ -171,17 +171,18 @@ class MainActivity : AppCompatActivity() {
     internal inner class SaveButton(ctx: Context) : AppCompatButton(ctx) {
         var clicker: OnClickListener = OnClickListener {
             //lancer a l'API
-            /*
+
             Locus.getCurrentLocation(ctx){result->
                 var lat=result.location?.latitude
                 var lon=result.location?.longitude
 
                 Log.i("audio",lat.toString()+" "+lon.toString())
-                if(lat!=null&&lon!=null) {
-                    var audio = AudioNote("fsjnks", "sdlfs", lat, lon, fileName)
-                    audio.save()
+                if(lat!=null && lon!=null) {
+                    ServiceAPI.uploadAudioNote(ServiceAPI.loadApiKey(ctx) ,lat,lon,fileName)
                 }
-            }*/
+            }
+
+
 
         }
         init {
@@ -267,4 +268,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+
+// source : https://developer.android.com/guide/topics/media/mediarecorder
 
