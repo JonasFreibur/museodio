@@ -84,7 +84,6 @@ class ServiceAPI {
 
             val data: DataPart = FileDataPart.from(fileName, name = "audio", contentType = "multipart/form-data")
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
-
             Fuel.upload(url + "/audio-notes/save", method = Method.POST)
                 .add(data, InlineDataPart(latitude.toString(), name="latitude", contentType="multipart/form-data"),InlineDataPart(longitude.toString(), name="longitude", contentType="multipart/form-data"))
                 .authentication()
