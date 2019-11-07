@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     private var recorder: MediaRecorder? = null
     private var playButton: PlayButton? = null
     private var saveButton: SaveButton? = null
-    private var player: MediaPlayer? = null
+    private var player: MediaPlayer = MediaPlayer()
     private var permissionToRecordAccepted = false
     private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO,Manifest.permission.ACCESS_COARSE_LOCATION)
 
@@ -95,9 +95,8 @@ class MainActivity : AppCompatActivity() {
 
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
 
-        val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
-        // ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken, this.applicationContext, ::playFile)
-        // playFile("11_2019_10_28_16_10_36.mp3", bearerToken)
+        //val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
+        //playFile("11_2019_10_28_16_10_36.mp3", bearerToken)
     }
 
     public override fun onResume() {
@@ -139,6 +138,7 @@ class MainActivity : AppCompatActivity() {
         val startMarker = Marker(map!!)
         startMarker.setPosition(startPoint)
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+        startMarker.subDescription = "${audioNote.firstName}, ${audioNote.lastName}"
         map!!.getOverlays().add(startMarker)
     }
 
@@ -207,7 +207,7 @@ class MainActivity : AppCompatActivity() {
         val headers: Map<String, String>? = mapOf("Authorization" to "Bearer $token")
         headers.toString().replace("=", ":")
 
-        player = MediaPlayer().apply {
+        player.apply {
             try {
             setDataSource(
                 this@MainActivity.applicationContext,
@@ -226,7 +226,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startPlaying() {
-        player = MediaPlayer().apply {
+        player.apply {
             try {
                 setDataSource(fileName)
                 prepare()
@@ -238,7 +238,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun stopPlaying() {
-        player?.release()
+        player.release()
     }
 
     private fun onRecord(start: Boolean) = if (start) {
@@ -274,8 +274,7 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
         recorder?.release()
         recorder = null
-        player?.release()
-        player = null
+        player.release()
     }
 }
 
