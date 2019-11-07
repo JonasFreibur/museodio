@@ -76,7 +76,6 @@ class ServiceAPI {
         fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double) {
 
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
-
             Fuel.upload(url + "/audio-notes/save", method = Method.POST)
                 .add(FileDataPart.from("path_to_your_file", name = "image"))
                 .header("Content-Type", "application/json")

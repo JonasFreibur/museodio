@@ -141,6 +141,7 @@ class MainActivity : AppCompatActivity() {
         startMarker.setOnMarkerClickListener { marker, mapView ->
             val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
             this@MainActivity.playFile(audioNote.file_name, bearerToken)
+            marker.showInfoWindow()
             false
         }
 
@@ -214,7 +215,7 @@ class MainActivity : AppCompatActivity() {
     private fun playFile(filename: String, token: String){
         val headers: Map<String, String>? = mapOf("Authorization" to "Bearer $token")
         headers.toString().replace("=", ":")
-        Log.i("Bonjour2", filename)
+
         player.apply {
             try {
                 setDataSource(
