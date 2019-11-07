@@ -18,6 +18,7 @@ class ServiceAPI {
     companion object{
 
         private var url : String = "http://10.0.2.2:8000/api"
+        //private var url : String = "http://127.0.0.1:81/museodio/public/api"
 
 
         fun login(email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
@@ -61,11 +62,11 @@ class ServiceAPI {
             Fuel.post(url + "/register")
                 .header("Content-Type", "application/json")
                 .body(dataJson.toString())
-                .responseObject(PassportToken.Deserializer()){ request, response, result ->
+                .responseObject(PassportToken.Deserializer()) { request, response, result ->
                     val (loginToken, err) = result
                     var isSignedUp = false
 
-                    if(loginToken?.success?.token != null) {
+                    if (loginToken?.success?.token != null) {
                         isSignedUp = true
                     }
 
@@ -82,7 +83,6 @@ class ServiceAPI {
                 .bearer(bearerToken)
                 .responseString(){ result ->
                     val (audioNote, err) = result
-                    Log.i("Bonjour", audioNote.toString())
                 }
         }
 
@@ -96,6 +96,10 @@ class ServiceAPI {
                 .body(dataJson.toString())
                 .authentication()
                 .bearer(bearerToken)
+                .responseString(){ result ->
+                    val (audioNote, err) = result
+
+                }
         }
 
         fun saveApiKey(apiKey: String?, context: Context) {
@@ -112,7 +116,6 @@ class ServiceAPI {
         fun loadApiKey(context: Context): String {
             val sharedPref = context.getSharedPreferences(context.getString(R.string.preference_file), Context.MODE_PRIVATE) ?: return ""
             val apiKey = sharedPref.getString(context.getString(R.string.museodio_api_key), "")
-
             return apiKey!!
         }
     }

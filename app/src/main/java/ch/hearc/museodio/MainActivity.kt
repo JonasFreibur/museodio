@@ -36,6 +36,9 @@ private var fileName: String = ""
 
 class MainActivity : AppCompatActivity() {
 
+
+
+
     internal var map: MapView? = null
     private lateinit var serviceAPI: ServiceAPI
 
@@ -51,6 +54,7 @@ class MainActivity : AppCompatActivity() {
     /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         val ctx = applicationContext
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
@@ -91,8 +95,9 @@ class MainActivity : AppCompatActivity() {
         startRequestingLocation()
 
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
-
         val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
+
+
         ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken)
 
     }
