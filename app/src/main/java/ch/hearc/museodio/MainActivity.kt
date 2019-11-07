@@ -96,8 +96,8 @@ class MainActivity : AppCompatActivity() {
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
 
         val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
-        // ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken, this.applicationContext, ::playFile)
-        // playFile("11_2019_10_28_16_10_36.mp3", bearerToken)
+       //ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken, this.applicationContext, ::playFile)
+        playFile("11_2019_10_28_16_10_36.mp3", bearerToken)
     }
 
     public override fun onResume() {
@@ -211,7 +211,7 @@ class MainActivity : AppCompatActivity() {
             try {
             setDataSource(
                 this@MainActivity.applicationContext,
-                Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
+                Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
                 headers
             )
             prepare()
