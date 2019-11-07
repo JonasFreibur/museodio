@@ -73,18 +73,6 @@ class ServiceAPI {
                 }
         }
 
-        fun downloadAudioNote(fileName: String, bearerToken: String, context: Context, callbackFn: (file : File) -> Unit) {
-            Fuel.download(url + "/audio-notes/download/${fileName}", method=Method.GET)
-                .fileDestination { response, url ->
-                    File(context.filesDir,"test.mp3")
-                }
-                .authentication()
-                .bearer(bearerToken)
-                .responseString(){ result ->
-                    callbackFn(File(context.filesDir,"test.mp3"))
-                }
-        }
-
         fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double) {
 
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
