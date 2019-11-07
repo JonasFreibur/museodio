@@ -158,7 +158,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.searchUsers -> {
-            
+
             true
         }
         else -> super.onOptionsItemSelected(item)
