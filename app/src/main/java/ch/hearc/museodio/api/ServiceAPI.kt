@@ -6,8 +6,9 @@ import ch.hearc.museodio.R
 import ch.hearc.museodio.api.model.AudioNote
 import ch.hearc.museodio.api.model.PassportToken
 import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.core.FileDataPart
+import com.github.kittinunf.fuel.core.Method
 
-import com.github.kittinunf.fuel.core.*
 import com.github.kittinunf.fuel.core.extensions.authentication
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
@@ -17,7 +18,10 @@ class ServiceAPI {
 
     companion object{
 
-        private var url : String = "http://10.0.2.2:8000/museodio/public/api"
+
+        //private var url : String = "http://10.0.2.2:8000/museodio/public/api"
+
+        private var url : String = "http://10.0.2.2:81/museodio/public/api"
 
         fun login(email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
             val dataJson: JsonObject = JsonParser().parse("{\"email\":$email, \"password\": $password}").getAsJsonObject()
@@ -72,19 +76,11 @@ class ServiceAPI {
                 }
         }
 
-        fun downloadAudioNote(fileName: String, bearerToken: String) {
-            Fuel.download(url + "/audio-notes/download/${fileName}", method=Method.GET)
-                .fileDestination(){ response, url ->
-                    response.body()
-                    File.createTempFile("temp", "tmp.mp3") }
-                .authentication()
-                .bearer(bearerToken)
-                .responseString(){ result ->
-                    val (audioNote, err) = result
-                }
-        }
 
-        fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double, fileName: String) {
+        fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double,fileName:String) {
+
+            Log.i("sldfjsjl","adjha")
+
 
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
 
@@ -95,8 +91,8 @@ class ServiceAPI {
                 .authentication()
                 .bearer(bearerToken)
                 .responseString(){ result ->
-                    val (audioNote, err) = result
-
+                    val (test, err) = result
+                    Log.i("adkajhkda",test)
                 }
         }
 

@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
+import android.media.AudioManager
 
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -18,6 +19,8 @@ import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
 import android.media.MediaPlayer
 import android.media.MediaRecorder
 import android.util.Log
+import android.net.Uri
+import android.os.PowerManager
 import java.io.IOException
 import android.widget.LinearLayout
 import android.view.View.OnClickListener
@@ -27,6 +30,9 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import com.birjuvachhani.locus.Locus
 import org.osmdroid.views.overlay.Marker
+import java.io.File
+import java.io.FileInputStream
+import java.net.URI
 
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -69,7 +75,6 @@ class MainActivity : AppCompatActivity() {
             ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION)
         }
 
-
         /* Initialisation record élément */
         fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
         recordButton = RecordButton(this)
@@ -97,9 +102,8 @@ class MainActivity : AppCompatActivity() {
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
         val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
 
-
-        ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken)
-
+       //ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken, this.applicationContext, ::playFile)
+        playFile("11_2019_10_28_16_10_36.mp3", bearerToken)
     }
 
     public override fun onResume() {
@@ -218,6 +222,28 @@ class MainActivity : AppCompatActivity() {
         stopPlaying()
     }
 
+    private fun playFile(filename: String, token: String){
+        val headers: Map<String, String>? = mapOf("Authorization" to "Bearer $token")
+        headers.toString().replace("=", ":")
+
+        player = MediaPlayer().apply {
+            try {
+            setDataSource(
+                this@MainActivity.applicationContext,
+                Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
+                headers
+            )
+            prepare()
+            setWakeMode(this@MainActivity, PowerManager.PARTIAL_WAKE_LOCK)
+            setOnPreparedListener(MediaPlayer.OnPreparedListener {
+                start()
+            })
+            } catch (e: IOException) {
+                Log.e(LOG_TAG_RECORD, "prepare() failed $e")
+            }
+        }
+    }
+
     private fun startPlaying() {
         player = MediaPlayer().apply {
             try {
@@ -232,7 +258,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun stopPlaying() {
         player?.release()
-        player = null
     }
 
     private fun onRecord(start: Boolean) = if (start) {
