@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         /* Initialisation record élément */
-        fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
+        fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.mp3"
         recordButton = RecordButton(this)
         playButton = PlayButton(this)
         saveButton = SaveButton(this)
@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
         val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
 
        //ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken, this.applicationContext, ::playFile)
-        playFile("11_2019_10_28_16_10_36.mp3", bearerToken)
+        //playFile("11_2019_10_28_16_10_36.mp3", bearerToken)
     }
 
     public override fun onResume() {
@@ -189,6 +189,8 @@ class MainActivity : AppCompatActivity() {
                 if(lat!=null && lon!=null) {
                     ServiceAPI.uploadAudioNote(ServiceAPI.loadApiKey(ctx) ,lat,lon,fileName)
                 }
+
+
             }
 
 
@@ -269,7 +271,7 @@ class MainActivity : AppCompatActivity() {
     private fun startRecording() {
         recorder = MediaRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
-            setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
+            setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
             setOutputFile(fileName)
             setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
             try {

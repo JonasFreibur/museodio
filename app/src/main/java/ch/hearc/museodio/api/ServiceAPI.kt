@@ -2,11 +2,14 @@ package ch.hearc.museodio.api
 
 import android.content.Context
 import android.util.Log
+import androidx.core.text.parseAsHtml
 import ch.hearc.museodio.R
 import ch.hearc.museodio.api.model.AudioNote
 import ch.hearc.museodio.api.model.PassportToken
 import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.core.DataPart
 import com.github.kittinunf.fuel.core.FileDataPart
+import com.github.kittinunf.fuel.core.InlineDataPart
 import com.github.kittinunf.fuel.core.Method
 
 import com.github.kittinunf.fuel.core.extensions.authentication
@@ -79,20 +82,21 @@ class ServiceAPI {
 
         fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double,fileName:String) {
 
-            Log.i("sldfjsjl","adjha")
-
-
+            Log.i("Bpnjour1",latitude.toString()+longitude.toString())
+            val data: DataPart = FileDataPart.from(fileName, name = "audio", contentType = "multipart/form-data")
+            Log.i("Bpnjour2", data.toString())
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
 
+            Log.i("Bponjour3",dataJson.toString())
+
             Fuel.upload(url + "/audio-notes/save", method = Method.POST)
-                .add(FileDataPart.from(fileName, name = "image"))
-                .header("Content-Type", "application/json")
-                .body(dataJson.toString())
+                .add(data, InlineDataPart(latitude.toString(), name="latitude", contentType="multipart/form-data"),InlineDataPart(longitude.toString(), name="longitude", contentType="multipart/form-data"))
                 .authentication()
                 .bearer(bearerToken)
                 .responseString(){ result ->
                     val (test, err) = result
                     Log.i("adkajhkda",test)
+                    Log.i("sjfsl",err.toString())
                 }
         }
 
