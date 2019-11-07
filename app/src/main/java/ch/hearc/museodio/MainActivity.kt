@@ -4,6 +4,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
+import android.media.AudioManager
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.util.Log
@@ -17,6 +18,8 @@ import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
 import android.media.MediaPlayer
 import android.media.MediaRecorder
+import android.net.Uri
+import android.os.PowerManager
 import java.io.IOException
 import android.widget.LinearLayout
 import android.view.View.OnClickListener
@@ -26,6 +29,9 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import com.birjuvachhani.locus.Locus
 import org.osmdroid.views.overlay.Marker
+import java.io.File
+import java.io.FileInputStream
+import java.net.URI
 
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -42,8 +48,9 @@ class MainActivity : AppCompatActivity() {
     private var recorder: MediaRecorder? = null
     private var playButton: PlayButton? = null
     private var saveButton: SaveButton? = null
-    private var player: MediaPlayer? = null
+    private var player: MediaPlayer = MediaPlayer()
     private var permissionToRecordAccepted = false
+    private var isMapCentered: Boolean = false
     private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO,Manifest.permission.ACCESS_COARSE_LOCATION)
 
     /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
@@ -62,7 +69,6 @@ class MainActivity : AppCompatActivity() {
         if ( permissionRecord!= PackageManager.PERMISSION_GRANTED ) {
             ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION)
         }
-
 
         /* Initialisation record élément */
         fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
@@ -89,9 +95,6 @@ class MainActivity : AppCompatActivity() {
         startRequestingLocation()
 
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
-
-        val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
-        ServiceAPI.downloadAudioNote("11_2019_10_28_16_10_36.mp3", bearerToken)
     }
 
     public override fun onResume() {
@@ -133,18 +136,30 @@ class MainActivity : AppCompatActivity() {
         val startMarker = Marker(map!!)
         startMarker.setPosition(startPoint)
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+        startMarker.subDescription = "${audioNote.firstName}, ${audioNote.lastName}"
+
+        startMarker.setOnMarkerClickListener { marker, mapView ->
+            val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
+            this@MainActivity.playFile(audioNote.file_name, bearerToken)
+            marker.showInfoWindow()
+            false
+        }
+
         map!!.getOverlays().add(startMarker)
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
         val mapController = map!!.getController()
-        mapController.setZoom(9.5)
-        val startPoint = GeoPoint(latitude, longitude)
-        mapController.setCenter(startPoint)
+        if(!isMapCentered) {
+            mapController.setZoom(9.5)
+            val startPoint = GeoPoint(latitude, longitude)
+            mapController.setCenter(startPoint)
+            isMapCentered = true
+        }
 
         val myLocationOverlay = MyLocationNewOverlay(map!!)
-        myLocationOverlay.enableFollowLocation()
-        myLocationOverlay.enableMyLocation()
+        //myLocationOverlay.enableFollowLocation()
+        //myLocationOverlay.enableMyLocation()
         map!!.getOverlays().add(myLocationOverlay)
     }
 
@@ -197,9 +212,34 @@ class MainActivity : AppCompatActivity() {
         stopPlaying()
     }
 
-    private fun startPlaying() {
-        player = MediaPlayer().apply {
+    private fun playFile(filename: String, token: String){
+        val headers: Map<String, String>? = mapOf("Authorization" to "Bearer $token")
+        headers.toString().replace("=", ":")
+
+        player.apply {
             try {
+                setDataSource(
+                    this@MainActivity.applicationContext,
+                    Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
+                    headers
+                )
+                prepare()
+                setWakeMode(this@MainActivity, PowerManager.PARTIAL_WAKE_LOCK)
+                setOnPreparedListener(MediaPlayer.OnPreparedListener {
+                    start()
+                })
+            } catch (e: Exception){
+                Log.e(LOG_TAG_RECORD, "Error : $e")
+            } catch (e: IOException) {
+                Log.e(LOG_TAG_RECORD, "prepare() failed $e")
+            }
+        }
+    }
+
+    private fun startPlaying() {
+        player.apply {
+            try {
+                reset()
                 setDataSource(fileName)
                 prepare()
                 start()
@@ -210,8 +250,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun stopPlaying() {
-        player?.release()
-        player = null
+        player.release()
     }
 
     private fun onRecord(start: Boolean) = if (start) {
@@ -247,8 +286,7 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
         recorder?.release()
         recorder = null
-        player?.release()
-        player = null
+        player.release()
     }
 }
 

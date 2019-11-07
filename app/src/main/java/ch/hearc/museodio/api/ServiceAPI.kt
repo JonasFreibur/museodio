@@ -6,7 +6,8 @@ import ch.hearc.museodio.R
 import ch.hearc.museodio.api.model.AudioNote
 import ch.hearc.museodio.api.model.PassportToken
 import com.github.kittinunf.fuel.Fuel
-import com.github.kittinunf.fuel.core.*
+import com.github.kittinunf.fuel.core.FileDataPart
+import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.extensions.authentication
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
@@ -72,23 +73,9 @@ class ServiceAPI {
                 }
         }
 
-        fun downloadAudioNote(fileName: String, bearerToken: String) {
-            Fuel.download(url + "/audio-notes/download/${fileName}", method=Method.GET)
-                .fileDestination(){ response, url ->
-                    response.body()
-                    File.createTempFile("temp", "tmp.mp3") }
-                .authentication()
-                .bearer(bearerToken)
-                .responseString(){ result ->
-                    val (audioNote, err) = result
-                    Log.i("Bonjour", audioNote.toString())
-                }
-        }
-
         fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double) {
 
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
-
             Fuel.upload(url + "/audio-notes/save", method = Method.POST)
                 .add(FileDataPart.from("path_to_your_file", name = "image"))
                 .header("Content-Type", "application/json")
