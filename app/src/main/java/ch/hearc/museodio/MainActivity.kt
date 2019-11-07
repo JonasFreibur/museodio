@@ -5,9 +5,9 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.media.AudioManager
+
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.AudioNote
@@ -18,6 +18,7 @@ import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
 import android.media.MediaPlayer
 import android.media.MediaRecorder
+import android.util.Log
 import android.net.Uri
 import android.os.PowerManager
 import java.io.IOException
@@ -36,14 +37,18 @@ import java.net.URI
 /* Variables globales */
 private const val LOG_TAG_RECORD = "AudioRecordTest"
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
+private var fileName: String = ""
+
 
 class MainActivity : AppCompatActivity() {
+
+
+
 
     internal var map: MapView? = null
     private lateinit var serviceAPI: ServiceAPI
 
     /* Initialisation variables record */
-    private var fileName: String = ""
     private var recordButton: RecordButton? = null
     private var recorder: MediaRecorder? = null
     private var playButton: PlayButton? = null
@@ -53,9 +58,11 @@ class MainActivity : AppCompatActivity() {
     private var isMapCentered: Boolean = false
     private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO,Manifest.permission.ACCESS_COARSE_LOCATION)
 
+
     /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         val ctx = applicationContext
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx))
@@ -65,13 +72,13 @@ class MainActivity : AppCompatActivity() {
         map!!.setTileSource(TileSourceFactory.MAPNIK)
 
         /* Permissions */
-        val permissionRecord =  ActivityCompat.checkSelfPermission(this, permissions[1])
+        val permissionRecord =  ActivityCompat.checkSelfPermission(this, permissions[0])
         if ( permissionRecord!= PackageManager.PERMISSION_GRANTED ) {
             ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION)
         }
 
         /* Initialisation record élément */
-        fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
+        fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.mp3"
         recordButton = RecordButton(this)
         playButton = PlayButton(this)
         saveButton = SaveButton(this)
@@ -183,6 +190,21 @@ class MainActivity : AppCompatActivity() {
     internal inner class SaveButton(ctx: Context) : AppCompatButton(ctx) {
         var clicker: OnClickListener = OnClickListener {
             //lancer a l'API
+
+            Locus.getCurrentLocation(ctx){result->
+                var lat=result.location?.latitude
+                var lon=result.location?.longitude
+
+                Log.i("audio",lat.toString()+" "+lon.toString())
+                if(lat!=null && lon!=null) {
+                    ServiceAPI.uploadAudioNote(ServiceAPI.loadApiKey(ctx) ,lat,lon,fileName)
+                }
+
+
+            }
+
+
+
         }
         init {
             text = "Save recording"
@@ -218,6 +240,9 @@ class MainActivity : AppCompatActivity() {
 
         player.apply {
             try {
+
+               // Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
+
                 setDataSource(
                     this@MainActivity.applicationContext,
                     Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
@@ -228,10 +253,10 @@ class MainActivity : AppCompatActivity() {
                 setOnPreparedListener(MediaPlayer.OnPreparedListener {
                     start()
                 })
-            } catch (e: Exception){
-                Log.e(LOG_TAG_RECORD, "Error : $e")
-            } catch (e: IOException) {
+            }  catch (e: IOException) {
                 Log.e(LOG_TAG_RECORD, "prepare() failed $e")
+            }catch (e: Exception){
+                Log.e(LOG_TAG_RECORD, "Error : $e")
             }
         }
     }
@@ -262,7 +287,7 @@ class MainActivity : AppCompatActivity() {
     private fun startRecording() {
         recorder = MediaRecorder().apply {
             setAudioSource(MediaRecorder.AudioSource.MIC)
-            setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
+            setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
             setOutputFile(fileName)
             setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
             try {
@@ -290,4 +315,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+
+// source : https://developer.android.com/guide/topics/media/mediarecorder
 
