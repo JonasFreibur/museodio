@@ -23,6 +23,8 @@ import java.io.IOException
 import android.widget.LinearLayout
 import android.view.View.OnClickListener
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
@@ -188,13 +190,27 @@ class MainActivity : AppCompatActivity() {
 
     internal inner class SaveButton(ctx: Context) : AppCompatButton(ctx) {
         var clicker: OnClickListener = OnClickListener {
-            Locus.getCurrentLocation(ctx){result->
-                var lat=result.location?.latitude
-                var lon=result.location?.longitude
-                if(lat !=null && lon!=null) {
-                    ServiceAPI.uploadAudioNote(ServiceAPI.loadApiKey(ctx) ,lat,lon,fileName)
+
+            val alertDialog = AlertDialog.Builder(this@MainActivity)
+            alertDialog.setTitle("Save Record")
+            alertDialog.setMessage("Are you sure to want to save Record")
+            alertDialog.setPositiveButton("YES"){dialog, which ->
+                Locus.getCurrentLocation(ctx){result->
+                    var lat=result.location?.latitude
+                    var lon=result.location?.longitude
+                    if(lat !=null && lon!=null) {
+                        ServiceAPI.uploadAudioNote(ServiceAPI.loadApiKey(ctx) ,lat,lon,fileName)
+                    }
                 }
+                Toast.makeText(applicationContext,"Saved success",Toast.LENGTH_SHORT).show()
+
             }
+            alertDialog.setNegativeButton("No"){dialog,which ->
+                Toast.makeText(applicationContext,"Cancel saved",Toast.LENGTH_SHORT).show()
+            }
+
+            val dialog: AlertDialog = alertDialog.create()
+            dialog.show()
         }
         init {
             text = "Save recording"
