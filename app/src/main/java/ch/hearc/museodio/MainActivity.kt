@@ -163,12 +163,12 @@ class MainActivity : AppCompatActivity() {
         map!!.getOverlays().add(myLocationOverlay)
 
 
-    /*
-    Bitmap icon = BitmapFactory.decodeResource(context.getResources(), R.drawable.user_location);
-    locationOverlay.setPersonIcon(icon);
-    locationOverlay.setPersonHotspot(icon.getWidth() / 2, icon.getHeight());
-    map.getOverlays().add(locationOverlay);
-    */
+        /*
+        Bitmap icon = BitmapFactory.decodeResource(context.getResources(), R.drawable.user_location);
+        locationOverlay.setPersonIcon(icon);
+        locationOverlay.setPersonHotspot(icon.getWidth() / 2, icon.getHeight());
+        map.getOverlays().add(locationOverlay);
+        */
     }
 
     /* functions and classes to record part */
@@ -193,7 +193,7 @@ class MainActivity : AppCompatActivity() {
 
             val alertDialog = AlertDialog.Builder(this@MainActivity)
             alertDialog.setTitle("Save Record")
-            alertDialog.setMessage("Are you sure to want to save Record")
+            alertDialog.setMessage("Are you sure to want to save your record")
             alertDialog.setPositiveButton("YES"){dialog, which ->
                 Locus.getCurrentLocation(ctx){result->
                     var lat=result.location?.latitude
@@ -208,7 +208,6 @@ class MainActivity : AppCompatActivity() {
             alertDialog.setNegativeButton("No"){dialog,which ->
                 Toast.makeText(applicationContext,"Cancel saved",Toast.LENGTH_SHORT).show()
             }
-
             val dialog: AlertDialog = alertDialog.create()
             dialog.show()
         }
@@ -323,6 +322,8 @@ class MainActivity : AppCompatActivity() {
 
 }
 
+/*
+source : - https://developer.android.com/guide/topics/media/mediarecorder
+            - https://android--code.blogspot.com/2018/02/android-kotlin-alertdialog-example.html
 
-// source : https://developer.android.com/guide/topics/media/mediarecorder
-
+*/
