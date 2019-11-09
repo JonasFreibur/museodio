@@ -20,10 +20,7 @@ import java.io.File
 class ServiceAPI {
 
     companion object{
-
-
         //private var url : String = "http://10.0.2.2:8000/api"
-
         private var url : String = "http://10.0.2.2:81/museodio/public/api"
 
         fun login(email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
@@ -35,12 +32,10 @@ class ServiceAPI {
                 .responseObject(PassportToken.Deserializer()){ request, response, result ->
                     val (loginToken, err) = result
                     var isLoggedIn = false
-
                     if(loginToken?.success?.token != null){
                         saveApiKey(loginToken.success.token, context)
                         isLoggedIn = true
                     }
-
                     callbackFn(isLoggedIn)
                 }
         }
@@ -49,7 +44,6 @@ class ServiceAPI {
             Fuel.get(url + "/audio-notes/")
                 .responseObject(AudioNote.Deserializer()){ request, response, result ->
                     val (audioNotes, err) = result
-
                     audioNotes?.forEach {audioNote ->
                         callbackFn(audioNote)
                     }
@@ -70,34 +64,30 @@ class ServiceAPI {
                 .responseObject(PassportToken.Deserializer()) { request, response, result ->
                     val (loginToken, err) = result
                     var isSignedUp = false
-
                     if (loginToken?.success?.token != null) {
                         isSignedUp = true
                     }
-
                     callbackFn(isSignedUp)
                 }
         }
 
 
         fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double,fileName:String) {
-
             val data: DataPart = FileDataPart.from(fileName, name = "audio", contentType = "multipart/form-data")
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
+
             Fuel.upload(url + "/audio-notes/save", method = Method.POST)
                 .add(data, InlineDataPart(latitude.toString(), name="latitude", contentType="multipart/form-data"),InlineDataPart(longitude.toString(), name="longitude", contentType="multipart/form-data"))
                 .authentication()
                 .bearer(bearerToken)
                 .responseString(){ result ->
-                    val (test, err) = result
-                    Log.i("reponse",test)
-
+                    val (res, err) = result
+                    Log.i("reponse ",res)
                 }
         }
 
         fun saveApiKey(apiKey: String?, context: Context) {
             apiKey ?: return
-
             val sharedPref = context.getSharedPreferences(
                 context.getString(R.string.preference_file), Context.MODE_PRIVATE)
             with (sharedPref.edit()) {
@@ -112,5 +102,4 @@ class ServiceAPI {
             return apiKey!!
         }
     }
-
 }

@@ -10,10 +10,7 @@ data class AudioNote(var firstName: String,
                      var longitude: Double,
                      var file_name: String) {
 
-
     class Deserializer: ResponseDeserializable<Array<AudioNote>>{
         override fun deserialize(content: String): Array<AudioNote>? = Gson().fromJson(content, Array<AudioNote>::class.java)
     }
-
-
 }
