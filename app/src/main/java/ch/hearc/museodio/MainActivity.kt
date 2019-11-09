@@ -39,12 +39,8 @@ private const val LOG_TAG_RECORD = "AudioRecordTest"
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
 private var fileName: String = ""
 
-
 class MainActivity : AppCompatActivity() {
-
-
-
-
+    
     internal var map: MapView? = null
     private lateinit var serviceAPI: ServiceAPI
 
@@ -239,13 +235,12 @@ class MainActivity : AppCompatActivity() {
         headers.toString().replace("=", ":")
 
         player.apply {
-            try {
-
-               // Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
+            try{
 
                 setDataSource(
                     this@MainActivity.applicationContext,
-                    Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
+                    Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
+                    //Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
                     headers
                 )
                 prepare()
