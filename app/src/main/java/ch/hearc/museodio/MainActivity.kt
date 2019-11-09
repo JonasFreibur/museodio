@@ -28,6 +28,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import com.birjuvachhani.locus.Locus
 import org.osmdroid.views.overlay.Marker
+import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
 
 /* Global variables*/
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -132,7 +133,6 @@ class MainActivity : AppCompatActivity() {
         startMarker.setPosition(startPoint)
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         startMarker.subDescription = "${audioNote.firstName}, ${audioNote.lastName}"
-
         startMarker.setOnMarkerClickListener { marker, mapView ->
             val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
             this@MainActivity.playFile(audioNote.file_name, bearerToken)
@@ -143,6 +143,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
+        Log.i("lat",latitude.toString())
+        Log.i("laon",longitude.toString())
         val mapController = map!!.getController()
         if(!isMapCentered) {
             mapController.setZoom(9.5)
@@ -150,8 +152,21 @@ class MainActivity : AppCompatActivity() {
             mapController.setCenter(startPoint)
             isMapCentered = true
         }
+
+
         val myLocationOverlay = MyLocationNewOverlay(map!!)
+        myLocationOverlay.enableFollowLocation()
+        myLocationOverlay.enableMyLocation()
+        Log.i("lamy",myLocationOverlay.toString())
         map!!.getOverlays().add(myLocationOverlay)
+
+
+    /*
+    Bitmap icon = BitmapFactory.decodeResource(context.getResources(), R.drawable.user_location);
+    locationOverlay.setPersonIcon(icon);
+    locationOverlay.setPersonHotspot(icon.getWidth() / 2, icon.getHeight());
+    map.getOverlays().add(locationOverlay);
+    */
     }
 
     /* functions and classes to record part */
@@ -176,7 +191,7 @@ class MainActivity : AppCompatActivity() {
             Locus.getCurrentLocation(ctx){result->
                 var lat=result.location?.latitude
                 var lon=result.location?.longitude
-                if(lat!=null && lon!=null) {
+                if(lat !=null && lon!=null) {
                     ServiceAPI.uploadAudioNote(ServiceAPI.loadApiKey(ctx) ,lat,lon,fileName)
                 }
             }
