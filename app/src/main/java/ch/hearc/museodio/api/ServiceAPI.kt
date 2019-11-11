@@ -20,8 +20,8 @@ import java.io.File
 class ServiceAPI {
 
     companion object{
-        //private var url : String = "http://10.0.2.2:8000/api"
-        private var url : String = "http://10.0.2.2:81/museodio/public/api"
+        private var url : String = "http://10.0.2.2:8000/api"
+        //private var url : String = "http://10.0.2.2:81/museodio/public/api"
 
         fun login(email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
             val dataJson: JsonObject = JsonParser().parse("{\"email\":$email, \"password\": $password}").getAsJsonObject()

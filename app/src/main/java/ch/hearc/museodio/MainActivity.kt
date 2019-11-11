@@ -134,7 +134,8 @@ class MainActivity : AppCompatActivity() {
         val startMarker = Marker(map!!)
         startMarker.setPosition(startPoint)
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        startMarker.subDescription = "${audioNote.firstName}, ${audioNote.lastName}"
+        startMarker.title = "${audioNote.firstName}, ${audioNote.lastName}"
+        startMarker.subDescription = "${audioNote.latitude}, ${audioNote.longitude}"
         startMarker.setOnMarkerClickListener { marker, mapView ->
             val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
             this@MainActivity.playFile(audioNote.file_name, bearerToken)
@@ -248,8 +249,8 @@ class MainActivity : AppCompatActivity() {
             try{
                 setDataSource(
                     this@MainActivity.applicationContext,
-                    Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
-                    //Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
+                    //Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
+                    Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
                     headers
                 )
                 prepare()
