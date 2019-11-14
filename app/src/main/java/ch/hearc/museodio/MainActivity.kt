@@ -8,6 +8,9 @@ package ch.hearc.museodio
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.Drawable
 
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -33,6 +36,7 @@ import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
+import ch.hearc.museodio.util.Util
 import com.birjuvachhani.locus.Locus
 import org.osmdroid.views.overlay.Marker
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
@@ -139,8 +143,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun addAudioNoteToMap(audioNote: AudioNote){
         val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+
+        val drawable: Drawable = resources.getDrawable(R.drawable.ic_guitar_pick_outline, null);
+
         val startMarker = Marker(map!!)
         startMarker.setPosition(startPoint)
+        startMarker.icon = drawable
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         startMarker.title = "${audioNote.firstName}, ${audioNote.lastName}"
         startMarker.subDescription = "${audioNote.latitude}, ${audioNote.longitude}"
@@ -154,8 +162,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
-        Log.i("lat",latitude.toString())
-        Log.i("laon",longitude.toString())
         val mapController = map!!.getController()
         if(!isMapCentered) {
             mapController.setZoom(9.5)
@@ -166,10 +172,10 @@ class MainActivity : AppCompatActivity() {
 
 
         val myLocationOverlay = MyLocationNewOverlay(map!!)
-        myLocationOverlay.enableFollowLocation()
+        /*myLocationOverlay.enableFollowLocation()
         myLocationOverlay.enableMyLocation()
         Log.i("lamy",myLocationOverlay.toString())
-        map!!.getOverlays().add(myLocationOverlay)
+        map!!.getOverlays().add(myLocationOverlay)*/
 
 
         /*
