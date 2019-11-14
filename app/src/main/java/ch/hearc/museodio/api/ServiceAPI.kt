@@ -1,3 +1,8 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio.api
 
 import android.content.Context
@@ -17,12 +22,23 @@ import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import java.io.File
 
+/**
+ * Handles API calls
+ * Singleton
+ */
 class ServiceAPI {
 
     companion object{
-        //private var url : String = "http://10.0.2.2:8000/api"
-        private var url : String = "http://10.0.2.2:81/museodio/public/api"
+        private var url : String = "http://10.0.2.2:8000/api"
+        //private var url : String = "http://10.0.2.2:81/museodio/public/api"
 
+        /**
+         * Login API call : /login
+         * @param String email
+         * @param String password
+         * @param Context context
+         * @param (Boolean) -> Unit callbackFn : Callback function
+         */
         fun login(email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
             val dataJson: JsonObject = JsonParser().parse("{\"email\":$email, \"password\": $password}").getAsJsonObject()
 
@@ -40,6 +56,10 @@ class ServiceAPI {
                 }
         }
 
+        /**
+         * Get all audio notes API call : /audio-notes
+         * @param (AudioNote) -> Unit callbackFn : Callback function
+         */
         fun fetchAllAudioNotes(callbackFn : (audioNote: AudioNote) -> Unit) {
             Fuel.get(url + "/audio-notes/")
                 .responseObject(AudioNote.Deserializer()){ request, response, result ->
@@ -50,6 +70,16 @@ class ServiceAPI {
                 }
         }
 
+        /**
+         * Sign up API call : /register
+         * @param String firstName
+         * @param String lastName
+         * @param String email
+         * @param String password
+         * @param String passwordConfirmation
+         * @param Context context
+         * @param (Boolean) -> Unit callbackFn : Callback function
+         */
         fun signUp(firstName: String, lastName: String, email: String, password: String, passwordConfirmation: String,
                    context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
             val dataJson: JsonObject = JsonParser().parse("{\"firstname\":$firstName," +
@@ -71,8 +101,14 @@ class ServiceAPI {
                 }
         }
 
-
-        fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double,fileName:String) {
+        /**
+         * Uplod audio note API call : /audio-notes/save
+         * @param String bearerToken : For authentification when logged in
+         * @param Double latitude
+         * @param Double longitude
+         * @param String fileName
+         */
+        fun uploadAudioNote(bearerToken: String, latitude: Double, longitude: Double, fileName:String) {
             val data: DataPart = FileDataPart.from(fileName, name = "audio", contentType = "multipart/form-data")
             val dataJson: JsonObject = JsonParser().parse("{\"latitude\":$latitude, \"longitude\": $longitude}").getAsJsonObject()
 
@@ -86,6 +122,11 @@ class ServiceAPI {
                 }
         }
 
+        /**
+         * Save Api key to shared preferences
+         * @param String? apiKey: For authentification when logged in
+         * @param Context context: The activity context
+         */
         fun saveApiKey(apiKey: String?, context: Context) {
             apiKey ?: return
             val sharedPref = context.getSharedPreferences(
@@ -96,6 +137,10 @@ class ServiceAPI {
             }
         }
 
+        /**
+         * @param Context context: The activity context
+         * @return String apiKey
+         */
         fun loadApiKey(context: Context): String {
             val sharedPref = context.getSharedPreferences(context.getString(R.string.preference_file), Context.MODE_PRIVATE) ?: return ""
             val apiKey = sharedPref.getString(context.getString(R.string.museodio_api_key), "")
