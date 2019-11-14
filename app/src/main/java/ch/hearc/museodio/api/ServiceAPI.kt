@@ -21,7 +21,7 @@ class ServiceAPI {
 
     companion object{
         //private var url : String = "http://10.0.2.2:8000/api"
-        private var url : String = "http://10.0.2.2:81/museodio/public/api"
+        private var url : String = "https://museodio.srvz-webapp.he-arc.ch/api"
 
         fun login(email: String, password: String, context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
             val dataJson: JsonObject = JsonParser().parse("{\"email\":$email, \"password\": $password}").getAsJsonObject()
@@ -52,7 +52,7 @@ class ServiceAPI {
 
         fun signUp(firstName: String, lastName: String, email: String, password: String, passwordConfirmation: String,
                    context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
-            val dataJson: JsonObject = JsonParser().parse("{\"firstname\":$firstName," +
+            val dataJson: JsonObject = JsonParser().parse("{\"fsirstname\":$firstName," +
                                                                 "\"lastname\":$lastName," +
                                                                 "\"email\":$email, " +
                                                                 "\"password\": $password," +
