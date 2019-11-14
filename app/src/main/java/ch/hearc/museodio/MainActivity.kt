@@ -263,7 +263,8 @@ class MainActivity : AppCompatActivity() {
                 setDataSource(
                     this@MainActivity.applicationContext,
                     //Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
-                    Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
+                    //Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
+                    Uri.parse("https://museodio.srvz-webapp.he-arc.ch/api/audio-notes/download/$filename"),
                     headers
                 )
                 prepare()
@@ -272,11 +273,15 @@ class MainActivity : AppCompatActivity() {
                     start()
                 })
                 setOnCompletionListener(MediaPlayer.OnCompletionListener() {
-                    stopPlaying();
+                    stopPlaying()
                 })
-            }  catch (e: IOException) {
+                setOnErrorListener(MediaPlayer.OnErrorListener() { mp : MediaPlayer, what: Int, extras: Int ->
+                    Log.e(LOG_TAG_RECORD, "Failed to play song")
+                    false
+                })
+            } catch (e: IOException) {
                 Log.e(LOG_TAG_RECORD, "prepare() failed $e")
-            }catch (e: Exception){
+            } catch (e: Exception){
                 Log.e(LOG_TAG_RECORD, "Error : $e")
             }
         }
