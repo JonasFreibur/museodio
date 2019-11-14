@@ -7,49 +7,61 @@ android:layout_height="match_parent"
 android:gravity="center"
 android:orientation="vertical">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
     android:id="@+id/textViewEmail"
+    android:layout_margin="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Email" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
     android:id="@+id/editTextEmail"
+    android:layout_margin="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ems="10"
-    android:inputType="textEmailAddress" />
+    android:inputType="textEmailAddress"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
     android:id="@+id/textViewPassword"
+    android:layout_margin="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Password" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
     android:id="@+id/editTextPassword"
+    android:layout_margin="@dimen/activity_horizontal_margin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ems="10"
-    android:inputType="textPassword" />
+    android:inputType="textPassword"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
-    <Button
-    android:id="@+id/buttonLogin"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Login" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogin"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        style="@style/Widget.MaterialComponents.Button" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView6"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Or"
         android:textAlignment="center" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSignUpIntent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=" sign up" />
+        android:text=" sign up"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
 </LinearLayout>
