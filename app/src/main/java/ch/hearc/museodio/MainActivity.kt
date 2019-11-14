@@ -1,8 +1,16 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio
 
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.Drawable
 
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -28,6 +36,7 @@ import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
+import ch.hearc.museodio.util.Util
 import com.birjuvachhani.locus.Locus
 import org.osmdroid.views.overlay.Marker
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
@@ -37,6 +46,9 @@ private const val LOG_TAG_RECORD = "AudioRecordTest"
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
 private var fileName: String = ""
 
+/**
+ * MainActivity : Activity with all the applications's business
+ */
 class MainActivity : AppCompatActivity() {
 
     /* Initialisation variables */
@@ -131,10 +143,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun addAudioNoteToMap(audioNote: AudioNote){
         val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+
+        val drawable: Drawable = resources.getDrawable(R.drawable.ic_guitar_pick_outline, null);
+
         val startMarker = Marker(map!!)
         startMarker.setPosition(startPoint)
+        startMarker.icon = drawable
         startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        startMarker.subDescription = "${audioNote.firstName}, ${audioNote.lastName}"
+        startMarker.title = "${audioNote.firstName}, ${audioNote.lastName}"
+        startMarker.subDescription = "${audioNote.latitude}, ${audioNote.longitude}"
         startMarker.setOnMarkerClickListener { marker, mapView ->
             val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
             this@MainActivity.playFile(audioNote.file_name, bearerToken)
@@ -145,8 +162,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
-        Log.i("lat",latitude.toString())
-        Log.i("laon",longitude.toString())
         val mapController = map!!.getController()
         if(!isMapCentered) {
             mapController.setZoom(9.5)
@@ -159,7 +174,6 @@ class MainActivity : AppCompatActivity() {
         val myLocationOverlay = MyLocationNewOverlay(map!!)
         myLocationOverlay.enableFollowLocation()
         myLocationOverlay.enableMyLocation()
-        Log.i("lamy",myLocationOverlay.toString())
         map!!.getOverlays().add(myLocationOverlay)
 
 
@@ -248,8 +262,8 @@ class MainActivity : AppCompatActivity() {
             try{
                 setDataSource(
                     this@MainActivity.applicationContext,
-                    Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
-                    //Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
+                    //Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
+                    Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
                     headers
                 )
                 prepare()

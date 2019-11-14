@@ -1,3 +1,8 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio
 
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +13,9 @@ import kotlinx.android.synthetic.main.activity_login.*
 import android.content.Intent
 import android.widget.Toast
 
-
+/**
+ * LoginActivity : Application's entry point
+ */
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
