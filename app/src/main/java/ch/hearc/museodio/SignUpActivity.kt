@@ -1,3 +1,8 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio
 
 import android.content.Intent
@@ -10,6 +15,9 @@ import ch.hearc.museodio.api.ServiceAPI
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
+/**
+ * SignUpActivity : Activity for the user to sign up
+ */
 class SignUpActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

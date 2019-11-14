@@ -1,3 +1,8 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio
 
 import android.Manifest
@@ -37,6 +42,9 @@ private const val LOG_TAG_RECORD = "AudioRecordTest"
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
 private var fileName: String = ""
 
+/**
+ * MainActivity : Activity with all the applications's business
+ */
 class MainActivity : AppCompatActivity() {
 
     /* Initialisation variables */
