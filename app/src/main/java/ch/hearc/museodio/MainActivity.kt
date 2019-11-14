@@ -172,10 +172,9 @@ class MainActivity : AppCompatActivity() {
 
 
         val myLocationOverlay = MyLocationNewOverlay(map!!)
-        /*myLocationOverlay.enableFollowLocation()
+        myLocationOverlay.enableFollowLocation()
         myLocationOverlay.enableMyLocation()
-        Log.i("lamy",myLocationOverlay.toString())
-        map!!.getOverlays().add(myLocationOverlay)*/
+        map!!.getOverlays().add(myLocationOverlay)
 
 
         /*
