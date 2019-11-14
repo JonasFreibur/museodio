@@ -82,7 +82,7 @@ class ServiceAPI {
          */
         fun signUp(firstName: String, lastName: String, email: String, password: String, passwordConfirmation: String,
                    context: Context, callbackFn: (isLoggedIn : Boolean) -> Unit){
-            val dataJson: JsonObject = JsonParser().parse("{\"fsirstname\":$firstName," +
+            val dataJson: JsonObject = JsonParser().parse("{\"firstname\":$firstName," +
                                                                 "\"lastname\":$lastName," +
                                                                 "\"email\":$email, " +
                                                                 "\"password\": $password," +
