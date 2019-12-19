@@ -156,9 +156,29 @@ class MainActivity : AppCompatActivity() {
                     startActivity(searchUserActivityIntent)
                     true
                 }
+                R.id.nav_logout -> {
+                    ServiceAPI.logout(::logoutCallback)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    finish()
+                    true
+                }
                 else -> false
             }
         }
+    }
+
+    private fun logoutCallback(isLoggedOut: Boolean){
+        if(isLoggedOut){
+            runOnUiThread() {Toast.makeText(this, "Successfully logged out", Toast.LENGTH_SHORT).show()}
+            loadLoginActivity()
+        } else {
+            runOnUiThread() {Toast.makeText(this, "Error while logging out", Toast.LENGTH_LONG).show()}
+        }
+    }
+
+    private fun loadLoginActivity() {
+        val logInActivityIntent = Intent(this, LoginActivity::class.java)
+        startActivity(logInActivityIntent)
     }
 
     private fun startRequestingLocation() {

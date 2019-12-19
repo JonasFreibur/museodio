@@ -123,6 +123,18 @@ class ServiceAPI {
         }
 
         /**
+         * Logs the user out
+         * @param (Boolean) -> Unit : Callback function
+         */
+        fun logout(callbackFn : (isLoggedOut: Boolean) -> Unit){
+            Fuel.get(url + "/logout")
+                .response { request, response, _ ->
+                    Log.i("response", response.statusCode.toString())
+                    callbackFn(response.statusCode == 200)
+                }
+        }
+
+        /**
          * Save Api key to shared preferences
          * @param String? apiKey: For authentification when logged in
          * @param Context context: The activity context
@@ -146,5 +158,6 @@ class ServiceAPI {
             val apiKey = sharedPref.getString(context.getString(R.string.museodio_api_key), "")
             return apiKey!!
         }
+
     }
 }
