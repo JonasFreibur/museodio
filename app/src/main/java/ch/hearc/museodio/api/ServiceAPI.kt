@@ -9,6 +9,7 @@ import android.content.Context
 import android.util.Log
 import androidx.core.text.parseAsHtml
 import ch.hearc.museodio.R
+import ch.hearc.museodio.api.model.Users
 import ch.hearc.museodio.api.model.AudioNote
 import ch.hearc.museodio.api.model.PassportToken
 import com.github.kittinunf.fuel.Fuel
@@ -123,6 +124,28 @@ class ServiceAPI {
         }
 
         /**
+         * TODO:changer
+         * Get all audio notes API call : /audio-notes
+         * @param (AudioNote) -> Unit callbackFn : Callback function
+         */
+        fun fetchSearchUsers(bearerToken: String, callbackFn : (user: Users) -> Unit) {
+
+            Fuel.get(url + "/users/search/a/")
+                .responseObject(Users.Deserializer()){ request, response, result ->
+                    val (users, err) = result
+                    users?.forEach {user ->
+                        callbackFn(user)
+                    }
+                    Log.i("USERS", users.toString());
+                    Log.i("ERROR", err.toString());
+                    Log.i("REQUEST", request.toString());
+                    Log.i("RESPONSE", response.toString());
+
+
+                }
+
+        }
+        /**
          * Save Api key to shared preferences
          * @param String? apiKey: For authentification when logged in
          * @param Context context: The activity context
@@ -146,5 +169,7 @@ class ServiceAPI {
             val apiKey = sharedPref.getString(context.getString(R.string.museodio_api_key), "")
             return apiKey!!
         }
+
+
     }
 }
