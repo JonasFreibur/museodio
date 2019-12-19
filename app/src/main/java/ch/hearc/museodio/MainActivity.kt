@@ -7,6 +7,7 @@ package ch.hearc.museodio
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -27,17 +28,23 @@ import android.media.MediaRecorder
 import android.util.Log
 import android.net.Uri
 import android.os.PowerManager
+import android.view.Gravity
 import java.io.IOException
 import android.widget.LinearLayout
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.view.menu.MenuBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import ch.hearc.museodio.util.Util
 import com.birjuvachhani.locus.Locus
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.navigation.NavigationView
 import org.osmdroid.views.overlay.Marker
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
 
@@ -105,6 +112,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         linearLayout.addView(linearLayoutRecord)
+
+        setUpToolBar()
+
         startRequestingLocation()
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
     }
@@ -119,6 +129,36 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         map!!.onPause()
         stopRequestingLocation()
+    }
+
+    private fun setUpToolBar(){
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar) as MaterialToolbar
+        setSupportActionBar(toolbar)
+        toolbar.showOverflowMenu()
+        toolbar.setNavigationIcon(R.drawable.ic_menu)
+        toolbar.setNavigationOnClickListener {
+            val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout) as DrawerLayout
+
+            if(drawerLayout.isDrawerOpen(Gravity.LEFT)){
+                drawerLayout.closeDrawer(Gravity.LEFT)
+            }else {
+                drawerLayout.openDrawer(Gravity.LEFT)
+            }
+        }
+
+        val navigationView = findViewById<NavigationView>(R.id.navigation_view) as NavigationView
+        navigationView.setNavigationItemSelectedListener {
+            val id = it.getItemId();
+
+            when (id){
+                R.id.nav_search_user -> {
+                    val searchUserActivityIntent = Intent(this, UserSearch::class.java)
+                    startActivity(searchUserActivityIntent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
     private fun startRequestingLocation() {
