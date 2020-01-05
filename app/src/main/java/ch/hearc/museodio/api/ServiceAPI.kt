@@ -72,6 +72,54 @@ class ServiceAPI {
         }
 
         /**
+         * TODO:changer
+         * Get all audio notes API call : /audio-notes
+         * @param (AudioNote) -> Unit callbackFn : Callback function
+         */
+        fun fetchSearchUsers(bearerToken: String, callbackFn : (user: Users) -> Unit) {
+            Fuel.get(url + "/users/search/a/")
+                .authentication()
+                .bearer(bearerToken)
+                .responseObject(Users.Deserializer()){ request, response, result ->
+                    val (users,err) =  response
+/*
+                    users?.forEach {user ->
+                        callbackFn(user)
+                    }*/
+                    Log.i("USERS", users.toString());
+                    //Log.i("ERROR", err.toString());
+                    Log.i("REQUEST", request.toString());
+                    Log.i("RESPONSE", response.toString());
+                    Log.i("RESULT", result.toString());
+                }
+        }
+
+        fun fetchFriends(bearerToken: String, callbackFn : (user: Users) -> Unit) {
+            Fuel.get(url + "/friend/")
+                .authentication()
+                .bearer(bearerToken)
+                .responseObject(Users.Deserializer()){ request, response, result ->
+                    val (users,err) =  response
+                    /*
+                    users?.forEach {user ->
+                        callbackFn(user)
+                    }*/
+                }
+        }
+
+        fun addFriend()  {
+
+        }
+
+        fun acceptFriend(){
+
+        }
+
+        fun deleteFriend(){
+
+        }
+
+        /**
          * Sign up API call : /register
          * @param String firstName
          * @param String lastName
@@ -123,28 +171,7 @@ class ServiceAPI {
                 }
         }
 
-        /**
-         * TODO:changer
-         * Get all audio notes API call : /audio-notes
-         * @param (AudioNote) -> Unit callbackFn : Callback function
-         */
-        fun fetchSearchUsers(bearerToken: String, callbackFn : (user: Users) -> Unit) {
 
-            Fuel.get(url + "/users/search/a/")
-                .responseObject(Users.Deserializer()){ request, response, result ->
-                    val (users, err) = result
-                    users?.forEach {user ->
-                        callbackFn(user)
-                    }
-                    Log.i("USERS", users.toString());
-                    Log.i("ERROR", err.toString());
-                    Log.i("REQUEST", request.toString());
-                    Log.i("RESPONSE", response.toString());
-
-
-                }
-
-        }
         /*
          * Logs the user out
          * @param (Boolean) -> Unit : Callback function

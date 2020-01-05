@@ -20,17 +20,8 @@ class FriendsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_friends)
 
-
-        btnTest.setOnClickListener(object: View.OnClickListener {
-            override fun onClick(v: View?) {
-                /* ICI TODO
-
-                val bearerToken = ServiceAPI.loadApiKey()
-                ServiceAPI.fetchSearchUsers(bearerToken,::printUsers)*/
-            }
-        })
+        //display friends
     }
 
-    private fun printUsers(user:Users){
-    }
+
 }

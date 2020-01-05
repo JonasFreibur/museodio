@@ -20,15 +20,28 @@ import com.google.gson.Gson
  * @property String file_name: The audio note's file name
  */
 
-class Users(val success:Success?) {
-
-
-    data class Success(var id :Int?, var firstName: String?, var lastName: String?)
+class Users(val success: Success?) {
 
     /**
-     * Class responsible of deserializing the audi note JSON
+     * Data class containing a success token
      */
-    class Deserializer: ResponseDeserializable<Array<Users>>{
-        override fun deserialize(content: String): Array<Users>? = Gson().fromJson(content, Array<Users>::class.java)
+    data class Success(val arrayUsers:Array<User>?)
+
+    /**
+     * Class responsible of deserializing the passport token JSON
+     */
+    class Deserializer: ResponseDeserializable<Users> {
+        override fun deserialize(content: String): Users? = Gson().fromJson(content, Users::class.java)
+    }
+}
+
+class User(val id:Int, val firstname: String,val lastname:String)
+{
+
+    /**
+     * Class responsible of deserializing the passport token JSON
+     */
+    class Deserializer: ResponseDeserializable<Array<User>> {
+        override fun deserialize(content: String): Array<User>? = Gson().fromJson(content, Array<User>::class.java)
     }
 }
