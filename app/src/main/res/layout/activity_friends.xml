@@ -21,7 +21,7 @@
                 android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nom de l'utilisateur"/>
+                android:hint="Nom de l'utilisateur"/>
 
             
             <com.google.android.material.button.MaterialButton

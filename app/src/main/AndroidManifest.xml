@@ -27,8 +27,6 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".FriendsActivity">
-        </activity>
     </application>
 
 </manifest>

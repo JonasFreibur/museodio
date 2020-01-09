@@ -44,6 +44,7 @@ android:orientation="vertical">
     android:layout_height="wrap_content"
     android:ems="10"
     android:inputType="textEmailAddress"
+    android:hint="Email address"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -60,6 +61,7 @@ android:orientation="vertical">
     android:layout_height="wrap_content"
     android:ems="10"
     android:inputType="textPassword"
+    android:hint="Password"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
 
     <com.google.android.material.button.MaterialButton
