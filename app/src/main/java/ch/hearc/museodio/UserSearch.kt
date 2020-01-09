@@ -18,6 +18,9 @@ class UserSearch : AppCompatActivity() {
         Configuration.getInstance().load(applicationContext, PreferenceManager.getDefaultSharedPreferences(applicationContext))
 
 
+        val bearerToken = ServiceAPI.loadApiKey(applicationContext)
+        ServiceAPI.fetchFriends(bearerToken, ::printUsers)
+
         btnTest.setOnClickListener(object: View.OnClickListener {
             override fun onClick(v: View?) {
 

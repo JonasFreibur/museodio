@@ -11,6 +11,7 @@ import androidx.core.text.parseAsHtml
 import ch.hearc.museodio.R
 import ch.hearc.museodio.api.model.Users
 import ch.hearc.museodio.api.model.AudioNote
+import ch.hearc.museodio.api.model.Friends
 import ch.hearc.museodio.api.model.PassportToken
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.DataPart
@@ -87,37 +88,61 @@ class ServiceAPI {
                     users?.success?.forEach { user ->
                         Log.i("USER", user.firstname)
                     }
-
-                    Log.i("USERS", users.toString());
-                    //Log.i("ERROR", err.toString());
-                    Log.i("REQUEST", request.toString());
-                    Log.i("RESPONSE", response.toString());
-                    Log.i("RESULT", result.toString());
                 }
         }
 
         fun fetchFriends(bearerToken: String, callbackFn : (user: Users) -> Unit) {
-            Fuel.get(url + "/friend/")
+            Fuel.get(url + "/friends/")
                 .authentication()
                 .bearer(bearerToken)
-                .responseObject(Users.Deserializer()){ request, response, result ->
-                    val (users,err) =  response
-                    /*
-                    users?.forEach {user ->
-                        callbackFn(user)
-                    }*/
+                .responseObject(Friends.Deserializer()){ request, response, result ->
+                    val (friends, err) =  result
+
+                    friends?.success?.friends?.forEach {  friend ->
+                        Log.i("FRIEND", friend.firstname)
+                    }
                 }
         }
 
-        fun addFriend()  {
+        fun addFriend(bearerToken: String, user:Users)  {
+            val id:Int
+            id=10
 
+            Fuel.upload(url + "/friends/store", method = Method.POST)
+                .add(InlineDataPart(id.toString(), name="id", contentType="multipart/form-data"))
+                .authentication()
+                .bearer(bearerToken)
+                .responseString(){ result ->
+                    val (res, err) = result
+                    Log.i("reponse ",res)
+                }
         }
 
-        fun acceptFriend(){
+        fun acceptFriend(bearerToken: String,user:Users){
+            val id:Int
+            id=10
 
+            Fuel.put(url + "/friends/update", listOf("friend" to id))
+                .authentication()
+                .bearer(bearerToken)
+                .responseString(){ result ->
+                    val (res, err) = result
+                    Log.i("reponse ",res)
+                }
         }
 
-        fun deleteFriend(){
+
+        fun deleteFriend(bearerToken: String,user:Users){
+            val id:Int
+            id=10
+
+            Fuel.delete(url + "/friends/destroy", listOf("friend" to id))
+                .authentication()
+                .bearer(bearerToken)
+                .responseString(){ result ->
+                    val (res, err) = result
+                    Log.i("reponse ",res)
+                }
 
         }
 
