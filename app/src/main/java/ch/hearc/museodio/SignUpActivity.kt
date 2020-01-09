@@ -10,15 +10,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import ch.hearc.museodio.api.ServiceAPI
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 /**
  * SignUpActivity : Activity for the user to sign up
  */
-class SignUpActivity: AppCompatActivity() {
+class SignUpActivity: DrawerWrapper() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
