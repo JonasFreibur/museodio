@@ -7,15 +7,28 @@ android:layout_height="match_parent"
 android:gravity="center"
 android:orientation="vertical">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textViewMuseodio"
-        android:gravity="center_horizontal"
-        android:textSize="40dp"
-        android:textColor="@color/cardview_light_background"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Museodio" />
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewMuseodio"
+            android:gravity="center_horizontal"
+            android:textSize="48dp"
+            android:textColor="@color/cardview_light_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Museodio" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_music_clef_treble">
+        </androidx.appcompat.widget.AppCompatImageView>
+
+    </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
     android:id="@+id/textViewEmail"

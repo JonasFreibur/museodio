@@ -9,8 +9,6 @@ import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
 
 import android.os.Bundle
@@ -34,19 +32,15 @@ import android.widget.LinearLayout
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.view.menu.MenuBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import ch.hearc.museodio.util.Util
 import com.birjuvachhani.locus.Locus
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 import org.osmdroid.views.overlay.Marker
-import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
 
 /* Global variables*/
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -152,7 +146,7 @@ class MainActivity : AppCompatActivity() {
 
             when (id){
                 R.id.nav_search_user -> {
-                    val searchUserActivityIntent = Intent(this, UserSearch::class.java)
+                    val searchUserActivityIntent = Intent(this, FriendsActivity::class.java)
                     startActivity(searchUserActivityIntent)
                     true
                 }
