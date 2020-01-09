@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     private var player: MediaPlayer ?= null
     private var permissionToRecordAccepted = false
     private var isMapCentered: Boolean = false
-    private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO,Manifest.permission.ACCESS_COARSE_LOCATION)
+    private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO, Manifest.permission.ACCESS_COARSE_LOCATION)
 
 
     /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
