@@ -104,11 +104,8 @@ class ServiceAPI {
                 }
         }
 
-        fun addFriend(bearerToken: String, user:Users)  {
-            val id:Int
-            id=10
-
-            Fuel.upload(url + "/friends/store", method = Method.POST)
+        fun addFriend(bearerToken: String, id: Int)  {
+            Fuel.upload(url + "/friends/", method = Method.POST)
                 .add(InlineDataPart(id.toString(), name="id", contentType="multipart/form-data"))
                 .authentication()
                 .bearer(bearerToken)
@@ -118,11 +115,8 @@ class ServiceAPI {
                 }
         }
 
-        fun acceptFriend(bearerToken: String,user:Users){
-            val id:Int
-            id=10
-
-            Fuel.put(url + "/friends/update", listOf("friend" to id))
+        fun acceptFriend(bearerToken: String, id: Int){
+            Fuel.put(url + "/friends/update/$id")
                 .authentication()
                 .bearer(bearerToken)
                 .responseString(){ result ->
@@ -132,11 +126,8 @@ class ServiceAPI {
         }
 
 
-        fun deleteFriend(bearerToken: String,user:Users){
-            val id:Int
-            id=10
-
-            Fuel.delete(url + "/friends/destroy", listOf("friend" to id))
+        fun deleteFriend(bearerToken: String, id: Int){
+            Fuel.delete(url + "/friends/$id")
                 .authentication()
                 .bearer(bearerToken)
                 .responseString(){ result ->
