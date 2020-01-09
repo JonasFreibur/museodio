@@ -19,6 +19,7 @@ import com.github.kittinunf.fuel.core.InlineDataPart
 import com.github.kittinunf.fuel.core.Method
 
 import com.github.kittinunf.fuel.core.extensions.authentication
+import com.github.kittinunf.result.success
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import java.io.File
@@ -81,11 +82,12 @@ class ServiceAPI {
                 .authentication()
                 .bearer(bearerToken)
                 .responseObject(Users.Deserializer()){ request, response, result ->
-                    val (users,err) =  response
-/*
-                    users?.forEach {user ->
-                        callbackFn(user)
-                    }*/
+                    val (users, err) =  result
+
+                    users?.success?.forEach { user ->
+                        Log.i("USER", user.firstname)
+                    }
+
                     Log.i("USERS", users.toString());
                     //Log.i("ERROR", err.toString());
                     Log.i("REQUEST", request.toString());
