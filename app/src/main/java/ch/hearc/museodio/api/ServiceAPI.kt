@@ -113,7 +113,7 @@ class ServiceAPI {
                 .bearer(bearerToken)
                 .responseString(){ result ->
                     val (res, err) = result
-                    Log.i("reponse ",res)
+                    Log.i("FRIEND ",res)
                 }
         }
 

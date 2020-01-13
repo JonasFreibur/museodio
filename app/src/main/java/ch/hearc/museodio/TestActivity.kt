@@ -22,8 +22,10 @@ class TestActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
 
                 val bearerToken = ServiceAPI.loadApiKey(applicationContext)
-                val stringText = "a"
+                //val stringText = "a"
 
+               // if(tvRecherche.text.toString())
+                val stringText=etRecherche.text.toString()
                 listUser.clear()
                 //Log.i("USER bea",bearerToken)
 
@@ -58,4 +60,5 @@ class TestActivity : AppCompatActivity() {
         //adapter?.onAddItem("coucou")
         recyclerView.adapter?.notifyDataSetChanged()
     }
+
 }

@@ -17,7 +17,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialAutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
+                android:id="@+id/actvRecherche"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
