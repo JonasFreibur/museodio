@@ -82,7 +82,6 @@ class ServiceAPI {
         }
 
         /**
-         * TODO:changer
          * Get all audio notes API call : /audio-notes
          * @param (AudioNote) -> Unit callbackFn : Callback function
          */
@@ -93,24 +92,19 @@ class ServiceAPI {
                 .responseObject(Users.Deserializer()){ request, response, result ->
                     val (users, err) =  result
                     users?.success?.forEach { user ->
-                        Log.i("USER",user.firstname)
                         callbackFn(user)
-
                     }
                 }
 
         }
 
-        fun fetchFriends(bearerToken: String, callbackFn : (user: Users) -> Unit) {
+        fun fetchFriends(bearerToken: String, callbackFn : (friend: Array<Friends.Friend>,invitationsToAnswer:Array<Friends.Friend>,invitationsWaitingForAnswer:Array<Friends.Friend>) -> Unit) {
             Fuel.get(url + "/friends/")
                 .authentication()
                 .bearer(bearerToken)
                 .responseObject(Friends.Deserializer()){ request, response, result ->
                     val (friends, err) =  result
-
-                    friends?.success?.friends?.forEach {  friend ->
-                        Log.i("FRIEND", friend.firstname)
-                    }
+                    callbackFn(friends?.success?.friends!!,friends?.success?.invitationsToAnswer!!,friends?.success?.invitationsWaitingForAnswer!!)
                 }
         }
 
@@ -121,30 +115,30 @@ class ServiceAPI {
                 .bearer(bearerToken)
                 .responseString(){ result ->
                     val (res, err) = result
-                    Log.i("FRIEND ",res)
                 }
         }
 
         fun acceptFriend(bearerToken: String, id: Int){
-            Fuel.put(url + "/friends/update/$id")
+            Fuel.patch(url + "/friends/update/"+id+"/")
                 .authentication()
                 .bearer(bearerToken)
-                .responseString(){ result ->
-                    val (res, err) = result
-                    Log.i("reponse ",res)
+                .response { request, response, result ->
+                    Log.i("REQUEST",request.toString())
+                    Log.i("RESPONSE",response.toString())
+                    Log.i("RESULT",result.toString())
                 }
         }
 
 
         fun deleteFriend(bearerToken: String, id: Int){
-            Fuel.delete(url + "/friends/$id")
+            Fuel.delete(url + "/friends/"+id+"/")
                 .authentication()
                 .bearer(bearerToken)
-                .responseString(){ result ->
-                    val (res, err) = result
-                    Log.i("reponse ",res)
+                .response { request, response, result ->
+                    Log.i("REQUEST",request.toString())
+                    Log.i("RESPONSE",response.toString())
+                    Log.i("RESULT",result.toString())
                 }
-
         }
 
         /**

@@ -12,28 +12,26 @@ import ch.hearc.museodio.api.ServiceAPI
 import kotlinx.android.synthetic.main.activity_list_search.view.*
 
 
-class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : RecyclerView.Adapter<ViewHolderUser>() {
 
     override fun getItemCount(): Int {
        return  items.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolderUser, position: Int) {
         holder.tvFirstName?.text = items.get(position).firstname
         holder.tvLastName?.text = items.get(position).lastname
         holder.btn?.id = items.get(position).id
         holder.btn.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
-                Log.i("USER ON CLICK",v?.id.toString())
                 val bearerToken = ServiceAPI.loadApiKey(this@UserAdapter.context)
                 ServiceAPI.addFriend(bearerToken,v?.id!!)
-
             }
         })
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderUser {
+        return ViewHolderUser(
             LayoutInflater.from(context).inflate(
                 R.layout.activity_list_search,
                 parent,
@@ -41,11 +39,9 @@ class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : 
             )
         )
     }
-
-
 }
 
-class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+class ViewHolderUser (view: View) : RecyclerView.ViewHolder(view) {
     val tvFirstName = view.tvFirstName
     val tvLastName =view.tvLastName
     val btn= view.btnAccept

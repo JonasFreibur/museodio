@@ -412,11 +412,10 @@ class MainActivity : AppCompatActivity() {
         }
         recorder = null
     }
-
 }
 
 /*
 source : - https://developer.android.com/guide/topics/media/mediarecorder
             - https://android--code.blogspot.com/2018/02/android-kotlin-alertdialog-example.html
-
+            - https://android.jlelse.eu/using-recyclerview-in-android-kotlin-722991e86bf3
 */
