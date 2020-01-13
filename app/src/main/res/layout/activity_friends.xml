@@ -13,29 +13,25 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.textview.MaterialAutoCompleteTextView
                 android:id="@+id/autoCompleteTextView"
-                android:layout_weight="0.8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nom de l'utilisateur"/>
+                android:layout_weight="0.8"
+                android:text="Nom de l'utilisateur" />
 
-            
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/rechercher"/>
+                android:text="@string/rechercher" />
 
         </LinearLayout>
 
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </LinearLayout>
 
 </LinearLayout>
