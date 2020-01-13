@@ -48,5 +48,5 @@ class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : 
 class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val tvFirstName = view.tvFirstName
     val tvLastName =view.tvLastName
-    val btn= view.btn
+    val btn= view.btnAccept
 }
