@@ -19,6 +19,7 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:ems="10"
+        android:hint="Your first name"
         android:inputType="textPersonName" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -37,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Your last name"
         android:inputType="textPersonName" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -54,6 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Your Email address"
         android:inputType="textEmailAddress" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -72,6 +75,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:hint="Define a password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -90,6 +94,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:hint="Confirm above password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
     <com.google.android.material.button.MaterialButton

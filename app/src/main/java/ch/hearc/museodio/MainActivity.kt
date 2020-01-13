@@ -37,7 +37,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import ch.hearc.museodio.api.model.AudioNoteStatus
 import com.birjuvachhani.locus.Locus
+import com.google.android.gms.location.LocationRequest
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 import org.osmdroid.views.overlay.Marker
@@ -74,7 +76,7 @@ class MainActivity : AppCompatActivity() {
 
         /* Config Map */
         map = findViewById<MapView>(R.id.map) as MapView
-        map!!.setTileSource(TileSourceFactory.MAPNIK)
+        map?.setTileSource(TileSourceFactory.MAPNIK)
 
         /* Permissions */
         val permissionRecord =  ActivityCompat.checkSelfPermission(this, permissions[0])
@@ -110,18 +112,19 @@ class MainActivity : AppCompatActivity() {
         setUpToolBar()
 
         startRequestingLocation()
+
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
     }
 
     public override fun onResume() {
         super.onResume()
-        map!!.onResume()
+        map?.onResume()
         startRequestingLocation()
     }
 
     public override fun onPause() {
         super.onPause()
-        map!!.onPause()
+        map?.onPause()
         stopRequestingLocation()
     }
 
@@ -176,8 +179,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startRequestingLocation() {
+        Locus.configure {
+            request {
+                fastestInterval = 600000 // 10 minutes
+                priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+                interval = 600000
+            }
+        }
+
         Locus.startLocationUpdates(this) { result ->
-            result.location?.let { addLocationToMap(it.latitude, it.longitude) }
+            result.location?.let {
+                addLocationToMap(it.latitude, it.longitude)
+            }
         }
     }
 
@@ -196,47 +209,54 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addAudioNoteToMap(audioNote: AudioNote){
-        val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+        val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
 
-        val drawable: Drawable = resources.getDrawable(R.drawable.ic_guitar_pick_outline, null);
+        ServiceAPI.fetchAudioNoteStatus(bearerToken, audioNote.file_name, fun (status: AudioNoteStatus?) {
+            val startMarker = Marker(map)
+            val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+            startMarker.setPosition(startPoint)
+            val drawable: Drawable = resources.getDrawable(R.drawable.ic_guitar_pick_outline, null);
+            startMarker.icon = drawable
+            startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+            startMarker.title = "${audioNote.firstName}, ${audioNote.lastName}"
 
-        val startMarker = Marker(map!!)
-        startMarker.setPosition(startPoint)
-        startMarker.icon = drawable
-        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        startMarker.title = "${audioNote.firstName}, ${audioNote.lastName}"
-        startMarker.subDescription = "${audioNote.latitude}, ${audioNote.longitude}"
-        startMarker.setOnMarkerClickListener { marker, mapView ->
-            val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
-            this@MainActivity.playFile(audioNote.file_name, bearerToken)
-            marker.showInfoWindow()
-            false
-        }
-        map!!.getOverlays().add(startMarker)
+            if(status?.error != null){
+                startMarker.subDescription = status.error?.error
+                startMarker.setOnMarkerClickListener { marker, mapView ->
+                    marker.showInfoWindow()
+                    false
+                }
+            }
+            else {
+                startMarker.subDescription = "${audioNote.latitude}, ${audioNote.longitude}"
+                startMarker.setOnMarkerClickListener { marker, mapView ->
+                    this@MainActivity.playFile(audioNote.file_name, bearerToken)
+                    marker.showInfoWindow()
+                    false
+                }
+            }
+
+            map?.getOverlays()?.add(startMarker)
+        })
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
-        val mapController = map!!.getController()
-        if(!isMapCentered) {
-            mapController.setZoom(9.5)
-            val startPoint = GeoPoint(latitude, longitude)
-            mapController.setCenter(startPoint)
-            isMapCentered = true
+        if(map != null){
+            val mapController = map?.getController()
+            if(!isMapCentered) {
+                mapController?.setZoom(9.5)
+                val startPoint = GeoPoint(latitude, longitude)
+                mapController?.setCenter(startPoint)
+                isMapCentered = true
+            }
+
+
+
+            val myLocationOverlay = MyLocationNewOverlay(map)
+            myLocationOverlay.enableFollowLocation()
+            myLocationOverlay.enableMyLocation()
+            map?.getOverlays()?.add(myLocationOverlay)
         }
-
-
-        val myLocationOverlay = MyLocationNewOverlay(map!!)
-        myLocationOverlay.enableFollowLocation()
-        myLocationOverlay.enableMyLocation()
-        map!!.getOverlays().add(myLocationOverlay)
-
-
-        /*
-        Bitmap icon = BitmapFactory.decodeResource(context.getResources(), R.drawable.user_location);
-        locationOverlay.setPersonIcon(icon);
-        locationOverlay.setPersonHotspot(icon.getWidth() / 2, icon.getHeight());
-        map.getOverlays().add(locationOverlay);
-        */
     }
 
     /* functions and classes to record part */

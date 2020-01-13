@@ -9,10 +9,7 @@ import android.content.Context
 import android.util.Log
 import androidx.core.text.parseAsHtml
 import ch.hearc.museodio.R
-import ch.hearc.museodio.api.model.Users
-import ch.hearc.museodio.api.model.AudioNote
-import ch.hearc.museodio.api.model.Friends
-import ch.hearc.museodio.api.model.PassportToken
+import ch.hearc.museodio.api.model.*
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.DataPart
 import com.github.kittinunf.fuel.core.FileDataPart
@@ -67,9 +64,20 @@ class ServiceAPI {
             Fuel.get(url + "/audio-notes/")
                 .responseObject(AudioNote.Deserializer()){ request, response, result ->
                     val (audioNotes, err) = result
+
                     audioNotes?.forEach {audioNote ->
                         callbackFn(audioNote)
                     }
+                }
+        }
+
+        fun fetchAudioNoteStatus(bearerToken: String, fileName: String, callbackFn: (status: AudioNoteStatus?) -> Unit){
+            Fuel.get(url + "/audio-notes/check/$fileName")
+                .authentication()
+                .bearer(bearerToken)
+                .responseObject(AudioNoteStatus.Deserializer()){ request, response, result ->
+                    val (status, err) = result
+                    callbackFn(status)
                 }
         }
 
@@ -227,7 +235,7 @@ class ServiceAPI {
         fun loadApiKey(context: Context): String {
             val sharedPref = context.getSharedPreferences(context.getString(R.string.preference_file), Context.MODE_PRIVATE) ?: return ""
             val apiKey = sharedPref.getString(context.getString(R.string.museodio_api_key), "")
-            return apiKey!!
+            return apiKey?: ""
         }
 
     }
