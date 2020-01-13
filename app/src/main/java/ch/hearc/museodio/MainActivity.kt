@@ -146,7 +146,7 @@ class MainActivity : AppCompatActivity() {
 
             when (id){
                 R.id.nav_search_user -> {
-                    val searchUserActivityIntent = Intent(this, FriendsActivity::class.java)
+                    val searchUserActivityIntent = Intent(this, TestActivity::class.java)
                     startActivity(searchUserActivityIntent)
                     true
                 }
