@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : AppCompatActivity() {
 
-    var listUser = ArrayList<Users.Success>()
+    private var listUser = ArrayList<Users.Success>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,44 +21,25 @@ class SearchActivity : AppCompatActivity() {
 
         btnRecherche.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
-
                 val bearerToken = ServiceAPI.loadApiKey(applicationContext)
-                //val stringText = "a"
 
-               // if(tvRecherche.text.toString())
-                val stringText=etRecherche.text.toString()
-                listUser.clear()
-                //Log.i("USER bea",bearerToken)
-
-                ServiceAPI.fetchSearchUsers(bearerToken, stringText, ::addUser)
-               // addUser(Users.Success(0," w","sdfjh"))
-
-
+                if(!etRecherche.text.toString().isEmpty())
+                {
+                    val stringText=etRecherche.text.toString()
+                    listUser.clear()
+                    ServiceAPI.fetchSearchUsers(bearerToken, stringText, ::addUser)
+                }
             }
-
         })
 
-
-
         var adapter = UserAdapter(listUser, this)
-
-        // Creates a vertical Layout Manager
-        //recyclerView.layoutManager = LinearLayoutManager(this)
-
-        // You can use GridLayoutManager if you want multiple columns. Enter the number of columns as a parameter.
         recyclerView.layoutManager = GridLayoutManager(this, 1)
         recyclerView.adapter = adapter
-
-        Log.i("USER LIST",listUser.toString())
-        //re?.adapter=adapter
     }
 
     fun addUser(user:Users.Success)
     {
         listUser.add(user)
-        Log.i("USER LIST A",listUser.toString())
-
-        //adapter?.onAddItem("coucou")
         recyclerView.adapter?.notifyDataSetChanged()
     }
 
