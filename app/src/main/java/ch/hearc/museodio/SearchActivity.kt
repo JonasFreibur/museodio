@@ -5,18 +5,19 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import ch.hearc.museodio.adapter.UserAdapter
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Users
-import kotlinx.android.synthetic.main.test_card_frag.*
+import kotlinx.android.synthetic.main.activity_search.*
 
 
-class TestActivity : AppCompatActivity() {
+class SearchActivity : AppCompatActivity() {
 
     var listUser = ArrayList<Users.Success>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.test_card_frag)
+        setContentView(R.layout.activity_search)
 
         btnRecherche.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
@@ -39,7 +40,7 @@ class TestActivity : AppCompatActivity() {
 
 
 
-        var adapter = UserAdapter(listUser,this)
+        var adapter = UserAdapter(listUser, this)
 
         // Creates a vertical Layout Manager
         //recyclerView.layoutManager = LinearLayoutManager(this)

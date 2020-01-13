@@ -1,17 +1,15 @@
-package ch.hearc.museodio
+package ch.hearc.museodio.adapter
 
 import android.content.Context
-import android.preference.PreferenceManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import ch.hearc.museodio.R
 import ch.hearc.museodio.api.model.Users
-import kotlinx.android.synthetic.main.test_card_list.view.*
-import android.widget.Toast
 import ch.hearc.museodio.api.ServiceAPI
-import org.osmdroid.config.Configuration
+import kotlinx.android.synthetic.main.activity_list_search.view.*
 
 
 class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
@@ -35,7 +33,13 @@ class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.test_card_list, parent, false))
+        return ViewHolder(
+            LayoutInflater.from(context).inflate(
+                R.layout.activity_list_search,
+                parent,
+                false
+            )
+        )
     }
 
 
