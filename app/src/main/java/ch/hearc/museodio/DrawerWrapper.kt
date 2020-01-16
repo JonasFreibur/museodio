@@ -1,8 +1,12 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +14,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import ch.hearc.museodio.api.ServiceAPI
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.drawer_wrapper.*
 
 open class DrawerWrapper : AppCompatActivity() {
 
@@ -40,19 +43,30 @@ open class DrawerWrapper : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             val id = it.getItemId();
 
-
             if(lastStartedActivity != id){
                 when (id) {
                     R.id.nav_home -> {
-                        val homeActivityIntent = Intent(this, MainActivity::class.java);
-                        startActivity(homeActivityIntent);
-                        lastStartedActivity = id;
+                        val homeActivityIntent = Intent(this, MainActivity::class.java)
+                        startActivity(homeActivityIntent)
+                        lastStartedActivity = id
                         true
                     }
                     R.id.nav_search_user -> {
-                        val searchUserActivityIntent = Intent(this, UserSearch::class.java);
-                        startActivity(searchUserActivityIntent);
-                        lastStartedActivity = id;
+                        val searchUserActivityIntent = Intent(this, SearchActivity::class.java)
+                        startActivity(searchUserActivityIntent)
+                        lastStartedActivity = id
+                        true
+                    }
+                    R.id.nav_friendship -> {
+                        val friendActivity = Intent(this, FriendActivity::class.java)
+                        startActivity(friendActivity)
+                        lastStartedActivity = id
+                        true
+                    }
+                    R.id.nav_friendship_invitation -> {
+                        val friendshipInvitationActivity = Intent(this, FriendshipInvitationActivity::class.java)
+                        startActivity(friendshipInvitationActivity)
+                        lastStartedActivity = id
                         true
                     }
                     R.id.nav_logout -> {
@@ -67,7 +81,7 @@ open class DrawerWrapper : AppCompatActivity() {
             }
             else{
                 val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout) as DrawerLayout
-                drawerLayout.closeDrawer(Gravity.LEFT);
+                drawerLayout.closeDrawer(Gravity.LEFT)
                 true
             }
         }
