@@ -68,7 +68,6 @@ class MainActivity : DrawerWrapper()  {
         super.onCreate(savedInstanceState)
 
         Configuration.getInstance().load(applicationContext, PreferenceManager.getDefaultSharedPreferences(applicationContext))
-        //setContentView(R.layout.activity_main)
 
         val layoutInflater:LayoutInflater = LayoutInflater.from(applicationContext);
 

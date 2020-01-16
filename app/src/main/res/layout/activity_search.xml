@@ -11,7 +11,7 @@
         android:padding="10dp">
 
         <EditText
-            android:id="@+id/etRecherche"
+            android:id="@+id/researchBar"
             android:layout_width="298dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -19,7 +19,7 @@
             android:inputType="textPersonName" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRecherche"
+            android:id="@+id/btnResearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
