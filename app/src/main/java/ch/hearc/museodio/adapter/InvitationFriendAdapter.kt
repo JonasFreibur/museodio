@@ -50,7 +50,7 @@ class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val contex
 
 class ViewHolderInvitation (view: View) : RecyclerView.ViewHolder(view) {
     val tvFirstName = view.tvFirstName
-    val tvLastName =view.tvLastName
+    val tvLastName = view.tvLastName
     val btnAccept= view.btnAccept
     val btnDelete= view.btnDelete
 }

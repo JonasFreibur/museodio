@@ -29,7 +29,7 @@ import java.io.File
 class ServiceAPI {
 
     companion object{
-        //private var url : String = "http://10.0.2.2:8000/api"
+        //private var url : String = "http://10.0.2.2:8080/api"
         private var url : String = "https://museodio.srvz-webapp.he-arc.ch/api"
 
         /**
@@ -86,7 +86,7 @@ class ServiceAPI {
          * @param (AudioNote) -> Unit callbackFn : Callback function
          */
         fun fetchSearchUsers(bearerToken: String, stringText:String, callbackFn : (user: Users.Success) -> Unit) {
-            Fuel.get(url + "/users/search/"+stringText+"/")
+            Fuel.get(url + "/users/search/$stringText")
                 .authentication()
                 .bearer(bearerToken)
                 .responseObject(Users.Deserializer()){ request, response, result ->
@@ -98,13 +98,16 @@ class ServiceAPI {
 
         }
 
-        fun fetchFriends(bearerToken: String, callbackFn : (friend: Array<Friends.Friend>,invitationsToAnswer:Array<Friends.Friend>,invitationsWaitingForAnswer:Array<Friends.Friend>) -> Unit) {
+        fun fetchFriends(bearerToken: String,
+                         callbackFn : (friend: Array<Friends.Friend>,
+                                       invitationsToAnswer:Array<Friends.Friend>,
+                                       invitationsWaitingForAnswer:Array<Friends.Friend>) -> Unit) {
             Fuel.get(url + "/friends/")
                 .authentication()
                 .bearer(bearerToken)
                 .responseObject(Friends.Deserializer()){ request, response, result ->
                     val (friends, err) =  result
-                    callbackFn(friends?.success?.friends!!,friends?.success?.invitationsToAnswer!!,friends?.success?.invitationsWaitingForAnswer!!)
+                    callbackFn(friends?.success?.friends!!, friends?.success?.invitationsToAnswer!!, friends?.success?.invitationsWaitingForAnswer!!)
                 }
         }
 
@@ -119,25 +122,27 @@ class ServiceAPI {
         }
 
         fun acceptFriend(bearerToken: String, id: Int){
-            Fuel.patch(url + "/friends/update/"+id+"/")
+            Fuel.put(url + "/friends/$id", listOf("id" to id))
                 .authentication()
                 .bearer(bearerToken)
-                .response { request, response, result ->
+                .responseString() { request, response, result ->
                     Log.i("REQUEST",request.toString())
                     Log.i("RESPONSE",response.toString())
                     Log.i("RESULT",result.toString())
+                    Log.i("RESULT_BODY", result.get().toString())
+                    // TODO : do something with result
                 }
         }
 
 
         fun deleteFriend(bearerToken: String, id: Int){
-            Fuel.delete(url + "/friends/"+id+"/")
+            Fuel.delete(url + "/friends/$id", listOf("id" to id))
                 .authentication()
                 .bearer(bearerToken)
-                .response { request, response, result ->
-                    Log.i("REQUEST",request.toString())
-                    Log.i("RESPONSE",response.toString())
-                    Log.i("RESULT",result.toString())
+                .responseString() { request, response, result ->
+                    Log.i("RESPONSE", response.toString())
+                    Log.i("RESULT", result.get().toString())
+                    // TODO callback whith result.get and update list
                 }
         }
 

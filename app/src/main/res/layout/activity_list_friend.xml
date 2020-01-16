@@ -14,7 +14,7 @@
             android:id="@+id/tvFirstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.4"
             android:padding="10dp"
             android:text="FirstName"
             android:textSize="20sp" />
@@ -23,7 +23,7 @@
             android:id="@+id/tvLastName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.4"
             android:padding="10dp"
             android:text="LastName"
             android:textSize="20sp" />
@@ -32,8 +32,7 @@
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="0dp"
+            android:layout_weight="0.1"
             android:text="X" />
     </LinearLayout>
 
