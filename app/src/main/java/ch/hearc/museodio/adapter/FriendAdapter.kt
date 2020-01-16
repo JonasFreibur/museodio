@@ -5,17 +5,23 @@
 
 package ch.hearc.museodio.adapter
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import ch.hearc.museodio.FriendActivity
 import ch.hearc.museodio.R
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Friends
 import kotlinx.android.synthetic.main.activity_list_friend.view.*
+import java.util.logging.Handler
 
-class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context) : RecyclerView.Adapter<ViewHolderFriend>() {
+class FriendAdapter( val items : ArrayList<Friends.Friend>,
+                     val context: Context,
+                     val callbackFn: (message: String) -> Unit) : RecyclerView.Adapter<ViewHolderFriend>() {
 
     override fun getItemCount(): Int {
         return  items.size
@@ -29,7 +35,7 @@ class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@FriendAdapter.context)
                 if(v?.id != null) {
-                    ServiceAPI.deleteFriend(bearerToken, v?.id)
+                    ServiceAPI.deleteFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })

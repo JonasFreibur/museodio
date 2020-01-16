@@ -7,6 +7,7 @@ package ch.hearc.museodio
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import ch.hearc.museodio.adapter.InvitationFriendAdapter
 import ch.hearc.museodio.api.ServiceAPI
@@ -33,17 +34,21 @@ class FriendshipInvitationActivity : DrawerWrapper() {
         listInvitationToAnswer.clear()
         ServiceAPI.fetchFriends(bearerToken, ::addFriend)
 
-        var adapterInvitation = InvitationFriendAdapter(listInvitationToAnswer, this)
+        var adapterInvitation = InvitationFriendAdapter(listInvitationToAnswer, this, ::displayStatus)
         rv_invitation_friend.layoutManager = LinearLayoutManager(this)
         rv_invitation_friend.adapter = adapterInvitation
     }
 
-    fun addFriend(friends: Array<Friends.Friend>, invitationToAnswer:Array<Friends.Friend>, invitationWaitingForAnswer:Array<Friends.Friend>)
+    fun displayStatus(message: String){
+        runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
+    }
+
+    fun addFriend(friends: Array<Friends.Friend>, invitationToAnswer:Array<Friends.Friend>,
+                  invitationWaitingForAnswer:Array<Friends.Friend>)
     {
         listInvitationToAnswer.addAll(invitationToAnswer)
 
         rv_invitation_friend.adapter?.notifyDataSetChanged()
         rv_invitation_friend.adapter?.notifyDataSetChanged()
-
     }
 }

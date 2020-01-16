@@ -16,7 +16,9 @@ import ch.hearc.museodio.api.ServiceAPI
 import kotlinx.android.synthetic.main.activity_list_search.view.*
 
 
-class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : RecyclerView.Adapter<ViewHolderUser>() {
+class UserAdapter(val items : ArrayList<Users.Success>,
+                  val context: Context,
+                  val callbackFn: (message: String) -> Unit) : RecyclerView.Adapter<ViewHolderUser>() {
 
     override fun getItemCount(): Int {
        return  items.size
@@ -30,7 +32,7 @@ class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : 
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@UserAdapter.context)
                 if(v?.id !=null) {
-                    ServiceAPI.addFriend(bearerToken, v?.id)
+                    ServiceAPI.addFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })

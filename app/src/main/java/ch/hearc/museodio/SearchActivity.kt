@@ -8,6 +8,7 @@ package ch.hearc.museodio
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import ch.hearc.museodio.adapter.UserAdapter
 import ch.hearc.museodio.api.ServiceAPI
@@ -37,16 +38,20 @@ class SearchActivity : DrawerWrapper() {
 
                 if(!researchBar.text.toString().isEmpty())
                 {
-                    val stringText=researchBar.text.toString()
+                    val stringText = researchBar.text.toString()
                     listUser.clear()
                     ServiceAPI.fetchSearchUsers(bearerToken, stringText, ::addUser)
                 }
             }
         })
 
-        var adapter = UserAdapter(listUser, this)
+        var adapter = UserAdapter(listUser, this, ::displayStatus)
         recyclerView.layoutManager = GridLayoutManager(this, 1)
         recyclerView.adapter = adapter
+    }
+
+    fun displayStatus(message: String){
+        runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
     }
 
     fun addUser(users: Array<Users.Success>)
@@ -54,6 +59,7 @@ class SearchActivity : DrawerWrapper() {
         users.forEach { user ->
             listUser.add(user)
         }
+
         recyclerView.adapter?.notifyDataSetChanged()
     }
 }
