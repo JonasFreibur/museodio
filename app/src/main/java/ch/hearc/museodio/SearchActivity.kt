@@ -15,8 +15,9 @@ import ch.hearc.museodio.api.model.Users
 import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.drawer_wrapper.*
 
-
-
+/**
+ * SearchActivity : Activity for the user to search a user
+ */
 class SearchActivity : DrawerWrapper() {
 
     private var listUser = ArrayList<Users.Success>()
@@ -49,6 +50,9 @@ class SearchActivity : DrawerWrapper() {
         recyclerView.adapter = adapter
     }
 
+    /**
+     * Callback function called by the API request
+     */
     fun addUser(users: Array<Users.Success>)
     {
         users.forEach { user ->

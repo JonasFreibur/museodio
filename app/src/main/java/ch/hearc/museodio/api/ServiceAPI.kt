@@ -25,7 +25,6 @@ import com.google.gson.JsonParser
 class ServiceAPI {
 
     companion object{
-        //private var url : String = "http://10.0.2.2:8080/api"
         private var url : String = "https://museodio.srvz-webapp.he-arc.ch/api"
 
         /**
@@ -94,6 +93,12 @@ class ServiceAPI {
 
         }
 
+        /**
+         * Get all friends API call : /friends/
+         *
+         * @param String bearerToken
+         * @param (Array<Friends.Friend>, Array<Friends.Friend>, Array<Friends.Friend>) -> Unit callbackFn : Callback function
+         */
         fun fetchFriends(bearerToken: String,
                          callbackFn : (friend: Array<Friends.Friend>,
                                        invitationsToAnswer:Array<Friends.Friend>,
@@ -113,6 +118,13 @@ class ServiceAPI {
                 }
         }
 
+        /**
+         * Do a friendship request
+         * API call : /friends/{id}
+         *
+         * @param String bearerToken
+         * @param Int id
+         */
         fun addFriend(bearerToken: String, id: Int)  {
             Fuel.upload(url + "/friends/", method = Method.POST)
                 .add(InlineDataPart(id.toString(), name="id", contentType="multipart/form-data"))
@@ -123,6 +135,13 @@ class ServiceAPI {
                 }
         }
 
+        /**
+         * Accept a friendship request
+         * API call : /friends/{id}
+         *
+         * @param String bearerToken
+         * @param Int id
+         */
         fun acceptFriend(bearerToken: String, id: Int){
             Fuel.put(url + "/friends/$id", listOf("id" to id))
                 .authentication()
@@ -136,7 +155,13 @@ class ServiceAPI {
                 }
         }
 
-
+        /**
+         * Refuse a friendship request or delete a friendship
+         * API call : /friends/{id}
+         *
+         * @param String bearerToken
+         * @param Int id
+         */
         fun deleteFriend(bearerToken: String, id: Int){
             Fuel.delete(url + "/friends/$id", listOf("id" to id))
                 .authentication()

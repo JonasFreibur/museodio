@@ -14,10 +14,16 @@ import ch.hearc.museodio.api.model.Friends
 import kotlinx.android.synthetic.main.activity_friend.*
 import kotlinx.android.synthetic.main.drawer_wrapper.*
 
+/**
+ * FriendshipInvitationActivity : Activity for the user to display its friendship invitations
+ */
 class FriendshipInvitationActivity : DrawerWrapper() {
 
     private val listInvitationToAnswer = ArrayList<Friends.Friend>()
 
+    /**
+     * onCreate function
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -38,6 +44,9 @@ class FriendshipInvitationActivity : DrawerWrapper() {
         rv_invitation_friend.adapter = adapterInvitation
     }
 
+    /**
+     * Callback function called by the API request
+     */
     fun addFriend(friends: Array<Friends.Friend>, invitationToAnswer:Array<Friends.Friend>, invitationWaitingForAnswer:Array<Friends.Friend>)
     {
         listInvitationToAnswer.addAll(invitationToAnswer)
