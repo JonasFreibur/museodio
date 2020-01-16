@@ -28,7 +28,7 @@ class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context
         holder.btnDelete.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@FriendAdapter.context)
-                if(v?.id!=null) {
+                if(v?.id != null) {
                     ServiceAPI.deleteFriend(bearerToken, v?.id)
                 }
             }
