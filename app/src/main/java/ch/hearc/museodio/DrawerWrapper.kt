@@ -35,7 +35,13 @@ open class DrawerWrapper : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             val id = it.getItemId();
             Log.e("TEST_DRAWER", "ID VIEW : " + id);
+
             when (id){
+                R.id.nav_home -> {
+                    val homeActivityIntent = Intent(this, MainActivity::class.java);
+                    startActivity(homeActivityIntent);
+                    true
+                }
                 R.id.nav_search_user -> {
                     val searchUserActivityIntent = Intent(this, UserSearch::class.java);
                     startActivity(searchUserActivityIntent);

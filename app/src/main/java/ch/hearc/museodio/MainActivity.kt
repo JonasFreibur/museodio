@@ -70,9 +70,10 @@ class MainActivity : DrawerWrapper()  {
 
         val layoutInflater:LayoutInflater = LayoutInflater.from(applicationContext);
 
+
         layoutInflater.inflate(
             R.layout.activity_main, // Custom view/ layout
-            drawer_layout, // Root layout to attach the view
+            content_layout, // Root layout to attach the view
             true // Attach with root layout or not
         )
 
@@ -129,6 +130,10 @@ class MainActivity : DrawerWrapper()  {
         super.onPause()
         map!!.onPause()
         stopRequestingLocation()
+    }
+
+    public override fun onBackPressed() {
+    // Nothing
     }
 
     private fun startRequestingLocation() {

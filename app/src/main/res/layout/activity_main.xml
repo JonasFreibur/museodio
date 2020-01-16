@@ -18,4 +18,8 @@
             </org.osmdroid.views.MapView>
 
         </FrameLayout>
+
+
+
+
 </LinearLayout>
