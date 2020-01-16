@@ -24,6 +24,7 @@ import android.media.MediaRecorder
 import android.util.Log
 import android.net.Uri
 import android.os.PowerManager
+import android.view.Gravity
 import android.view.LayoutInflater
 import java.io.IOException
 import android.widget.LinearLayout
@@ -34,7 +35,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import com.birjuvachhani.locus.Locus
-import kotlinx.android.synthetic.main.activity_main.linearLayout
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.drawer_wrapper.*
 import org.osmdroid.views.overlay.Marker
 
@@ -109,12 +110,11 @@ class MainActivity : DrawerWrapper()  {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 0f))
+            gravity = Gravity.BOTTOM
+
         }
 
-        //val linearLayout = mainView.findViewById<LinearLayout>(R.id.linearLayout) as LinearLayout;
-
-        linearLayout.addView(linearLayoutRecord);
-
+        linearLayoutContent.addView(linearLayoutRecord);
 
         startRequestingLocation()
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap);
@@ -129,6 +129,7 @@ class MainActivity : DrawerWrapper()  {
     public override fun onPause() {
         super.onPause()
         map!!.onPause()
+        stopPlaying()
         stopRequestingLocation()
     }
 
