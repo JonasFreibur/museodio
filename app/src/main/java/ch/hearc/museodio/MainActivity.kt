@@ -7,15 +7,11 @@ package ch.hearc.museodio
 
 import android.Manifest
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
 
 import android.os.Bundle
 import android.preference.PreferenceManager
-import androidx.appcompat.app.AppCompatActivity
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.AudioNote
 import org.osmdroid.config.Configuration
@@ -28,25 +24,19 @@ import android.media.MediaRecorder
 import android.util.Log
 import android.net.Uri
 import android.os.PowerManager
-import android.view.Gravity
+import android.view.LayoutInflater
 import java.io.IOException
 import android.widget.LinearLayout
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.view.menu.MenuBuilder
-import kotlinx.android.synthetic.main.activity_main.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
-import androidx.drawerlayout.widget.DrawerLayout
-import ch.hearc.museodio.util.Util
 import com.birjuvachhani.locus.Locus
-import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.linearLayout
+import kotlinx.android.synthetic.main.drawer_wrapper.*
 import org.osmdroid.views.overlay.Marker
-import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
 
 /* Global variables*/
 private const val LOG_TAG_RECORD = "AudioRecordTest"
@@ -56,7 +46,7 @@ private var fileName: String = ""
 /**
  * MainActivity : Activity with all the applications's business
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : DrawerWrapper()  {
 
     /* Initialisation variables */
     internal var map: MapView? = null
@@ -68,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     private var player: MediaPlayer ?= null
     private var permissionToRecordAccepted = false
     private var isMapCentered: Boolean = false
-    private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO,Manifest.permission.ACCESS_COARSE_LOCATION)
+    private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO, Manifest.permission.ACCESS_COARSE_LOCATION)
 
 
     /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
@@ -76,7 +66,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         Configuration.getInstance().load(applicationContext, PreferenceManager.getDefaultSharedPreferences(applicationContext))
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+
+        val layoutInflater:LayoutInflater = LayoutInflater.from(applicationContext);
+
+
+        layoutInflater.inflate(
+            R.layout.activity_main, // Custom view/ layout
+            content_layout, // Root layout to attach the view
+            true // Attach with root layout or not
+        )
+
 
         /* Config Map */
         map = findViewById<MapView>(R.id.map) as MapView
@@ -111,12 +111,13 @@ class MainActivity : AppCompatActivity() {
                 0f))
         }
 
-        linearLayout.addView(linearLayoutRecord)
+        //val linearLayout = mainView.findViewById<LinearLayout>(R.id.linearLayout) as LinearLayout;
 
-        setUpToolBar()
+        linearLayout.addView(linearLayoutRecord);
+
 
         startRequestingLocation()
-        ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
+        ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap);
     }
 
     public override fun onResume() {
@@ -131,54 +132,8 @@ class MainActivity : AppCompatActivity() {
         stopRequestingLocation()
     }
 
-    private fun setUpToolBar(){
-        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar) as MaterialToolbar
-        setSupportActionBar(toolbar)
-        toolbar.showOverflowMenu()
-        toolbar.setNavigationIcon(R.drawable.ic_menu)
-        toolbar.setNavigationOnClickListener {
-            val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout) as DrawerLayout
-
-            if(drawerLayout.isDrawerOpen(Gravity.LEFT)){
-                drawerLayout.closeDrawer(Gravity.LEFT)
-            }else {
-                drawerLayout.openDrawer(Gravity.LEFT)
-            }
-        }
-
-        val navigationView = findViewById<NavigationView>(R.id.navigation_view) as NavigationView
-        navigationView.setNavigationItemSelectedListener {
-            val id = it.getItemId();
-
-            when (id){
-                R.id.nav_search_user -> {
-                    val searchUserActivityIntent = Intent(this, UserSearch::class.java)
-                    startActivity(searchUserActivityIntent)
-                    true
-                }
-                R.id.nav_logout -> {
-                    ServiceAPI.logout(::logoutCallback)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    finish()
-                    true
-                }
-                else -> false
-            }
-        }
-    }
-
-    private fun logoutCallback(isLoggedOut: Boolean){
-        if(isLoggedOut){
-            runOnUiThread() {Toast.makeText(this, "Successfully logged out", Toast.LENGTH_SHORT).show()}
-            loadLoginActivity()
-        } else {
-            runOnUiThread() {Toast.makeText(this, "Error while logging out", Toast.LENGTH_LONG).show()}
-        }
-    }
-
-    private fun loadLoginActivity() {
-        val logInActivityIntent = Intent(this, LoginActivity::class.java)
-        startActivity(logInActivityIntent)
+    public override fun onBackPressed() {
+    // Nothing
     }
 
     private fun startRequestingLocation() {
