@@ -1,13 +1,14 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import ch.hearc.museodio.adapter.FriendAdapter
-import ch.hearc.museodio.adapter.InvitationFriendAdapter
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Friends
 import kotlinx.android.synthetic.main.activity_friend.*
@@ -42,9 +43,6 @@ class FriendActivity : DrawerWrapper() {
     {
         listFriends.addAll(friends)
         listFriends.addAll(invitationWaitingForAnswer)
-
         rv_friend.adapter?.notifyDataSetChanged()
-
     }
-
 }

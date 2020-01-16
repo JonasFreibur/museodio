@@ -211,8 +211,6 @@ class MainActivity : DrawerWrapper()  {
                 isMapCentered = true
             }
 
-
-
             val myLocationOverlay = MyLocationNewOverlay(map)
             myLocationOverlay.enableFollowLocation()
             myLocationOverlay.enableMyLocation()

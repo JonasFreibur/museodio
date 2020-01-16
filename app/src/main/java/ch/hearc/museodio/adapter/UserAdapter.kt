@@ -1,7 +1,11 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +29,9 @@ class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : 
         holder.btn.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@UserAdapter.context)
-                ServiceAPI.addFriend(bearerToken,v?.id!!)
+                if(v?.id !=null) {
+                    ServiceAPI.addFriend(bearerToken, v?.id)
+                }
             }
         })
     }

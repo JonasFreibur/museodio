@@ -7,7 +7,6 @@ package ch.hearc.museodio.api
 
 import android.content.Context
 import android.util.Log
-import androidx.core.text.parseAsHtml
 import ch.hearc.museodio.R
 import ch.hearc.museodio.api.model.*
 import com.github.kittinunf.fuel.Fuel
@@ -15,12 +14,9 @@ import com.github.kittinunf.fuel.core.DataPart
 import com.github.kittinunf.fuel.core.FileDataPart
 import com.github.kittinunf.fuel.core.InlineDataPart
 import com.github.kittinunf.fuel.core.Method
-
 import com.github.kittinunf.fuel.core.extensions.authentication
-import com.github.kittinunf.result.success
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import java.io.File
 
 /**
  * Handles API calls
@@ -91,10 +87,9 @@ class ServiceAPI {
                 .bearer(bearerToken)
                 .responseObject(Users.Deserializer()){ request, response, result ->
                     val (users, err) =  result
-                    callbackFn(users?.success!!)
-                    /*users?.success?.forEach { user ->
-                        callbackFn(user)
-                    }*/
+                    if(users?.success != null) {
+                        callbackFn(users?.success)
+                    }
                 }
 
         }
@@ -108,7 +103,13 @@ class ServiceAPI {
                 .bearer(bearerToken)
                 .responseObject(Friends.Deserializer()){ request, response, result ->
                     val (friends, err) =  result
-                    callbackFn(friends?.success?.friends!!, friends?.success?.invitationsToAnswer!!, friends?.success?.invitationsWaitingForAnswer!!)
+                    if(friends?.success?.friends!=null && friends?.success?.invitationsWaitingForAnswer!=null &&friends?.success?.invitationsToAnswer!=null) {
+                        callbackFn(
+                            friends?.success?.friends,
+                            friends?.success?.invitationsToAnswer,
+                            friends?.success?.invitationsWaitingForAnswer
+                        )
+                    }
                 }
         }
 
@@ -237,6 +238,5 @@ class ServiceAPI {
             val apiKey = sharedPref.getString(context.getString(R.string.museodio_api_key), "")
             return apiKey?: ""
         }
-
     }
 }

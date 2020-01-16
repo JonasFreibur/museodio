@@ -1,7 +1,11 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +14,6 @@ import ch.hearc.museodio.R
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Friends
 import kotlinx.android.synthetic.main.activity_list_friend.view.*
-
 
 class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context) : RecyclerView.Adapter<ViewHolderFriend>() {
 
@@ -25,7 +28,9 @@ class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context
         holder.btnDelete.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@FriendAdapter.context)
-                ServiceAPI.deleteFriend(bearerToken,v?.id!!)
+                if(v?.id!=null) {
+                    ServiceAPI.deleteFriend(bearerToken, v?.id)
+                }
             }
         })
     }

@@ -1,7 +1,11 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,14 +29,18 @@ class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val contex
         holder.btnDelete.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@InvitationFriendAdapter.context)
-                ServiceAPI.deleteFriend(bearerToken,v?.id!!)
+                if(v?.id != null) {
+                    ServiceAPI.deleteFriend(bearerToken, v?.id)
+                }
             }
         })
         holder.btnAccept?.id = items.get(position).id
         holder.btnAccept.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@InvitationFriendAdapter.context)
-                ServiceAPI.acceptFriend(bearerToken,v?.id!!)
+                if(v?.id != null) {
+                    ServiceAPI.acceptFriend(bearerToken, v?.id)
+                }
             }
         })
     }

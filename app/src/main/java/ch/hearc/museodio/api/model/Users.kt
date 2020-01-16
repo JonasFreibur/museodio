@@ -5,7 +5,6 @@
 
 package ch.hearc.museodio.api.model
 
-import ch.hearc.museodio.api.ServiceAPI
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.google.gson.Gson
 
