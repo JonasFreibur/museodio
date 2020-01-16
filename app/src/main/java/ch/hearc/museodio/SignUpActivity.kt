@@ -50,6 +50,10 @@ class SignUpActivity: DrawerWrapper() {
         })
     }
 
+    public override fun onBackPressed() {
+        // Nothing
+    }
+
     private fun signUpCallback(isSignedUp: Boolean) {
         if(isSignedUp){
             runOnUiThread() {Toast.makeText(this, "Successfully signed up", Toast.LENGTH_SHORT).show()}

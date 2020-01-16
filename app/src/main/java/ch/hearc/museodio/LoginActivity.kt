@@ -44,6 +44,10 @@ class LoginActivity : AppCompatActivity() {
         })
     }
 
+    public override fun onBackPressed() {
+        // Nothing
+    }
+
     private fun loginCallback(isLoggedIn: Boolean){
         if(isLoggedIn){
             runOnUiThread() {Toast.makeText(this, "Successfully logged in", Toast.LENGTH_SHORT).show()}
