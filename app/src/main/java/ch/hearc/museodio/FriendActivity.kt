@@ -22,7 +22,7 @@ class FriendActivity : AppCompatActivity() {
         val bearerToken = ServiceAPI.loadApiKey(applicationContext)
         listFriends.clear()
         listInvitationToAnswer.clear()
-        ServiceAPI.fetchFriends(bearerToken,::addFriend)
+        ServiceAPI.fetchFriends(bearerToken, ::addFriend)
 
         var adapterFriend = FriendAdapter(listFriends, this)
         rv_friend.layoutManager = GridLayoutManager(this, 1)

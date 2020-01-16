@@ -9,6 +9,8 @@ import ch.hearc.museodio.adapter.UserAdapter
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Users
 import kotlinx.android.synthetic.main.activity_search.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class SearchActivity : AppCompatActivity() {
@@ -37,9 +39,11 @@ class SearchActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
-    fun addUser(user:Users.Success)
+    fun addUser(users: Array<Users.Success>)
     {
-        listUser.add(user)
+        users.forEach { user ->
+            listUser.add(user)
+        }
         recyclerView.adapter?.notifyDataSetChanged()
     }
 

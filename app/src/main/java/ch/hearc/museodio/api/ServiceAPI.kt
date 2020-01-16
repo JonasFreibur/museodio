@@ -85,15 +85,16 @@ class ServiceAPI {
          * Get all audio notes API call : /audio-notes
          * @param (AudioNote) -> Unit callbackFn : Callback function
          */
-        fun fetchSearchUsers(bearerToken: String, stringText:String, callbackFn : (user: Users.Success) -> Unit) {
+        fun fetchSearchUsers(bearerToken: String, stringText:String, callbackFn : (users: Array<Users.Success>) -> Unit) {
             Fuel.get(url + "/users/search/$stringText")
                 .authentication()
                 .bearer(bearerToken)
                 .responseObject(Users.Deserializer()){ request, response, result ->
                     val (users, err) =  result
-                    users?.success?.forEach { user ->
+                    callbackFn(users?.success!!)
+                    /*users?.success?.forEach { user ->
                         callbackFn(user)
-                    }
+                    }*/
                 }
 
         }
