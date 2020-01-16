@@ -1,13 +1,8 @@
 package ch.hearc.museodio
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
-import androidx.recyclerview.widget.GridLayoutManager
-import ch.hearc.museodio.DrawerWrapper
-import ch.hearc.museodio.R
-import ch.hearc.museodio.adapter.FriendAdapter
+import androidx.recyclerview.widget.LinearLayoutManager
 import ch.hearc.museodio.adapter.InvitationFriendAdapter
 import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Friends
@@ -34,7 +29,7 @@ class FriendshipInvitationActivity : DrawerWrapper() {
         ServiceAPI.fetchFriends(bearerToken, ::addFriend)
 
         var adapterInvitation = InvitationFriendAdapter(listInvitationToAnswer, this)
-        rv_invitation_friend.layoutManager = GridLayoutManager(this, 1)
+        rv_invitation_friend.layoutManager = LinearLayoutManager(this)
         rv_invitation_friend.adapter = adapterInvitation
     }
 
@@ -43,7 +38,7 @@ class FriendshipInvitationActivity : DrawerWrapper() {
         listInvitationToAnswer.addAll(invitationToAnswer)
 
         rv_invitation_friend.adapter?.notifyDataSetChanged()
-        rv_friend.adapter?.notifyDataSetChanged()
+        rv_invitation_friend.adapter?.notifyDataSetChanged()
 
     }
 }

@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import ch.hearc.museodio.adapter.FriendAdapter
 import ch.hearc.museodio.adapter.InvitationFriendAdapter
 import ch.hearc.museodio.api.ServiceAPI
@@ -16,7 +17,6 @@ import kotlinx.android.synthetic.main.drawer_wrapper.*
 class FriendActivity : DrawerWrapper() {
 
     private val listFriends=ArrayList<Friends.Friend>()
-    private val listInvitationToAnswer=ArrayList<Friends.Friend>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,32 +31,18 @@ class FriendActivity : DrawerWrapper() {
 
         val bearerToken = ServiceAPI.loadApiKey(applicationContext)
         listFriends.clear()
-        listInvitationToAnswer.clear()
         ServiceAPI.fetchFriends(bearerToken, ::addFriend)
 
         var adapterFriend = FriendAdapter(listFriends, this)
-        rv_friend.layoutManager = GridLayoutManager(this, 1)
+        rv_friend.layoutManager = LinearLayoutManager(this)
         rv_friend.adapter = adapterFriend
-
-        var adapterInvitation = InvitationFriendAdapter(listInvitationToAnswer, this)
-        rv_invitation_friend.layoutManager = GridLayoutManager(this, 1)
-        rv_invitation_friend.adapter = adapterInvitation
     }
 
     fun addFriend(friends: Array<Friends.Friend>, invitationToAnswer:Array<Friends.Friend>, invitationWaitingForAnswer:Array<Friends.Friend>)
     {
         listFriends.addAll(friends)
-        listInvitationToAnswer.addAll(invitationToAnswer)
         listFriends.addAll(invitationWaitingForAnswer)
-        friends.forEach { f->
-            Log.i("FRIEND ADD",f.toString())
 
-        }
-        invitationToAnswer.forEach { f->
-            Log.i("INV FRIEND ADD",f.toString())
-
-        }
-        rv_invitation_friend.adapter?.notifyDataSetChanged()
         rv_friend.adapter?.notifyDataSetChanged()
 
     }
