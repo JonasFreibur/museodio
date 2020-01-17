@@ -5,7 +5,6 @@
 
 package ch.hearc.museodio
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
@@ -37,19 +36,30 @@ class FriendActivity : DrawerWrapper() {
             true
         )
 
-        val bearerToken = ServiceAPI.loadApiKey(applicationContext)
-        listFriends.clear()
-        ServiceAPI.fetchFriends(bearerToken, ::addFriend)
-
         var adapterFriend = FriendAdapter(listFriends, this, ::displayStatus)
         rv_friend.layoutManager = LinearLayoutManager(this)
         rv_friend.adapter = adapterFriend
+
+        loadFriendList()
     }
 
+    /**
+     * Loads the list of the friends
+     */
+    private fun loadFriendList() {
+        val bearerToken = ServiceAPI.loadApiKey(applicationContext)
+        listFriends.clear()
+        ServiceAPI.fetchFriends(bearerToken, ::addFriend)
+    }
 
+    /**
+     * Displays a status feedback after delete operation
+     */
     fun displayStatus(message: String){
         runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
+        loadFriendList()
     }
+
     /**
      * Callback function called by the API request
      */
@@ -58,6 +68,6 @@ class FriendActivity : DrawerWrapper() {
     {
         listFriends.addAll(friends)
         listFriends.addAll(invitationWaitingForAnswer)
-        rv_friend.adapter?.notifyDataSetChanged()
+        runOnUiThread{ rv_friend.adapter?.notifyDataSetChanged() }
     }
 }

@@ -54,6 +54,9 @@ class SignUpActivity: DrawerWrapper() {
         // Nothing
     }
 
+    /**
+     * Manage the signup status after attempt
+     */
     private fun signUpCallback(isSignedUp: Boolean) {
         if(isSignedUp){
             runOnUiThread() {Toast.makeText(this, "Successfully signed up", Toast.LENGTH_SHORT).show()}

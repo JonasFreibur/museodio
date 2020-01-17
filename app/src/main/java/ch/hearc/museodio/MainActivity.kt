@@ -130,10 +130,16 @@ class MainActivity : DrawerWrapper()  {
         stopRequestingLocation()
     }
 
+    /**
+     * Required but unused
+     */
     public override fun onBackPressed() {
         // Nothing
     }
 
+    /**
+     * Starts continuous querrying of the user's location
+     */
     private fun startRequestingLocation() {
         Locus.configure {
             request {
@@ -164,6 +170,10 @@ class MainActivity : DrawerWrapper()  {
         if (!permissionToRecordAccepted) finish()
     }
 
+    /**
+     * Adds an audio note pin to the map
+     * @param AudioNote : JSON containing the audio note's information
+     */
     private fun addAudioNoteToMap(audioNote: AudioNote){
         val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
 
@@ -196,6 +206,9 @@ class MainActivity : DrawerWrapper()  {
         })
     }
 
+    /**
+     * Displays the user's location on the map
+     */
     private fun addLocationToMap(latitude: Double, longitude: Double){
         if(map != null){
             val mapController = map?.getController()
@@ -230,6 +243,9 @@ class MainActivity : DrawerWrapper()  {
         }
     }
 
+    /**
+     * Asks for upload validation from the user and uploads the file on positive validation
+     */
     internal inner class SaveButton(ctx: Context) : AppCompatButton(ctx) {
         var clicker: OnClickListener = OnClickListener {
 
@@ -259,6 +275,9 @@ class MainActivity : DrawerWrapper()  {
         }
     }
 
+    /**
+     * Change the state of the play button
+     */
     internal inner class PlayButton(ctx: Context) : AppCompatButton(ctx) {
         var mStartPlaying = true
         var clicker: OnClickListener = OnClickListener {
@@ -281,6 +300,11 @@ class MainActivity : DrawerWrapper()  {
         stopPlaying()
     }
 
+    /**
+     * Dowloads and plays an audio file
+     * @param String filename : The file to download
+     * @param String token : The bearer auth token
+     */
     private fun playFile(filename: String, token: String){
         val headers: Map<String, String>? = mapOf("Authorization" to "Bearer $token")
         headers.toString().replace("=", ":")
@@ -313,6 +337,9 @@ class MainActivity : DrawerWrapper()  {
         }
     }
 
+    /**
+     * Plays a locally saved audio file
+     */
     private fun startPlaying() {
         stopPlaying()
         stopRecording()
@@ -340,6 +367,9 @@ class MainActivity : DrawerWrapper()  {
         stopRecording()
     }
 
+    /**
+     * Records an audio
+     */
     private fun startRecording() {
         stopPlaying()
         stopRecording()
@@ -357,6 +387,9 @@ class MainActivity : DrawerWrapper()  {
         }
     }
 
+    /**
+     * Stops the recording
+     */
     private fun stopRecording() {
         recorder?.apply {
             stop()

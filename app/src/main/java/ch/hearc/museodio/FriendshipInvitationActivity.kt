@@ -36,31 +36,38 @@ class FriendshipInvitationActivity : DrawerWrapper() {
             true
         )
 
-        val bearerToken = ServiceAPI.loadApiKey(applicationContext)
-        listInvitationToAnswer.clear()
-        ServiceAPI.fetchFriends(bearerToken, ::addFriend)
+        loadRelationships()
 
         var adapterInvitation = InvitationFriendAdapter(listInvitationToAnswer, this, ::displayStatus)
         rv_invitation_friend.layoutManager = LinearLayoutManager(this)
         rv_invitation_friend.adapter = adapterInvitation
     }
 
-    /**
-     * Callback function to display the Toast
-     */
-    fun displayStatus(message: String){
-        runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
+    private fun loadRelationships() {
+        val bearerToken = ServiceAPI.loadApiKey(applicationContext)
+        listInvitationToAnswer.clear()
+        ServiceAPI.fetchFriends(bearerToken, ::addFriend)
     }
 
     /**
-     * Callback function called by the API request
+     * Displays a status feedback after operation
+     */
+    fun displayStatus(message: String){
+        runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
+        loadRelationships()
+    }
+
+    /**
+     * Callback function called by the API request to display the list
      */
     fun addFriend(friends: Array<Friends.Friend>, invitationToAnswer:Array<Friends.Friend>,
                   invitationWaitingForAnswer:Array<Friends.Friend>)
     {
         listInvitationToAnswer.addAll(invitationToAnswer)
 
-        rv_invitation_friend.adapter?.notifyDataSetChanged()
-        rv_invitation_friend.adapter?.notifyDataSetChanged()
+        runOnUiThread {
+            rv_invitation_friend.adapter?.notifyDataSetChanged()
+            rv_invitation_friend.adapter?.notifyDataSetChanged()
+        }
     }
 }
