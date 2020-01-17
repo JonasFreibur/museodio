@@ -36,20 +36,25 @@ class FriendshipInvitationActivity : DrawerWrapper() {
             true
         )
 
-        val bearerToken = ServiceAPI.loadApiKey(applicationContext)
-        listInvitationToAnswer.clear()
-        ServiceAPI.fetchFriends(bearerToken, ::addFriend)
+        loadRelationships()
 
         var adapterInvitation = InvitationFriendAdapter(listInvitationToAnswer, this, ::displayStatus)
         rv_invitation_friend.layoutManager = LinearLayoutManager(this)
         rv_invitation_friend.adapter = adapterInvitation
     }
 
+    private fun loadRelationships() {
+        val bearerToken = ServiceAPI.loadApiKey(applicationContext)
+        listInvitationToAnswer.clear()
+        ServiceAPI.fetchFriends(bearerToken, ::addFriend)
+    }
+
     /**
-     * Displays a status feedback after fetch operation
+     * Displays a status feedback after operation
      */
     fun displayStatus(message: String){
         runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
+        loadRelationships()
     }
 
     /**
@@ -60,7 +65,9 @@ class FriendshipInvitationActivity : DrawerWrapper() {
     {
         listInvitationToAnswer.addAll(invitationToAnswer)
 
-        rv_invitation_friend.adapter?.notifyDataSetChanged()
-        rv_invitation_friend.adapter?.notifyDataSetChanged()
+        runOnUiThread {
+            rv_invitation_friend.adapter?.notifyDataSetChanged()
+            rv_invitation_friend.adapter?.notifyDataSetChanged()
+        }
     }
 }
