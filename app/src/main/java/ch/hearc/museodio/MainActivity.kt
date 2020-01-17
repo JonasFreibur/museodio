@@ -98,16 +98,16 @@ class MainActivity : DrawerWrapper()  {
                 LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    0f))
+                    0.3f))
             addView(playButton,
                 LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    0f))
+                    0.3f))
             addView(saveButton,LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                0f))
+                0.4f))
             gravity = Gravity.BOTTOM
 
         }
