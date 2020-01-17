@@ -9,7 +9,6 @@ import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
-
 import android.os.Bundle
 import android.preference.PreferenceManager
 import ch.hearc.museodio.api.ServiceAPI
@@ -24,6 +23,7 @@ import android.media.MediaRecorder
 import android.util.Log
 import android.net.Uri
 import android.os.PowerManager
+import android.view.Gravity
 import android.view.LayoutInflater
 import java.io.IOException
 import android.widget.LinearLayout
@@ -35,8 +35,8 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
 import ch.hearc.museodio.api.model.AudioNoteStatus
 import com.birjuvachhani.locus.Locus
+import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.gms.location.LocationRequest
-import kotlinx.android.synthetic.main.activity_main.linearLayout
 import kotlinx.android.synthetic.main.drawer_wrapper.*
 import org.osmdroid.views.overlay.Marker
 
@@ -88,7 +88,7 @@ class MainActivity : DrawerWrapper()  {
         }
 
         /* Initialisation record elements */
-        fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.mp3"
+        fileName = "${externalCacheDir?.absolutePath}/audiorecord.mp3"
         recordButton = RecordButton(this)
         playButton = PlayButton(this)
         saveButton = SaveButton(this)
@@ -98,18 +98,21 @@ class MainActivity : DrawerWrapper()  {
                 LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    0f))
+                    0.3f))
             addView(playButton,
                 LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    0f))
+                    0.3f))
             addView(saveButton,LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                0f))
+                0.4f))
+            gravity = Gravity.BOTTOM
+
         }
-        linearLayout.addView(linearLayoutRecord);
+
+        linearLayoutContent.addView(linearLayoutRecord);
         startRequestingLocation()
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
     }
@@ -122,6 +125,7 @@ class MainActivity : DrawerWrapper()  {
 
     public override fun onPause() {
         super.onPause()
+        stopPlaying()
         map?.onPause()
         stopRequestingLocation()
     }
