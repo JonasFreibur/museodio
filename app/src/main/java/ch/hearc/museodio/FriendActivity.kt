@@ -5,7 +5,6 @@
 
 package ch.hearc.museodio
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
@@ -46,7 +45,9 @@ class FriendActivity : DrawerWrapper() {
         rv_friend.adapter = adapterFriend
     }
 
-
+    /**
+     * Displays a status feedback after fetch operation
+     */
     fun displayStatus(message: String){
         runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
     }

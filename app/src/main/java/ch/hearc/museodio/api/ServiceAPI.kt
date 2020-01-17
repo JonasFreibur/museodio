@@ -53,7 +53,7 @@ class ServiceAPI {
 
         /**
          * Get all audio notes API call : /audio-notes
-         * @param (AudioNote) -> Unit callbackFn : Callback function
+         * @param (AudioNote) -> Unit callbackFn : Callback function that displays the audio notes
          */
         fun fetchAllAudioNotes(callbackFn : (audioNote: AudioNote) -> Unit) {
             Fuel.get(url + "/audio-notes/")
@@ -66,6 +66,12 @@ class ServiceAPI {
                 }
         }
 
+        /**
+         * Fetch the audio note status, if it is shared or with the or not
+         * @param String bearerToken
+         * @param String fileName : The name of the audio file to download
+         * @param (AudioNoteStatus?) -> Unit callbackFn : Callback function, displays the status
+         */
         fun fetchAudioNoteStatus(bearerToken: String, fileName: String, callbackFn: (status: AudioNoteStatus?) -> Unit){
             Fuel.get(url + "/audio-notes/check/$fileName")
                 .authentication()
@@ -78,7 +84,8 @@ class ServiceAPI {
 
         /**
          * Get all audio notes API call : /audio-notes
-         * @param (AudioNote) -> Unit callbackFn : Callback function
+         * @param String bearerToken
+         * @param (AudioNote) -> Unit callbackFn : Callback function, that displays the researched users
          */
         fun fetchSearchUsers(bearerToken: String, stringText:String, callbackFn : (users: Array<Users.Success>) -> Unit) {
             Fuel.get(url + "/users/search/$stringText")
@@ -97,7 +104,7 @@ class ServiceAPI {
          * Get all friends API call : /friends/
          *
          * @param String bearerToken
-         * @param (Array<Friends.Friend>, Array<Friends.Friend>, Array<Friends.Friend>) -> Unit callbackFn : Callback function
+         * @param (Array<Friends.Friend>, Array<Friends.Friend>, Array<Friends.Friend>) -> Unit callbackFn : Callback function that displays the friends
          */
         fun fetchFriends(bearerToken: String,
                          callbackFn : (friend: Array<Friends.Friend>,
@@ -125,6 +132,7 @@ class ServiceAPI {
          *
          * @param String bearerToken
          * @param Int id
+         * @param (String) -> Unit callbackFn : Callback function that display an operation result message
          */
         fun acceptFriend(bearerToken: String, id: Int, callbackFn : (message: String) -> Unit){
             Fuel.put(url + "/friends/$id", listOf("id" to id))

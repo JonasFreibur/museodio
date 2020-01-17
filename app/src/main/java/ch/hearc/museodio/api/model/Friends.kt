@@ -1,3 +1,8 @@
+/**
+ * @author Verardo Luca, Carraux Roxane, Freiburghaus Jonas
+ * HE-Arc 2019
+ */
+
 package ch.hearc.museodio.api.model
 
 import com.github.kittinunf.fuel.core.ResponseDeserializable

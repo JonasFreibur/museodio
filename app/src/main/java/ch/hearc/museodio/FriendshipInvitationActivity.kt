@@ -46,14 +46,14 @@ class FriendshipInvitationActivity : DrawerWrapper() {
     }
 
     /**
-     * Callback function to display the Toast
+     * Displays a status feedback after fetch operation
      */
     fun displayStatus(message: String){
         runOnUiThread{ Toast.makeText(this, message, Toast.LENGTH_LONG).show() }
     }
 
     /**
-     * Callback function called by the API request
+     * Callback function called by the API request to display the list
      */
     fun addFriend(friends: Array<Friends.Friend>, invitationToAnswer:Array<Friends.Friend>,
                   invitationWaitingForAnswer:Array<Friends.Friend>)
