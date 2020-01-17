@@ -15,13 +15,27 @@ import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Friends
 import kotlinx.android.synthetic.main.activity_list_invitation_friend.view.*
 
+/**
+ * Class to adapt a list of invitation friends in items of RecyclerView
+ *
+ * @property ArrayList<Friends.Friend> items: list of Friends
+ * @property Context context: context of the application
+ * @property (String) -> Unit callbackFn : Callback function
+ */
+class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>,
+                               val context: Context,
+                               val callbackFn: (message: String) -> Unit) : RecyclerView.Adapter<ViewHolderInvitation>() {
 
-class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context) : RecyclerView.Adapter<ViewHolderInvitation>() {
-
+    /**
+     * Function to return to number of items
+     */
     override fun getItemCount(): Int {
         return  items.size
     }
 
+    /**
+     * Function to bind all the list items to a view
+     */
     override fun onBindViewHolder(holder: ViewHolderInvitation, position: Int) {
         holder.tvFirstName?.text = items.get(position).firstname
         holder.tvLastName?.text = items.get(position).lastname
@@ -30,7 +44,7 @@ class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val contex
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@InvitationFriendAdapter.context)
                 if(v?.id != null) {
-                    ServiceAPI.deleteFriend(bearerToken, v?.id)
+                    ServiceAPI.deleteFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })
@@ -39,12 +53,15 @@ class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val contex
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@InvitationFriendAdapter.context)
                 if(v?.id != null) {
-                    ServiceAPI.acceptFriend(bearerToken, v?.id)
+                    ServiceAPI.acceptFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })
     }
 
+    /**
+     * Function to inflate the view
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderInvitation {
         return ViewHolderInvitation(
             LayoutInflater.from(context).inflate(
@@ -56,6 +73,9 @@ class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val contex
     }
 }
 
+/**
+ * Class to make the conversion between View and the list
+ */
 class ViewHolderInvitation (view: View) : RecyclerView.ViewHolder(view) {
     val tvFirstName = view.tvFirstName
     val tvLastName = view.tvLastName

@@ -63,7 +63,7 @@ class MainActivity : DrawerWrapper()  {
     private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO, Manifest.permission.ACCESS_COARSE_LOCATION)
 
 
-    /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
+    /* Fonction onCreate() */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -71,13 +71,11 @@ class MainActivity : DrawerWrapper()  {
 
         val layoutInflater:LayoutInflater = LayoutInflater.from(applicationContext);
 
-
         layoutInflater.inflate(
             R.layout.activity_main, // Custom view/ layout
             content_layout, // Root layout to attach the view
             true // Attach with root layout or not
         )
-
 
         /* Config Map */
         map = findViewById<MapView>(R.id.map) as MapView
@@ -111,16 +109,9 @@ class MainActivity : DrawerWrapper()  {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 0f))
         }
-
-        //val linearLayout = mainView.findViewById<LinearLayout>(R.id.linearLayout) as LinearLayout;
-
         linearLayout.addView(linearLayoutRecord);
-
-
         startRequestingLocation()
-
         ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
-
     }
 
     public override fun onResume() {
@@ -295,8 +286,6 @@ class MainActivity : DrawerWrapper()  {
             try{
                 setDataSource(
                     this@MainActivity.applicationContext,
-                    //Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
-                    //Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
                     Uri.parse("https://museodio.srvz-webapp.he-arc.ch/api/audio-notes/download/$filename"),
                     headers
                 )

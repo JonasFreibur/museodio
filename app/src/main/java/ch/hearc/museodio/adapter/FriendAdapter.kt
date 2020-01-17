@@ -15,12 +15,28 @@ import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Friends
 import kotlinx.android.synthetic.main.activity_list_friend.view.*
 
-class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context) : RecyclerView.Adapter<ViewHolderFriend>() {
 
+/**
+ * Class to adapt a list of Friend in items of RecyclerView
+ *
+ * @property ArrayList<Friends.Friend> items: list of Friends
+ * @property Context context: context of the application
+ * @property (String) -> Unit callbackFn : Callback function
+ */
+class FriendAdapter( val items : ArrayList<Friends.Friend>,
+                     val context: Context,
+                     val callbackFn: (message: String) -> Unit) : RecyclerView.Adapter<ViewHolderFriend>() {
+
+    /**
+     * Function to return to number of items
+     */
     override fun getItemCount(): Int {
         return  items.size
     }
 
+    /**
+     * Function to bind all the list items to a view
+     */
     override fun onBindViewHolder(holder: ViewHolderFriend, position: Int) {
         holder.tvFirstName?.text = items.get(position).firstname
         holder.tvLastName?.text = items.get(position).lastname
@@ -28,13 +44,16 @@ class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context
         holder.btnDelete.setOnClickListener (object: View.OnClickListener {
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@FriendAdapter.context)
-                if(v?.id!=null) {
-                    ServiceAPI.deleteFriend(bearerToken, v?.id)
+                if(v?.id != null) {
+                    ServiceAPI.deleteFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })
     }
 
+    /**
+     * Function to inflate the view
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderFriend {
         return ViewHolderFriend(
             LayoutInflater.from(context).inflate(
@@ -46,6 +65,9 @@ class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context
     }
 }
 
+/**
+ * Class to make the conversion between View and the list
+ */
 class ViewHolderFriend (view: View) : RecyclerView.ViewHolder(view) {
     val tvFirstName = view.tvFirstName
     val tvLastName =view.tvLastName

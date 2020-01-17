@@ -25,7 +25,6 @@ import com.google.gson.JsonParser
 class ServiceAPI {
 
     companion object{
-        //private var url : String = "http://10.0.2.2:8080/api"
         private var url : String = "https://museodio.srvz-webapp.he-arc.ch/api"
 
         /**
@@ -94,6 +93,12 @@ class ServiceAPI {
 
         }
 
+        /**
+         * Get all friends API call : /friends/
+         *
+         * @param String bearerToken
+         * @param (Array<Friends.Friend>, Array<Friends.Friend>, Array<Friends.Friend>) -> Unit callbackFn : Callback function
+         */
         fun fetchFriends(bearerToken: String,
                          callbackFn : (friend: Array<Friends.Friend>,
                                        invitationsToAnswer:Array<Friends.Friend>,
@@ -103,7 +108,8 @@ class ServiceAPI {
                 .bearer(bearerToken)
                 .responseObject(Friends.Deserializer()){ request, response, result ->
                     val (friends, err) =  result
-                    if(friends?.success?.friends!=null && friends?.success?.invitationsWaitingForAnswer!=null &&friends?.success?.invitationsToAnswer!=null) {
+                    if(friends?.success?.friends!=null && friends?.success?.invitationsWaitingForAnswer != null &&
+                        friends?.success?.invitationsToAnswer != null) {
                         callbackFn(
                             friends?.success?.friends,
                             friends?.success?.invitationsToAnswer,
@@ -113,38 +119,56 @@ class ServiceAPI {
                 }
         }
 
-        fun addFriend(bearerToken: String, id: Int)  {
+        /**
+         * Accept a friendship request
+         * API call : /friends/{id}
+         *
+         * @param String bearerToken
+         * @param Int id
+         */
+        fun acceptFriend(bearerToken: String, id: Int, callbackFn : (message: String) -> Unit){
+            Fuel.put(url + "/friends/$id", listOf("id" to id))
+                .authentication()
+                .bearer(bearerToken)
+                .responseString() { request, response, result ->
+                    callbackFn(result.get().toString())
+                }
+        }
+
+
+        /**
+         * Do a friendship request
+         * API call : /friends/{id}
+         *
+         * @param String bearerToken
+         * @param Int id
+         * @param (String) -> Unit callbackFn : Callback function
+         */
+        fun addFriend(bearerToken: String, id: Int, callbackFn: (message: String) -> Unit)  {
             Fuel.upload(url + "/friends/", method = Method.POST)
                 .add(InlineDataPart(id.toString(), name="id", contentType="multipart/form-data"))
                 .authentication()
                 .bearer(bearerToken)
                 .responseString(){ result ->
                     val (res, err) = result
+                    callbackFn(result.get().toString())
                 }
         }
 
-        fun acceptFriend(bearerToken: String, id: Int){
-            Fuel.put(url + "/friends/$id", listOf("id" to id))
-                .authentication()
-                .bearer(bearerToken)
-                .responseString() { request, response, result ->
-                    Log.i("REQUEST",request.toString())
-                    Log.i("RESPONSE",response.toString())
-                    Log.i("RESULT",result.toString())
-                    Log.i("RESULT_BODY", result.get().toString())
-                    // TODO : do something with result
-                }
-        }
-
-
-        fun deleteFriend(bearerToken: String, id: Int){
+        /**
+         * Refuse a friendship request or delete a friendship
+         * API call : /friends/{id}
+         *
+         * @param String bearerToken
+         * @param Int id
+         * @param (String) -> Unit callbackFn : Callback function
+         */
+        fun deleteFriend(bearerToken: String, id: Int, callbackFn : (message: String) -> Unit){
             Fuel.delete(url + "/friends/$id", listOf("id" to id))
                 .authentication()
                 .bearer(bearerToken)
                 .responseString() { request, response, result ->
-                    Log.i("RESPONSE", response.toString())
-                    Log.i("RESULT", result.get().toString())
-                    // TODO callback whith result.get and update list
+                    callbackFn(result.get().toString())
                 }
         }
 
