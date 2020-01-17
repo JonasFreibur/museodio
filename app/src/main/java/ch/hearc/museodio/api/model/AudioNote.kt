@@ -5,7 +5,6 @@
 
 package ch.hearc.museodio.api.model
 
-import ch.hearc.museodio.api.ServiceAPI
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.google.gson.Gson
 
@@ -24,7 +23,7 @@ data class AudioNote(var firstName: String,
                      var longitude: Double,
                      var file_name: String) {
     /**
-     * Class responsible of deserializing the audi note JSON
+     * Class responsible of deserializing the audio note JSON
      */
     class Deserializer: ResponseDeserializable<Array<AudioNote>>{
         override fun deserialize(content: String): Array<AudioNote>? = Gson().fromJson(content, Array<AudioNote>::class.java)

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/nav_home"
+
+    <item android:id="@+id/nav_home"
         android:icon="@drawable/ic_location_on"
         android:title="@string/menu_home" />
+
     <item android:id="@+id/nav_search_user"
         android:title="@string/search_user"
         android:icon="@drawable/ic_account_search_outline"/>
+
+    <item android:id="@+id/nav_friendship_invitation"
+        android:title="Friendship invitations"
+        android:icon="@drawable/ic_account_multiple_check_outline"/>
+
+    <item android:id="@+id/nav_friendship"
+        android:title="@string/manage_friendships"
+        android:icon="@drawable/ic_account_group_outline"/>
 
     <item android:id="@+id/nav_logout"
         android:title="@string/logout"

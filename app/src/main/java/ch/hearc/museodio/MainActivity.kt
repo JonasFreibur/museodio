@@ -9,7 +9,6 @@ import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
-
 import android.os.Bundle
 import android.preference.PreferenceManager
 import ch.hearc.museodio.api.ServiceAPI
@@ -34,8 +33,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.app.ActivityCompat
+import ch.hearc.museodio.api.model.AudioNoteStatus
 import com.birjuvachhani.locus.Locus
 import kotlinx.android.synthetic.main.activity_main.*
+import com.google.android.gms.location.LocationRequest
 import kotlinx.android.synthetic.main.drawer_wrapper.*
 import org.osmdroid.views.overlay.Marker
 
@@ -62,15 +63,13 @@ class MainActivity : DrawerWrapper()  {
     private var permissions: Array<String> = arrayOf(Manifest.permission.RECORD_AUDIO, Manifest.permission.ACCESS_COARSE_LOCATION)
 
 
-    /* Fonction onCreate() : initialise les éléments de la page et gère les permissions*/
+    /* Fonction onCreate() */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         Configuration.getInstance().load(applicationContext, PreferenceManager.getDefaultSharedPreferences(applicationContext))
-        //setContentView(R.layout.activity_main)
 
         val layoutInflater:LayoutInflater = LayoutInflater.from(applicationContext);
-
 
         layoutInflater.inflate(
             R.layout.activity_main, // Custom view/ layout
@@ -78,10 +77,9 @@ class MainActivity : DrawerWrapper()  {
             true // Attach with root layout or not
         )
 
-
         /* Config Map */
         map = findViewById<MapView>(R.id.map) as MapView
-        map!!.setTileSource(TileSourceFactory.MAPNIK)
+        map?.setTileSource(TileSourceFactory.MAPNIK)
 
         /* Permissions */
         val permissionRecord =  ActivityCompat.checkSelfPermission(this, permissions[0])
@@ -90,7 +88,7 @@ class MainActivity : DrawerWrapper()  {
         }
 
         /* Initialisation record elements */
-        fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.mp3"
+        fileName = "${externalCacheDir?.absolutePath}/audiorecord.mp3"
         recordButton = RecordButton(this)
         playButton = PlayButton(this)
         saveButton = SaveButton(this)
@@ -115,31 +113,40 @@ class MainActivity : DrawerWrapper()  {
         }
 
         linearLayoutContent.addView(linearLayoutRecord);
-
         startRequestingLocation()
-        ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap);
+        ServiceAPI.fetchAllAudioNotes(::addAudioNoteToMap)
     }
 
     public override fun onResume() {
         super.onResume()
-        map!!.onResume()
+        map?.onResume()
         startRequestingLocation()
     }
 
     public override fun onPause() {
         super.onPause()
-        map!!.onPause()
         stopPlaying()
+        map?.onPause()
         stopRequestingLocation()
     }
 
     public override fun onBackPressed() {
-    // Nothing
+        // Nothing
     }
 
     private fun startRequestingLocation() {
+        Locus.configure {
+            request {
+                fastestInterval = 600000 // 10 minutes
+                priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+                interval = 600000
+            }
+        }
+
         Locus.startLocationUpdates(this) { result ->
-            result.location?.let { addLocationToMap(it.latitude, it.longitude) }
+            result.location?.let {
+                addLocationToMap(it.latitude, it.longitude)
+            }
         }
     }
 
@@ -158,47 +165,52 @@ class MainActivity : DrawerWrapper()  {
     }
 
     private fun addAudioNoteToMap(audioNote: AudioNote){
-        val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+        val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
 
-        val drawable: Drawable = resources.getDrawable(R.drawable.ic_guitar_pick_outline, null);
+        ServiceAPI.fetchAudioNoteStatus(bearerToken, audioNote.file_name, fun (status: AudioNoteStatus?) {
+            val startMarker = Marker(map)
+            val startPoint = GeoPoint(audioNote.latitude, audioNote.longitude)
+            startMarker.setPosition(startPoint)
+            val drawable: Drawable = resources.getDrawable(R.drawable.ic_guitar_pick_outline, null);
+            startMarker.icon = drawable
+            startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+            startMarker.title = "${audioNote.firstName}, ${audioNote.lastName}"
 
-        val startMarker = Marker(map!!)
-        startMarker.setPosition(startPoint)
-        startMarker.icon = drawable
-        startMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        startMarker.title = "${audioNote.firstName}, ${audioNote.lastName}"
-        startMarker.subDescription = "${audioNote.latitude}, ${audioNote.longitude}"
-        startMarker.setOnMarkerClickListener { marker, mapView ->
-            val bearerToken = ServiceAPI.loadApiKey(this.applicationContext)
-            this@MainActivity.playFile(audioNote.file_name, bearerToken)
-            marker.showInfoWindow()
-            false
-        }
-        map!!.getOverlays().add(startMarker)
+            if(status?.error != null){
+                startMarker.subDescription = status.error?.error
+                startMarker.setOnMarkerClickListener { marker, mapView ->
+                    marker.showInfoWindow()
+                    false
+                }
+            }
+            else {
+                startMarker.subDescription = "${audioNote.latitude}, ${audioNote.longitude}"
+                startMarker.setOnMarkerClickListener { marker, mapView ->
+                    this@MainActivity.playFile(audioNote.file_name, bearerToken)
+                    marker.showInfoWindow()
+                    false
+                }
+            }
+
+            map?.getOverlays()?.add(startMarker)
+        })
     }
 
     private fun addLocationToMap(latitude: Double, longitude: Double){
-        val mapController = map!!.getController()
-        if(!isMapCentered) {
-            mapController.setZoom(9.5)
-            val startPoint = GeoPoint(latitude, longitude)
-            mapController.setCenter(startPoint)
-            isMapCentered = true
+        if(map != null){
+            val mapController = map?.getController()
+            if(!isMapCentered) {
+                mapController?.setZoom(9.5)
+                val startPoint = GeoPoint(latitude, longitude)
+                mapController?.setCenter(startPoint)
+                isMapCentered = true
+            }
+
+            val myLocationOverlay = MyLocationNewOverlay(map)
+            myLocationOverlay.enableFollowLocation()
+            myLocationOverlay.enableMyLocation()
+            map?.getOverlays()?.add(myLocationOverlay)
         }
-
-
-        val myLocationOverlay = MyLocationNewOverlay(map!!)
-        myLocationOverlay.enableFollowLocation()
-        myLocationOverlay.enableMyLocation()
-        map!!.getOverlays().add(myLocationOverlay)
-
-
-        /*
-        Bitmap icon = BitmapFactory.decodeResource(context.getResources(), R.drawable.user_location);
-        locationOverlay.setPersonIcon(icon);
-        locationOverlay.setPersonHotspot(icon.getWidth() / 2, icon.getHeight());
-        map.getOverlays().add(locationOverlay);
-        */
     }
 
     /* functions and classes to record part */
@@ -278,8 +290,6 @@ class MainActivity : DrawerWrapper()  {
             try{
                 setDataSource(
                     this@MainActivity.applicationContext,
-                    //Uri.parse("http://10.0.2.2:81/museodio/public/api/audio-notes/download/$filename"),
-                    //Uri.parse("http://10.0.2.2:8000/api/audio-notes/download/$filename"),
                     Uri.parse("https://museodio.srvz-webapp.he-arc.ch/api/audio-notes/download/$filename"),
                     headers
                 )
@@ -354,11 +364,10 @@ class MainActivity : DrawerWrapper()  {
         }
         recorder = null
     }
-
 }
 
 /*
 source : - https://developer.android.com/guide/topics/media/mediarecorder
             - https://android--code.blogspot.com/2018/02/android-kotlin-alertdialog-example.html
-
+            - https://android.jlelse.eu/using-recyclerview-in-android-kotlin-722991e86bf3
 */
