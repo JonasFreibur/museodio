@@ -20,8 +20,11 @@ import kotlinx.android.synthetic.main.activity_list_invitation_friend.view.*
  *
  * @property ArrayList<Friends.Friend> items: list of Friends
  * @property Context context: context of the application
+ * @property (String) -> Unit callbackFn : Callback function
  */
-class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context) : RecyclerView.Adapter<ViewHolderInvitation>() {
+class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>,
+                               val context: Context,
+                               val callbackFn: (message: String) -> Unit) : RecyclerView.Adapter<ViewHolderInvitation>() {
 
     /**
      * Function to return to number of items
@@ -41,7 +44,7 @@ class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val contex
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@InvitationFriendAdapter.context)
                 if(v?.id != null) {
-                    ServiceAPI.deleteFriend(bearerToken, v?.id)
+                    ServiceAPI.deleteFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })
@@ -50,7 +53,7 @@ class InvitationFriendAdapter( val items : ArrayList<Friends.Friend>, val contex
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@InvitationFriendAdapter.context)
                 if(v?.id != null) {
-                    ServiceAPI.acceptFriend(bearerToken, v?.id)
+                    ServiceAPI.acceptFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })

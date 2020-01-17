@@ -15,13 +15,17 @@ import ch.hearc.museodio.api.ServiceAPI
 import ch.hearc.museodio.api.model.Friends
 import kotlinx.android.synthetic.main.activity_list_friend.view.*
 
+
 /**
  * Class to adapt a list of Friend in items of RecyclerView
  *
  * @property ArrayList<Friends.Friend> items: list of Friends
  * @property Context context: context of the application
+ * @property (String) -> Unit callbackFn : Callback function
  */
-class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context) : RecyclerView.Adapter<ViewHolderFriend>() {
+class FriendAdapter( val items : ArrayList<Friends.Friend>,
+                     val context: Context,
+                     val callbackFn: (message: String) -> Unit) : RecyclerView.Adapter<ViewHolderFriend>() {
 
     /**
      * Function to return to number of items
@@ -41,7 +45,7 @@ class FriendAdapter( val items : ArrayList<Friends.Friend>, val context: Context
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@FriendAdapter.context)
                 if(v?.id != null) {
-                    ServiceAPI.deleteFriend(bearerToken, v?.id)
+                    ServiceAPI.deleteFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })

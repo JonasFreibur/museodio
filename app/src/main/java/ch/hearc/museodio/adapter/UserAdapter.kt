@@ -20,8 +20,11 @@ import kotlinx.android.synthetic.main.activity_list_search.view.*
  *
  * @property ArrayList<Friends.Friend> items: list of Friends
  * @property Context context: context of the application
+ * @property (String) -> Unit callbackFn : Callback function
  */
-class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : RecyclerView.Adapter<ViewHolderUser>() {
+class UserAdapter(val items : ArrayList<Users.Success>,
+                  val context: Context,
+                  val callbackFn: (message: String) -> Unit) : RecyclerView.Adapter<ViewHolderUser>() {
 
     /**
      * Function to return to number of items
@@ -41,7 +44,7 @@ class UserAdapter(val items : ArrayList<Users.Success>, val context: Context) : 
             override fun onClick(v: View?) {
                 val bearerToken = ServiceAPI.loadApiKey(this@UserAdapter.context)
                 if(v?.id !=null) {
-                    ServiceAPI.addFriend(bearerToken, v?.id)
+                    ServiceAPI.addFriend(bearerToken, v?.id, callbackFn)
                 }
             }
         })
