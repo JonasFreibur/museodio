@@ -67,7 +67,6 @@ class FriendActivity : DrawerWrapper() {
                   invitationWaitingForAnswer:Array<Friends.Friend>)
     {
         listFriends.addAll(friends)
-        listFriends.addAll(invitationWaitingForAnswer)
         runOnUiThread{ rv_friend.adapter?.notifyDataSetChanged() }
     }
 }

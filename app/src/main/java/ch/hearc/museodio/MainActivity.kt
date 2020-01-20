@@ -96,18 +96,18 @@ class MainActivity : DrawerWrapper()  {
         val linearLayoutRecord = LinearLayout(this).apply {
             addView(recordButton,
                 LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    0.3f))
+                    0.33f))
             addView(playButton,
                 LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    0.3f))
+                    0.33f))
             addView(saveButton,LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                0.4f))
+                0.34f))
             gravity = Gravity.BOTTOM
 
         }
@@ -210,6 +210,7 @@ class MainActivity : DrawerWrapper()  {
      * Displays the user's location on the map
      */
     private fun addLocationToMap(latitude: Double, longitude: Double){
+
         if(map != null){
             val mapController = map?.getController()
             if(!isMapCentered) {
